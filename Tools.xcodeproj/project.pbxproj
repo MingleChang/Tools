@@ -8,25 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
-		8205FE411BD68BB400EC838E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE401BD68BB400EC838E /* AppDelegate.m */; };
-		8205FE441BD68BB400EC838E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE431BD68BB400EC838E /* ViewController.m */; };
-		8205FE471BD68BB500EC838E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE451BD68BB500EC838E /* Main.storyboard */; };
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
-		8205FE4C1BD68BB500EC838E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE4A1BD68BB500EC838E /* LaunchScreen.storyboard */; };
+		822E20EE1BD9390E00F41211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822E20ED1BD9390E00F41211 /* Main.storyboard */; };
+		822E20F01BD9391D00F41211 /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822E20EF1BD9391D00F41211 /* LauchScreen.storyboard */; };
+		822E20F41BD9394F00F41211 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822E20F31BD9394F00F41211 /* AppDelegate.m */; };
 		A2BE7E7E883B9BA79B3EBD53 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC339506E995F7AFD8AFAFAD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8205FE391BD68BB400EC838E /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8205FE3D1BD68BB400EC838E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8205FE3F1BD68BB400EC838E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8205FE401BD68BB400EC838E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8205FE421BD68BB400EC838E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8205FE431BD68BB400EC838E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8205FE461BD68BB500EC838E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8205FE481BD68BB500EC838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8205FE4B1BD68BB500EC838E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8205FE4D1BD68BB500EC838E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822E20ED1BD9390E00F41211 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		822E20EF1BD9391D00F41211 /* LauchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
+		822E20F21BD9394F00F41211 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		822E20F31BD9394F00F41211 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC339506E995F7AFD8AFAFAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0553AA50D7379E8A437931 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C6E6F4DCD596D768B5724709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,14 +62,9 @@
 		8205FE3B1BD68BB400EC838E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				8205FE3F1BD68BB400EC838E /* AppDelegate.h */,
-				8205FE401BD68BB400EC838E /* AppDelegate.m */,
-				8205FE421BD68BB400EC838E /* ViewController.h */,
-				8205FE431BD68BB400EC838E /* ViewController.m */,
-				8205FE451BD68BB500EC838E /* Main.storyboard */,
+				822E20F11BD9394F00F41211 /* Common */,
+				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
-				8205FE4A1BD68BB500EC838E /* LaunchScreen.storyboard */,
-				8205FE4D1BD68BB500EC838E /* Info.plist */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
 			);
 			path = Tools;
@@ -81,9 +73,28 @@
 		8205FE3C1BD68BB400EC838E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8205FE4D1BD68BB500EC838E /* Info.plist */,
 				8205FE3D1BD68BB400EC838E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		822E20EC1BD938FB00F41211 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				822E20ED1BD9390E00F41211 /* Main.storyboard */,
+				822E20EF1BD9391D00F41211 /* LauchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		822E20F11BD9394F00F41211 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				822E20F21BD9394F00F41211 /* AppDelegate.h */,
+				822E20F31BD9394F00F41211 /* AppDelegate.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8FD0331F0B03CCEACDF3F8C4 /* Frameworks */ = {
@@ -163,9 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8205FE4C1BD68BB500EC838E /* LaunchScreen.storyboard in Resources */,
+				822E20F01BD9391D00F41211 /* LauchScreen.storyboard in Resources */,
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
-				8205FE471BD68BB500EC838E /* Main.storyboard in Resources */,
+				822E20EE1BD9390E00F41211 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,32 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8205FE441BD68BB400EC838E /* ViewController.m in Sources */,
-				8205FE411BD68BB400EC838E /* AppDelegate.m in Sources */,
+				822E20F41BD9394F00F41211 /* AppDelegate.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8205FE451BD68BB500EC838E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8205FE461BD68BB500EC838E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8205FE4A1BD68BB500EC838E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8205FE4B1BD68BB500EC838E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8205FE4E1BD68BB500EC838E /* Debug */ = {
@@ -338,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MingleChang.Tools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MingleChang.Tools;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,8 @@
 //
 
 #import "MCRootViewController.h"
+#import "MCWeatherManager.h"
+#import "MingleChang.h"
 
 @interface MCRootViewController ()
 
@@ -17,9 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSDataAsset *lDataAsset=[[NSDataAsset alloc]initWithName:@"city"];
-    NSString *lString=[[NSString alloc]initWithData:lDataAsset.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",lString);
 }
 
 - (void)didReceiveMemoryWarning {

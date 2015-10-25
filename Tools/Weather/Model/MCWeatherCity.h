@@ -11,4 +11,5 @@
 @interface MCWeatherCity : NSObject
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSArray *weatherAreas;
+-(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

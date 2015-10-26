@@ -9,7 +9,7 @@
 #import "MCRootViewController.h"
 #import "MCWeatherManager.h"
 #import "MingleChang.h"
-#import "MMLocationManager.h"
+
 @interface MCRootViewController ()
 - (IBAction)buttonClick:(UIButton *)sender;
 
@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    [[MCWeatherManager manager]updateWeatherInfo];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -40,9 +38,6 @@
 */
 
 - (IBAction)buttonClick:(UIButton *)sender {
-    [[MMLocationManager shareLocation]getAddress:^(NSString *addressString) {
-        NSLog(@"%@",addressString);
-    }];
     [[MCWeatherManager manager]updateWeatherInfo];
 }
 @end

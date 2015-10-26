@@ -10,12 +10,10 @@
 #import "MCWeatherProvince.h"
 #import "MCWeatherCity.h"
 #import "MCWeatherArea.h"
+#import "MCLocationManager.h"
+#import "MCAddress.h"
 
-@import CoreLocation;
-
-@interface MCWeatherManager()<CLLocationManagerDelegate>
-
-@property(nonatomic,strong)CLLocationManager *locationManager;
+@interface MCWeatherManager()
 
 @end
 
@@ -49,35 +47,37 @@
 }
 
 -(void)updateWeatherInfo{
-    [CLLocationManager locationServicesEnabled];
-    [self requestLocation];
-}
--(void)requestLocation{
-//    oCfuPBo9cGiHNvNG2mwP31Wx
-    self.locationManager=[[CLLocationManager alloc]init];
-    self.locationManager.delegate=self;
-    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager startUpdatingLocation];
-}
-
-#pragma mark - Delegate
-#pragma mark - CLLocationManager Delegate
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-    [manager stopUpdatingLocation];
-    CLLocation *lLocation=locations[0];
-    CLGeocoder *lGeocoder=[[CLGeocoder alloc]init];
-    CLLocation *lMLocation=manager.location;
-    [lGeocoder reverseGeocodeLocation:manager.location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        NSLog(@"%i",[NSThread isMainThread]);
-        if (error) {
-            NSLog(@"city error");
+    [[MCLocationManager manager]requestAddress:^(MCAddress *address, BOOL isSuccess) {
+        if (isSuccess) {
+            NSLog(@"%@",[self getCityIdBy:address]);
         }else{
-            NSLog(@"%i",(int)placemarks.count);
+            NSLog(@"error");
         }
     }];
 }
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"error");
+
+-(NSString *)getCityIdBy:(MCAddress *)address{
+    for (MCWeatherProvince *lProvince in self.cityList) {
+        if ([address.province containsString:lProvince.name]) {
+            for (MCWeatherCity *lCity in lProvince.weatherCities) {
+                if ([address.city containsString:lCity.name]) {
+                    for (MCWeatherArea *lArea in lCity.weatherAreas) {
+                        if ([address.area containsString:lArea.name]) {
+                            return lArea.identity;
+                        }
+                    }
+                    MCWeatherArea *lArea=lCity.weatherAreas[0];
+                    return lArea.identity;
+                }
+            }
+            MCWeatherCity *lCity=lProvince.weatherCities[0];
+            MCWeatherArea *lArea=lCity.weatherAreas[0];
+            return lArea.identity;
+        }
+    }
+    MCWeatherProvince *lProvince=self.cityList[0];
+    MCWeatherCity *lCity=lProvince.weatherCities[0];
+    MCWeatherArea *lArea=lCity.weatherAreas[0];
+    return lArea.identity;
 }
 @end

@@ -26,6 +26,9 @@
                                 <rect key="frame" x="126" y="178" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonClick:" destination="QVi-Li-O9T" eventType="touchUpInside" id="Mzi-rS-Ap4"/>
                                 </connections>

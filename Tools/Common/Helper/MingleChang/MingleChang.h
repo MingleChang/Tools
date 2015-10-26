@@ -17,6 +17,7 @@
 #import "MCDrawImage.h"
 #import "MCDevice.h"
 #import "MCHTTPConnection.h"
+#import "MCLocationManager.h"
 
 
 /***********自定义的打印方法*************/

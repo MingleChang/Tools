@@ -11,6 +11,14 @@
 #import "MCWeatherCity.h"
 #import "MCWeatherArea.h"
 
+@import CoreLocation;
+
+@interface MCWeatherManager()<CLLocationManagerDelegate>
+
+@property(nonatomic,strong)CLLocationManager *locationManager;
+
+@end
+
 @implementation MCWeatherManager
 +(MCWeatherManager *)manager{
     static MCWeatherManager *managerInstance=nil;
@@ -38,5 +46,38 @@
         [lCityList addObject:lProvice];
     }
     self.cityList=lCityList;
+}
+
+-(void)updateWeatherInfo{
+    [CLLocationManager locationServicesEnabled];
+    [self requestLocation];
+}
+-(void)requestLocation{
+//    oCfuPBo9cGiHNvNG2mwP31Wx
+    self.locationManager=[[CLLocationManager alloc]init];
+    self.locationManager.delegate=self;
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
+}
+
+#pragma mark - Delegate
+#pragma mark - CLLocationManager Delegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    [manager stopUpdatingLocation];
+    CLLocation *lLocation=locations[0];
+    CLGeocoder *lGeocoder=[[CLGeocoder alloc]init];
+    CLLocation *lMLocation=manager.location;
+    [lGeocoder reverseGeocodeLocation:manager.location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        NSLog(@"%i",[NSThread isMainThread]);
+        if (error) {
+            NSLog(@"city error");
+        }else{
+            NSLog(@"%i",(int)placemarks.count);
+        }
+    }];
+}
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"error");
 }
 @end

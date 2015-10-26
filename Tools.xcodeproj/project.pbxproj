@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5F1FA11BDE1BAF00358257 /* MMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5F1FA01BDE1BAF00358257 /* MMLocationManager.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
 		82273FD41BDB2A6100AFDEAF /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FC61BDB2A6100AFDEAF /* MCCollectionViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C5F1FA01BDE1BAF00358257 /* MMLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLocationManager.m; sourceTree = "<group>"; };
+		4C5F1FA21BDE1BB900358257 /* MMLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMLocationManager.h; sourceTree = "<group>"; };
 		8205FE391BD68BB400EC838E /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8205FE3D1BD68BB400EC838E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8205FE481BD68BB500EC838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 			children = (
 				82EFB7021BDC91EE008A978C /* MCWeatherManager.h */,
 				82EFB7031BDC91EE008A978C /* MCWeatherManager.m */,
+				4C5F1FA21BDE1BB900358257 /* MMLocationManager.h */,
+				4C5F1FA01BDE1BAF00358257 /* MMLocationManager.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				82273FD41BDB2A6100AFDEAF /* MCCollectionViewController.m in Sources */,
 				82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */,
 				82273FE01BDB2A8B00AFDEAF /* AppDelegate.m in Sources */,
+				4C5F1FA11BDE1BAF00358257 /* MMLocationManager.m in Sources */,
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

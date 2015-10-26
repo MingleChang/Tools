@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger,MCWeatherStatus){
+    WeatherStatusPositioning,
+    WeatherStatusRequesting,
+    WeatherStatusComplete,
+};
+
 @interface MCWeatherManager : NSObject
 
 @property(nonatomic,copy)NSArray *cityList;
 
+@property(nonatomic,assign)MCWeatherStatus status;
+
 +(MCWeatherManager *)manager;
+-(void)updateWeatherInfo;
 @end

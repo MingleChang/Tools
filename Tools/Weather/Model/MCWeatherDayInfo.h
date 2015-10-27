@@ -14,19 +14,18 @@
 #import "MCWeatherWind.h"
 
 @interface MCWeatherDayInfo : NSObject
-@property(nonatomic,strong)MCWeatherAstro *weatherAstro;
-@property(nonatomic,strong)MCWeatherCond *weatherCond;
-@property(nonatomic,strong)MCWeatherTmp *weatherTmp;
-@property(nonatomic,strong)MCWeatherWind *weatherWind;
+@property(nonatomic,strong)MCWeatherAstro *weatherAstro;//天文数值
+@property(nonatomic,strong)MCWeatherCond *weatherCond;//天气状况
+@property(nonatomic,strong)MCWeatherTmp *weatherTmp;//温度
+@property(nonatomic,strong)MCWeatherWind *weatherWind;//风力状况
 
-@property(nonatomic,strong)NSDate *weatherDate;
+@property(nonatomic,strong)NSDate *weatherDate;//当地日期
 
-@property(nonatomic,copy)NSString *hum;
-@property(nonatomic,copy)NSString *pcpn;
-@property(nonatomic,copy)NSString *pop;
-@property(nonatomic,copy)NSString *pres;
-@property(nonatomic,copy)NSString *vis;
-@property(nonatomic,copy)NSString *tmp;
+@property(nonatomic,copy)NSString *hum;//湿度（%）
+@property(nonatomic,copy)NSString *pcpn;//降雨量（mm）
+@property(nonatomic,copy)NSString *pop;//降水概率
+@property(nonatomic,copy)NSString *pres;//气压
+@property(nonatomic,copy)NSString *vis;//能见度
 
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 

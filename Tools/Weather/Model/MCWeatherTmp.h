@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MCWeatherTmp : NSObject
-@property(nonatomic,copy)NSString *max;
-@property(nonatomic,copy)NSString *min;
+@property(nonatomic,copy)NSString *max;//最高温度
+@property(nonatomic,copy)NSString *min;//最低温度
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

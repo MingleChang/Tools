@@ -10,12 +10,12 @@
 #import "MCWeatherIndex.h"
 
 @interface MCWeatherSuggestion : NSObject
-@property(nonatomic,strong)MCWeatherIndex *comfIndex;
-@property(nonatomic,strong)MCWeatherIndex *cwIndex;
-@property(nonatomic,strong)MCWeatherIndex *drsgIndex;
-@property(nonatomic,strong)MCWeatherIndex *fluIndex;
-@property(nonatomic,strong)MCWeatherIndex *sportIndex;
-@property(nonatomic,strong)MCWeatherIndex *travIndex;
-@property(nonatomic,strong)MCWeatherIndex *uvIndex;
+@property(nonatomic,strong)MCWeatherIndex *comfIndex;//
+@property(nonatomic,strong)MCWeatherIndex *cwIndex;//洗车指数
+@property(nonatomic,strong)MCWeatherIndex *drsgIndex;//穿衣指数
+@property(nonatomic,strong)MCWeatherIndex *fluIndex;//感冒指数
+@property(nonatomic,strong)MCWeatherIndex *sportIndex;//运动指数
+@property(nonatomic,strong)MCWeatherIndex *travIndex;//旅游指数
+@property(nonatomic,strong)MCWeatherIndex *uvIndex;//紫外线指数
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

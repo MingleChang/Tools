@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MCWeatherUpdate : NSObject
-@property(nonatomic,strong)NSDate *locDate;
-@property(nonatomic,strong)NSDate *utcDate;
+@property(nonatomic,strong)NSDate *locDate;//数据更新的当地时间
+@property(nonatomic,strong)NSDate *utcDate;//数据更新的UTC时间
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

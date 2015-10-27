@@ -38,6 +38,7 @@
 		82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FF01BDB395600AFDEAF /* MCWeatherViewController.xib */; };
 		82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FF41BDB397B00AFDEAF /* MCRootWeatherViewController.m */; };
 		82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FF51BDB397B00AFDEAF /* MCRootWeatherViewController.xib */; };
+		822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D2D581BDFB4AC00BB0CD1 /* MCWeatherNow.m */; };
 		822E20EE1BD9390E00F41211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822E20ED1BD9390E00F41211 /* Main.storyboard */; };
 		82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6681BDE51C500FCA1C2 /* MCLocationManager.m */; };
 		82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */; };
@@ -111,6 +112,8 @@
 		82273FF31BDB397B00AFDEAF /* MCRootWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootWeatherViewController.h; sourceTree = "<group>"; };
 		82273FF41BDB397B00AFDEAF /* MCRootWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootWeatherViewController.m; sourceTree = "<group>"; };
 		82273FF51BDB397B00AFDEAF /* MCRootWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCRootWeatherViewController.xib; sourceTree = "<group>"; };
+		822D2D571BDFB4AC00BB0CD1 /* MCWeatherNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherNow.h; sourceTree = "<group>"; };
+		822D2D581BDFB4AC00BB0CD1 /* MCWeatherNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherNow.m; sourceTree = "<group>"; };
 		822E20ED1BD9390E00F41211 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		82B4D6671BDE51C500FCA1C2 /* MCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLocationManager.h; sourceTree = "<group>"; };
 		82B4D6681BDE51C500FCA1C2 /* MCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLocationManager.m; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				4C30C3081BDF6D0500E6E2C5 /* MCWeatherBasic.m */,
 				4C30C30A1BDF6D1500E6E2C5 /* MCWeatherUpdate.h */,
 				4C30C30B1BDF6D1500E6E2C5 /* MCWeatherUpdate.m */,
+				822D2D571BDFB4AC00BB0CD1 /* MCWeatherNow.h */,
+				822D2D581BDFB4AC00BB0CD1 /* MCWeatherNow.m */,
 				4C30C30D1BDF6E7500E6E2C5 /* MCWeatherInfo.h */,
 				4C30C30E1BDF6E7500E6E2C5 /* MCWeatherInfo.m */,
 			);
@@ -537,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C30C2FA1BDF6BB900E6E2C5 /* MCWeatherCond.m in Sources */,
+				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
 				4C30C2F41BDF6B4000E6E2C5 /* MCWeatherSuggestion.m in Sources */,
 				4C30C30F1BDF6E7500E6E2C5 /* MCWeatherInfo.m in Sources */,
 				4C30C3061BDF6CEC00E6E2C5 /* MCWeatherTmp.m in Sources */,

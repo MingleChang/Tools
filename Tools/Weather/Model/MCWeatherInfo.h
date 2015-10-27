@@ -11,13 +11,14 @@
 #import "MCWeatherDayInfo.h"
 #import "MCWeatherHourInfo.h"
 #import "MCWeatherBasic.h"
+#import "MCWeatherNow.h"
 
 @interface MCWeatherInfo : NSObject
 
 @property(nonatomic,strong)MCWeatherBasic *weatherBasic;
 @property(nonatomic,copy)NSArray *weatherDays;
 @property(nonatomic,copy)NSArray *weatherHours;
-@property(nonatomic,strong)MCWeatherDayInfo *weatherNow;
+@property(nonatomic,strong)MCWeatherNow *weatherNow;
 @property(nonatomic,strong)MCWeatherSuggestion *weatherSuggestion;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dic;

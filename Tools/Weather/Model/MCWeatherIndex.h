@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MCWeatherIndex : NSObject
-@property(nonatomic,copy)NSString *brf;
-@property(nonatomic,copy)NSString *txt;
+@property(nonatomic,copy)NSString *brf;//指数简介
+@property(nonatomic,copy)NSString *txt;//指数详情
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

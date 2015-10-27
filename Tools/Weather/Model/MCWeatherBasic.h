@@ -12,12 +12,13 @@
 #import "MCWeatherUpdate.h"
 
 @interface MCWeatherBasic : NSObject
-@property(nonatomic,copy)NSString *city;
-@property(nonatomic,copy)NSString *cnty;
-@property(nonatomic,copy)NSString *cityid;
-@property(nonatomic,assign)CGFloat lat;
-@property(nonatomic,assign)CGFloat lon;
+@property(nonatomic,copy)NSString *city;//城市名称
+@property(nonatomic,copy)NSString *cnty;//国家名称
+@property(nonatomic,copy)NSString *cityid;//id 城市id
+@property(nonatomic,assign)CGFloat lat;//纬度
+@property(nonatomic,assign)CGFloat lon;//经度
 
-@property(nonatomic,strong)MCWeatherUpdate *updateTime;
+@property(nonatomic,strong)MCWeatherUpdate *updateTime;//数据更新时间，24小时制
+
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

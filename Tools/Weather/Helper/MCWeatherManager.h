@@ -10,9 +10,11 @@
 #import "MCWeatherInfo.h"
 
 typedef NS_ENUM(NSInteger,MCWeatherStatus){
+    WeatherStatusNone,
     WeatherStatusPositioning,
     WeatherStatusRequesting,
     WeatherStatusComplete,
+    WeatherStatusFailed,
 };
 
 @interface MCWeatherManager : NSObject

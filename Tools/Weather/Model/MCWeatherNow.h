@@ -1,21 +1,28 @@
 //
-//  MCWeatherHourInfo.h
+//  MCWeatherNow.h
 //  Tools
 //
-//  Created by cjw on 15/10/27.
+//  Created by 常峻玮 on 15/10/27.
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+#import "MCWeatherAstro.h"
+#import "MCWeatherCond.h"
+#import "MCWeatherTmp.h"
 #import "MCWeatherWind.h"
 
-@interface MCWeatherHourInfo : NSObject
+@interface MCWeatherNow : NSObject
+@property(nonatomic,strong)MCWeatherCond *weatherCond;//天气状况
 @property(nonatomic,strong)MCWeatherWind *weatherWind;//风力状况
-@property(nonatomic,strong)NSDate *dateTime;//当地日期和时间
 
 @property(nonatomic,copy)NSString *hum;//湿度（%）
-@property(nonatomic,copy)NSString *pop;//降水概率
+@property(nonatomic,copy)NSString *pcpn;//降雨量（mm）
 @property(nonatomic,copy)NSString *pres;//气压
+@property(nonatomic,copy)NSString *vis;//能见度
 @property(nonatomic,copy)NSString *tmp;//当前温度
+@property(nonatomic,copy)NSString *fl;//体感温度
+
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

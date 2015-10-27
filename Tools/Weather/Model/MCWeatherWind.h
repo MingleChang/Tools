@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface MCWeatherWind : NSObject
-@property(nonatomic,copy)NSString *deg;
-@property(nonatomic,copy)NSString *dir;
-@property(nonatomic,copy)NSString *sc;
-@property(nonatomic,copy)NSString *spd;
+@property(nonatomic,copy)NSString *deg;//风向（角度）
+@property(nonatomic,copy)NSString *dir;//风向（方向）
+@property(nonatomic,copy)NSString *sc;//风力等级
+@property(nonatomic,copy)NSString *spd;//风速
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30C2E71BDF0DF800E6E2C5 /* IPAddress.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
 		82273FD41BDB2A6100AFDEAF /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FC61BDB2A6100AFDEAF /* MCCollectionViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C30C2E61BDF0DF800E6E2C5 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		4C30C2E71BDF0DF800E6E2C5 /* IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
 		8205FE391BD68BB400EC838E /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8205FE3D1BD68BB400EC838E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8205FE481BD68BB500EC838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				82EFB7081BDC9AE7008A978C /* MingleChang */,
 				82B4D66F1BDE692100FCA1C2 /* APIStoreRequest.h */,
 				82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */,
+				4C30C2E61BDF0DF800E6E2C5 /* IPAddress.h */,
+				4C30C2E71BDF0DF800E6E2C5 /* IPAddress.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */,
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
+				4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */,
 				82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */,
 				82273FF11BDB395600AFDEAF /* MCWeatherViewController.m in Sources */,
 				82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MCWeatherInfo.h"
 
 typedef NS_ENUM(NSInteger,MCWeatherStatus){
     WeatherStatusPositioning,

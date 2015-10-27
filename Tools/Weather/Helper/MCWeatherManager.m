@@ -12,9 +12,10 @@
 #import "MCWeatherArea.h"
 #import "MCLocationManager.h"
 #import "MCAddress.h"
+#import "APIStoreRequest.h"
 
 @interface MCWeatherManager()
-
+@property(nonatomic,strong)NSURLSessionDataTask *sessionDataTask;
 @end
 
 @implementation MCWeatherManager
@@ -49,13 +50,27 @@
 -(void)updateWeatherInfo{
     [[MCLocationManager manager]requestAddress:^(MCAddress *address, BOOL isSuccess) {
         if (isSuccess) {
-            NSLog(@"%@",[self getCityIdBy:address]);
+            NSString *lCityId=[self getCityIdBy:address];
+            NSLog(@"%@",lCityId);
+            [self requestWeatherInfoWithCityId:lCityId];
         }else{
             NSLog(@"error");
         }
     }];
 }
-
+-(void)requestWeatherInfoWithCityId:(NSString *)cityid{
+    [self.sessionDataTask cancel];
+    NSURLRequest *lRequest=[APIStoreRequest getWeatherRequestWithCityId:cityid];
+    self.sessionDataTask=[[NSURLSession sharedSession]dataTaskWithRequest:lRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"weather error");
+        }else{
+            NSString *lString=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@",lString);
+        }
+    }];
+    [self.sessionDataTask resume];
+}
 -(NSString *)getCityIdBy:(MCAddress *)address{
     for (MCWeatherProvince *lProvince in self.cityList) {
         if ([address.province containsString:lProvince.name]) {

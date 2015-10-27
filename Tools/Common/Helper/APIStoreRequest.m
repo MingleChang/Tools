@@ -14,21 +14,21 @@
 
 @implementation APIStoreRequest
 +(NSURLRequest *)getWeatherRequestWithCityName:(NSString *)name{
-    NSString *lURLStr=[NSString stringWithFormat:@"%@&city=%@",WEATHER_URL,name];
+    NSString *lURLStr=[NSString stringWithFormat:@"%@?city=%@",WEATHER_URL,name];
     NSURL *lURL=[NSURL URLWithString:lURLStr];
     NSMutableURLRequest *lURLRequest=[NSMutableURLRequest requestWithURL:lURL];
     [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
     return [lURLRequest copy];
 }
 +(NSURLRequest *)getWeatherRequestWithCityId:(NSString *)cityid{
-    NSString *lURLStr=[NSString stringWithFormat:@"%@&cityid=%@",WEATHER_URL,cityid];
+    NSString *lURLStr=[NSString stringWithFormat:@"%@?cityid=%@",WEATHER_URL,cityid];
     NSURL *lURL=[NSURL URLWithString:lURLStr];
     NSMutableURLRequest *lURLRequest=[NSMutableURLRequest requestWithURL:lURL];
     [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
     return [lURLRequest copy];
 }
 +(NSURLRequest *)getWeatherRequestWithIP:(NSString *)cityIP{
-    NSString *lURLStr=[NSString stringWithFormat:@"%@&cityip=%@",WEATHER_URL,cityIP];
+    NSString *lURLStr=[NSString stringWithFormat:@"%@?cityip=%@",WEATHER_URL,cityIP];
     NSURL *lURL=[NSURL URLWithString:lURLStr];
     NSMutableURLRequest *lURLRequest=[NSMutableURLRequest requestWithURL:lURL];
     [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];

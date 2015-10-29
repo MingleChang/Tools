@@ -17,6 +17,17 @@
     return self;
 }
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+    if ([key isEqualToString:@"astro"]) {
+        self.weatherAstro=[[MCWeatherAstro alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"cond"]) {
+        self.weatherCond=[[MCWeatherCond alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"tmp"]) {
+        self.weatherTmp=[[MCWeatherTmp alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"wind"]) {
+        self.weatherWind=[[MCWeatherWind alloc]initWithDictionary:value];
+    }
 }
 @end

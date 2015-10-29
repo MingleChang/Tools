@@ -18,6 +18,8 @@
 #import "MCDevice.h"
 #import "MCHTTPConnection.h"
 #import "MCLocationManager.h"
+#import "MCStringExtension.h"
+#import "MCDateExtension.h"
 
 
 /***********自定义的打印方法*************/

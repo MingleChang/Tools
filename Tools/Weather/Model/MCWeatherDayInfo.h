@@ -19,7 +19,7 @@
 @property(nonatomic,strong)MCWeatherTmp *weatherTmp;//温度
 @property(nonatomic,strong)MCWeatherWind *weatherWind;//风力状况
 
-@property(nonatomic,strong)NSDate *weatherDate;//当地日期
+@property(nonatomic,copy)NSString *date;//当地日期
 
 @property(nonatomic,copy)NSString *hum;//湿度（%）
 @property(nonatomic,copy)NSString *pcpn;//降雨量（mm）

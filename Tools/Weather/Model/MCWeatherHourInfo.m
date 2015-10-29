@@ -17,6 +17,8 @@
     return self;
 }
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+    if ([key isEqualToString:@"wind"]) {
+        self.weatherWind=[[MCWeatherWind alloc]initWithDictionary:value];
+    }
 }
 @end

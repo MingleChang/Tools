@@ -7,6 +7,7 @@
 //
 
 #import "MCWeatherUpdate.h"
+#import "MingleChang.h"
 
 @implementation MCWeatherUpdate
 -(instancetype)initWithDictionary:(NSDictionary *)dic{

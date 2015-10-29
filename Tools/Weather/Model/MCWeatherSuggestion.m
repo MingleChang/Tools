@@ -17,6 +17,26 @@
     return self;
 }
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+    if ([key isEqualToString:@"comf"]) {
+        self.comfIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"cw"]) {
+        self.cwIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"drsg"]) {
+        self.drsgIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"flu"]) {
+        self.fluIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"sport"]) {
+        self.sportIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"trav"]) {
+        self.travIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
+    if ([key isEqualToString:@"uv"]) {
+        self.uvIndex=[[MCWeatherIndex alloc]initWithDictionary:value];
+    }
 }
 @end

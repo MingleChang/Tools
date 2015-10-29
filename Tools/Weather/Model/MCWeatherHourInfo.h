@@ -11,7 +11,7 @@
 
 @interface MCWeatherHourInfo : NSObject
 @property(nonatomic,strong)MCWeatherWind *weatherWind;//风力状况
-@property(nonatomic,strong)NSDate *dateTime;//当地日期和时间
+@property(nonatomic,copy)NSString *date;//当地日期和时间
 
 @property(nonatomic,copy)NSString *hum;//湿度（%）
 @property(nonatomic,copy)NSString *pop;//降水概率

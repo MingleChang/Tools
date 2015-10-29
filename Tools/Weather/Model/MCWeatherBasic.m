@@ -17,6 +17,11 @@
     return self;
 }
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+    if ([key isEqualToString:@"id"]) {
+        self.cityid=value;
+    }
+    if ([key isEqualToString:@"update"]) {
+        self.updateTime=[[MCWeatherUpdate alloc]initWithDictionary:value];
+    }
 }
 @end

@@ -65,8 +65,10 @@
         if (error) {
             NSLog(@"weather error");
         }else{
-            NSString *lString=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@",lString);
+            NSDictionary *lDic=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSArray *lArray=[lDic objectForKey:@"HeWeather data service 3.0"];
+            NSDictionary *lWeatherDic=[lArray objectAtIndex:0];
+            self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lWeatherDic];
         }
     }];
     [self.sessionDataTask resume];

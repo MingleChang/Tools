@@ -20,7 +20,7 @@
 @property(nonatomic,copy)NSString *hum;//湿度（%）
 @property(nonatomic,copy)NSString *pcpn;//降雨量（mm）
 @property(nonatomic,copy)NSString *pres;//气压
-@property(nonatomic,copy)NSString *vis;//能见度
+@property(nonatomic,copy)NSString *vis;//能见度(km)
 @property(nonatomic,copy)NSString *tmp;//当前温度
 @property(nonatomic,copy)NSString *fl;//体感温度
 

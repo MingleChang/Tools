@@ -27,6 +27,7 @@
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
+		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
 		82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */; };
 		82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FCA1BDB2A6100AFDEAF /* MCNavigationController.xib */; };
 		82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FCC1BDB2A6100AFDEAF /* MCTabBarController.m */; };
@@ -98,6 +99,7 @@
 		8205FE3D1BD68BB400EC838E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8205FE481BD68BB500EC838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8205FE4D1BD68BB500EC838E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		82273FC81BDB2A6100AFDEAF /* MCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNavigationController.h; sourceTree = "<group>"; };
 		82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNavigationController.m; sourceTree = "<group>"; };
 		82273FCA1BDB2A6100AFDEAF /* MCNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNavigationController.xib; sourceTree = "<group>"; };
@@ -250,9 +252,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		821166661BE265C0009227D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				821166671BE265D0009227D2 /* Root.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		82273FA91BDB297D00AFDEAF /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				821166661BE265C0009227D2 /* Resources */,
 				82273FE11BDB2A9900AFDEAF /* Controller */,
 			);
 			path = Root;
@@ -484,6 +495,7 @@
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,
 				82273FE61BDB2AB200AFDEAF /* MCRootViewController.xib in Resources */,
+				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				82EFB6F81BDC8DD1008A978C /* weather_citylist.json in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
 				82273FD91BDB2A6100AFDEAF /* MCTabBarController.xib in Resources */,

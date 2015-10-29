@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PI3-9F-hZr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="3eM-yH-7bV">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="PI3-9F-hZr" customClass="MCRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="je4-ti-laV"/>
+                        <viewControllerLayoutGuide type="bottom" id="8qL-PW-rck"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VhM-tV-56U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-64-eYO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBh-PZ-RfD">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25031672297297297" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Hsn-Sl-Qjf"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXS-W5-APR">
+                                <rect key="frame" x="0.0" y="20" width="320" height="348"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="usg-Nv-Kvf" kind="embed" id="jKS-ZL-Unj"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Spw-64-eYO" secondAttribute="trailing" id="668-5b-5De"/>
+                            <constraint firstItem="uXS-W5-APR" firstAttribute="leading" secondItem="VhM-tV-56U" secondAttribute="leading" id="9T3-oA-c43"/>
+                            <constraint firstItem="Spw-64-eYO" firstAttribute="leading" secondItem="VhM-tV-56U" secondAttribute="leading" id="CiX-UK-Fbs"/>
+                            <constraint firstItem="Spw-64-eYO" firstAttribute="top" secondItem="VhM-tV-56U" secondAttribute="top" id="Wij-2D-vc5"/>
+                            <constraint firstAttribute="bottom" secondItem="Spw-64-eYO" secondAttribute="bottom" id="cuj-C2-f4W"/>
+                            <constraint firstItem="UBh-PZ-RfD" firstAttribute="top" secondItem="uXS-W5-APR" secondAttribute="bottom" id="eDO-Ml-Nc6"/>
+                            <constraint firstItem="uXS-W5-APR" firstAttribute="top" secondItem="je4-ti-laV" secondAttribute="bottom" id="h8b-wd-X8c"/>
+                            <constraint firstAttribute="trailing" secondItem="UBh-PZ-RfD" secondAttribute="trailing" id="li4-Rf-2kw"/>
+                            <constraint firstAttribute="trailing" secondItem="uXS-W5-APR" secondAttribute="trailing" id="m5f-3d-P0X"/>
+                            <constraint firstItem="8qL-PW-rck" firstAttribute="top" secondItem="UBh-PZ-RfD" secondAttribute="bottom" id="rIy-an-2Aa"/>
+                            <constraint firstItem="UBh-PZ-RfD" firstAttribute="leading" secondItem="VhM-tV-56U" secondAttribute="leading" id="yo6-7q-hnW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="171"/>
+        </scene>
+        <!--MCRootWeatherViewController-->
+        <scene sceneID="Epc-qS-Lkz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" referencedIdentifier="MCRootWeatherViewController" id="usg-Nv-Kvf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OxR-Xi-ZiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374.5" y="-171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+    </resources>
+</document>

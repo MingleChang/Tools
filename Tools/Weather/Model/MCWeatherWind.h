@@ -12,6 +12,6 @@
 @property(nonatomic,copy)NSString *deg;//风向（角度）
 @property(nonatomic,copy)NSString *dir;//风向（方向）
 @property(nonatomic,copy)NSString *sc;//风力等级
-@property(nonatomic,copy)NSString *spd;//风速
+@property(nonatomic,copy)NSString *spd;//风速(Kmph)
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

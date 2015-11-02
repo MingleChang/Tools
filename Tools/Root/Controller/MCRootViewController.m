@@ -11,7 +11,7 @@
 #import "MingleChang.h"
 
 @interface MCRootViewController ()
-- (IBAction)buttonClick:(UIButton *)sender;
+
 
 @end
 
@@ -37,7 +37,4 @@
 }
 */
 
-- (IBAction)buttonClick:(UIButton *)sender {
-    [[MCWeatherManager manager]updateWeatherInfo];
-}
 @end

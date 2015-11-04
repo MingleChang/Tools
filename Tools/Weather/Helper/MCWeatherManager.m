@@ -31,6 +31,8 @@
     self=[super init];
     if (self) {
         [self setupCityList];
+        self.method=[[NSUserDefaults standardUserDefaults]integerForKey:WEATHER_METHOD_USERDEFAULT];
+        self.lastCityId=[[NSUserDefaults standardUserDefaults]stringForKey:LAST_CITY_ID_USERDEFAULT];
     }
     return self;
 }

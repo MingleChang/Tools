@@ -9,6 +9,10 @@
 #import "MCRootWeatherViewController.h"
 
 @interface MCRootWeatherViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
+@property (weak, nonatomic) IBOutlet UILabel *highTmpLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lowTmpLabel;
 
 @end
 
@@ -18,7 +22,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

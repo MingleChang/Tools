@@ -16,6 +16,7 @@
 
 @interface MCWeatherManager()
 @property(nonatomic,strong)NSURLSessionDataTask *sessionDataTask;
+@property(nonatomic,copy)WeatherResultBlock block;
 @end
 
 @implementation MCWeatherManager
@@ -48,7 +49,14 @@
     }
     self.cityList=lCityList;
 }
-
+-(void)updateWeatherInfo:(WeatherResultBlock)block{
+    self.block=block;
+    if (self.method==GetWeatherMethodSelected) {
+        self.block(WeatherStatusRequesting);
+    }else{
+        self.block(WeatherStatusPositioning);
+    }
+}
 -(void)updateWeatherInfo{
     [[MCLocationManager manager]requestAddress:^(MCAddress *address, BOOL isSuccess) {
         if (isSuccess) {

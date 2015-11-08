@@ -13,6 +13,9 @@
 #import "MCLocationManager.h"
 #import "MCAddress.h"
 #import "APIStoreRequest.h"
+#import "IPAddress.h"
+
+#define WEATHER_ROOT_KEY @"HeWeather data service 3.0"
 
 @interface MCWeatherManager()
 @property(nonatomic,strong)NSURLSessionDataTask *sessionDataTask;
@@ -52,21 +55,33 @@
 -(void)updateWeatherInfo:(WeatherResultBlock)block{
     self.block=block;
     if (self.method==GetWeatherMethodSelected) {
-        self.block(WeatherStatusRequesting);
+        if (self.block) {
+            self.block(WeatherStatusRequesting);
+        }
+        [self requestWeatherInfoWithCityId:self.lastCityId];
     }else{
-        self.block(WeatherStatusPositioning);
+        if (self.block) {
+            self.block(WeatherStatusPositioning);
+        }
+        [self locationAddress];
     }
 }
--(void)updateWeatherInfo{
+-(void)locationAddress{
     [[MCLocationManager manager]requestAddress:^(MCAddress *address, BOOL isSuccess) {
         if (isSuccess) {
+            if (self.block) {
+                self.block(WeatherStatusRequesting);
+            }
             NSString *lCityId=[self getCityIdBy:address];
-            NSLog(@"%@",lCityId);
             [self requestWeatherInfoWithCityId:lCityId];
         }else{
-            NSLog(@"error");
+            [self locationIPAddress];
         }
     }];
+}
+-(void)locationIPAddress{
+    NSString *lCityIP=[IPAddress getIPAddress];
+    [self requestWeatherInfoWithCityIP:lCityIP];
 }
 -(void)requestWeatherInfoWithCityId:(NSString *)cityid{
     [self.sessionDataTask cancel];
@@ -74,11 +89,38 @@
     self.sessionDataTask=[[NSURLSession sharedSession]dataTaskWithRequest:lRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"weather error");
+            if (self.block) {
+                self.block(WeatherStatusFailed);
+            }
         }else{
             NSDictionary *lDic=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            NSArray *lArray=[lDic objectForKey:@"HeWeather data service 3.0"];
+            NSArray *lArray=[lDic objectForKey:WEATHER_ROOT_KEY];
             NSDictionary *lWeatherDic=[lArray objectAtIndex:0];
             self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lWeatherDic];
+            if (self.block) {
+                self.block(WeatherStatusComplete);
+            }
+        }
+    }];
+    [self.sessionDataTask resume];
+}
+-(void)requestWeatherInfoWithCityIP:(NSString *)cityIP{
+    [self.sessionDataTask cancel];
+    NSURLRequest *lRequest=[APIStoreRequest getWeatherRequestWithIP:cityIP];
+    self.sessionDataTask=[[NSURLSession sharedSession]dataTaskWithRequest:lRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"weather error");
+            if (self.block) {
+                self.block(WeatherStatusFailed);
+            }
+        }else{
+            NSDictionary *lDic=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSArray *lArray=[lDic objectForKey:WEATHER_ROOT_KEY];
+            NSDictionary *lWeatherDic=[lArray objectAtIndex:0];
+            self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lWeatherDic];
+            if (self.block) {
+                self.block(WeatherStatusComplete);
+            }
         }
     }];
     [self.sessionDataTask resume];

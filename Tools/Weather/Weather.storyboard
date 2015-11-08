@@ -92,6 +92,7 @@
                         <outlet property="cityLabel" destination="oAn-sL-8eP" id="xmx-Sf-lRu"/>
                         <outlet property="highTmpLabel" destination="4ME-OZ-72u" id="oPu-q0-pz8"/>
                         <outlet property="lowTmpLabel" destination="AHb-bj-e5n" id="Am2-8z-2hK"/>
+                        <outlet property="timeLabel" destination="PH3-kY-r9B" id="7u7-bA-bf0"/>
                         <outlet property="tmpLabel" destination="5cD-t7-RDg" id="jB2-Yn-xOe"/>
                     </connections>
                 </viewController>

@@ -7,12 +7,13 @@
 //
 
 #import "MCRootWeatherViewController.h"
-
+#import "MCWeatherManager.h"
 @interface MCRootWeatherViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
 @property (weak, nonatomic) IBOutlet UILabel *highTmpLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lowTmpLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self configure];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -48,5 +49,47 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - Init Methods
+-(void)configure{
+    [self configureView];
+    [self configureData];
+}
+-(void)configureView{
+    
+}
+-(void)configureData{
+    [self resetWeatherInfo];
+    [[MCWeatherManager manager]updateWeatherInfo:^(MCWeatherStatus status) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            switch (status) {
+                case WeatherStatusNone:
+                    break;
+                case WeatherStatusPositioning:
+                    self.timeLabel.text=@"定位中...";
+                    break;
+                case WeatherStatusRequesting:
+                    self.timeLabel.text=@"更新中...";
+                    break;
+                case WeatherStatusComplete:
+                    [self resetWeatherInfo];
+                    break;
+                case WeatherStatusFailed:
+                    break;
+                default:
+                    break;
+            }
+        });
+    }];
+}
+-(void)resetWeatherInfo{
+    if ([MCWeatherManager manager].weatherInfo==nil) {
+        return;
+    }
+    MCWeatherDayInfo *lTodayWeather=[MCWeatherManager manager].weatherInfo.weatherDays[0];
+    self.cityLabel.text=[MCWeatherManager manager].weatherInfo.weatherBasic.city;
+    self.tmpLabel.text=[NSString stringWithFormat:@"%@°",[MCWeatherManager manager].weatherInfo.weatherNow.tmp];
+    self.highTmpLabel.text=[NSString stringWithFormat:@"%@°",lTodayWeather.weatherTmp.max];
+    self.lowTmpLabel.text=[NSString stringWithFormat:@"%@°",lTodayWeather.weatherTmp.min];
+    self.timeLabel.text=[MCWeatherManager manager].weatherInfo.weatherBasic.updateTime.loc;
+}
 @end

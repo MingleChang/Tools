@@ -25,4 +25,8 @@
 @property(nonatomic,copy)NSString *fl;//体感温度
 
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
+
+-(NSString *)displayHum;
+-(NSString *)displayTmp;
+-(NSString *)displayFl;
 @end

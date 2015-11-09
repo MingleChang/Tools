@@ -24,4 +24,14 @@
         self.weatherWind=[[MCWeatherWind alloc]initWithDictionary:value];
     }
 }
+
+-(NSString *)displayHum{
+    return [NSString stringWithFormat:@"%@%%",self.hum];
+}
+-(NSString *)displayTmp{
+    return [NSString stringWithFormat:@"%@°",self.tmp];
+}
+-(NSString *)displayFl{
+    return [NSString stringWithFormat:@"%@°",self.fl];
+}
 @end

@@ -14,6 +14,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *highTmpLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lowTmpLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *condLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windSCLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windDirLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humDesLabel;
 
 @end
 
@@ -58,7 +63,6 @@
     
 }
 -(void)configureData{
-    [self resetWeatherInfo];
     [[MCWeatherManager manager]updateWeatherInfo:^(MCWeatherStatus status) {
         dispatch_async(dispatch_get_main_queue(), ^{
             switch (status) {
@@ -80,6 +84,7 @@
             }
         });
     }];
+    [self resetWeatherInfo];
 }
 -(void)resetWeatherInfo{
     if ([MCWeatherManager manager].weatherInfo==nil) {
@@ -87,9 +92,14 @@
     }
     MCWeatherDayInfo *lTodayWeather=[MCWeatherManager manager].weatherInfo.weatherDays[0];
     self.cityLabel.text=[MCWeatherManager manager].weatherInfo.weatherBasic.city;
-    self.tmpLabel.text=[NSString stringWithFormat:@"%@°",[MCWeatherManager manager].weatherInfo.weatherNow.tmp];
-    self.highTmpLabel.text=[NSString stringWithFormat:@"%@°",lTodayWeather.weatherTmp.max];
-    self.lowTmpLabel.text=[NSString stringWithFormat:@"%@°",lTodayWeather.weatherTmp.min];
+    self.tmpLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.displayTmp;
+    self.highTmpLabel.text=lTodayWeather.weatherTmp.displayMax;
+    self.lowTmpLabel.text=lTodayWeather.weatherTmp.displayMin;
     self.timeLabel.text=[MCWeatherManager manager].weatherInfo.weatherBasic.updateTime.loc;
+    self.condLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.weatherCond.txt;
+    self.windSCLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.weatherWind.displaySc;
+    self.windDirLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.weatherWind.dir;
+    self.humLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.displayHum;
+    self.humDesLabel.text=@"湿度";
 }
 @end

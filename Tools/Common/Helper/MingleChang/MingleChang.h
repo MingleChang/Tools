@@ -20,6 +20,8 @@
 #import "MCLocationManager.h"
 #import "MCStringExtension.h"
 #import "MCDateExtension.h"
+#import "MCCacheManager.h"
+#import "MCFilePath.h"
 
 
 /***********自定义的打印方法*************/

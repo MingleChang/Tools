@@ -25,6 +25,8 @@
 		4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C30C3151BDF767900E6E2C5 /* MCTableViewController.xib */; };
 		4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */; };
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
+		82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E881BF0EE38002FC16C /* MCCacheManager.m */; };
+		82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E8B1BF0EFB4002FC16C /* MCFilePath.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
@@ -94,6 +96,10 @@
 		4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringExtension.m; sourceTree = "<group>"; };
 		4C57B6AE1BE203B50091E2EF /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
 		4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
+		82022E871BF0EE38002FC16C /* MCCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCacheManager.h; sourceTree = "<group>"; };
+		82022E881BF0EE38002FC16C /* MCCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCacheManager.m; sourceTree = "<group>"; };
+		82022E8A1BF0EFB4002FC16C /* MCFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFilePath.h; sourceTree = "<group>"; };
+		82022E8B1BF0EFB4002FC16C /* MCFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFilePath.m; sourceTree = "<group>"; };
 		8205FE391BD68BB400EC838E /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8205FE3D1BD68BB400EC838E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8205FE481BD68BB500EC838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -390,6 +396,10 @@
 		82EFB7081BDC9AE7008A978C /* MingleChang */ = {
 			isa = PBXGroup;
 			children = (
+				82022E8A1BF0EFB4002FC16C /* MCFilePath.h */,
+				82022E8B1BF0EFB4002FC16C /* MCFilePath.m */,
+				82022E871BF0EE38002FC16C /* MCCacheManager.h */,
+				82022E881BF0EE38002FC16C /* MCCacheManager.m */,
 				82B4D66C1BDE641300FCA1C2 /* MCAddress.h */,
 				82B4D66D1BDE641300FCA1C2 /* MCAddress.m */,
 				82B4D6671BDE51C500FCA1C2 /* MCLocationManager.h */,
@@ -580,10 +590,12 @@
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,
 				4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */,
+				82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */,
 				4C30C3161BDF767900E6E2C5 /* MCCollectionViewController.m in Sources */,
 				82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */,
 				82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */,
 				4C30C2F71BDF6B7200E6E2C5 /* MCWeatherWind.m in Sources */,
+				82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */,
 				82EFB72A1BDC9AE7008A978C /* MCDrawImage.m in Sources */,
 				82EFB72C1BDC9AE7008A978C /* MCImageExtension.m in Sources */,
 				4C30C3091BDF6D0500E6E2C5 /* MCWeatherBasic.m in Sources */,

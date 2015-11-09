@@ -38,6 +38,6 @@ typedef void (^WeatherResultBlock)(MCWeatherStatus status);
 @property(nonatomic,strong)MCWeatherInfo *weatherInfo;
 
 +(MCWeatherManager *)manager;
--(void)updateWeatherInfo;
+
 -(void)updateWeatherInfo:(WeatherResultBlock)block;
 @end

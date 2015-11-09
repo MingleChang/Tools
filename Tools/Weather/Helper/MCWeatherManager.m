@@ -14,8 +14,11 @@
 #import "MCAddress.h"
 #import "APIStoreRequest.h"
 #import "IPAddress.h"
+#import "MingleChang.h"
 
 #define WEATHER_ROOT_KEY @"HeWeather data service 3.0"
+
+#define EXPIRE_TIME 60*60
 
 @interface MCWeatherManager()
 @property(nonatomic,strong)NSURLSessionDataTask *sessionDataTask;
@@ -52,7 +55,34 @@
     }
     self.cityList=lCityList;
 }
+-(void)cacheWeatherInfo:(NSDictionary *)dic{
+    NSString *lFileName=[NSString stringWithFormat:@"tmp-%@",self.weatherInfo.weatherBasic.cityid];
+    [MCCacheManager cacheObject:dic toFile:lFileName expireTime:EXPIRE_TIME];
+    [[NSUserDefaults standardUserDefaults]setInteger:self.method forKey:WEATHER_METHOD_USERDEFAULT];
+    [[NSUserDefaults standardUserDefaults]setObject:self.weatherInfo.weatherBasic.cityid forKey:LAST_CITY_ID_USERDEFAULT];
+    self.lastCityId=self.weatherInfo.weatherBasic.cityid;
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
+-(BOOL)needUpdateAfterReadLocal{
+    if (self.lastCityId.length==0) {
+        return YES;
+    }
+    NSString *lCacheName=[NSString stringWithFormat:@"tmp-%@",self.lastCityId];
+    MCCache *lCache=[MCCacheManager getCacheByFile:lCacheName];
+    if (lCache==nil) {
+        return YES;
+    }
+    NSDictionary *lDic=(NSDictionary *)lCache.object;
+    if (![lDic isKindOfClass:[NSDictionary class]]) {
+        return YES;
+    }
+    self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lDic];
+    return lCache.expire;
+}
 -(void)updateWeatherInfo:(WeatherResultBlock)block{
+    if (![self needUpdateAfterReadLocal]) {
+        return;
+    }
     self.block=block;
     if (self.method==GetWeatherMethodSelected) {
         if (self.block) {
@@ -73,13 +103,22 @@
                 self.block(WeatherStatusRequesting);
             }
             NSString *lCityId=[self getCityIdBy:address];
+            self.method=GetWeatherMethodLocal;
             [self requestWeatherInfoWithCityId:lCityId];
         }else{
-            [self locationIPAddress];
+            if (self.method==GetWeatherMethodLocal) {
+                if (self.block) {
+                    self.block(WeatherStatusRequesting);
+                }
+                [self requestWeatherInfoWithCityId:self.lastCityId];
+            }else{
+                [self locationIPAddress];
+            }
         }
     }];
 }
 -(void)locationIPAddress{
+    self.method=GetWeatherMethodIP;
     NSString *lCityIP=[IPAddress getIPAddress];
     [self requestWeatherInfoWithCityIP:lCityIP];
 }
@@ -97,6 +136,7 @@
             NSArray *lArray=[lDic objectForKey:WEATHER_ROOT_KEY];
             NSDictionary *lWeatherDic=[lArray objectAtIndex:0];
             self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lWeatherDic];
+            [self cacheWeatherInfo:lWeatherDic];
             if (self.block) {
                 self.block(WeatherStatusComplete);
             }
@@ -118,6 +158,7 @@
             NSArray *lArray=[lDic objectForKey:WEATHER_ROOT_KEY];
             NSDictionary *lWeatherDic=[lArray objectAtIndex:0];
             self.weatherInfo=[[MCWeatherInfo alloc]initWithDictionary:lWeatherDic];
+            [self cacheWeatherInfo:lWeatherDic];
             if (self.block) {
                 self.block(WeatherStatusComplete);
             }

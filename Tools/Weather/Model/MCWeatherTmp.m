@@ -19,4 +19,11 @@
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
+
+-(NSString *)displayMax{
+    return [NSString stringWithFormat:@"%@°",self.max];
+}
+-(NSString *)displayMin{
+    return [NSString stringWithFormat:@"%@°",self.min];
+}
 @end

@@ -12,4 +12,7 @@
 @property(nonatomic,copy)NSString *max;//最高温度
 @property(nonatomic,copy)NSString *min;//最低温度
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
+
+-(NSString *)displayMax;
+-(NSString *)displayMin;
 @end

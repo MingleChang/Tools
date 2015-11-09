@@ -19,4 +19,8 @@
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
+
+-(NSString *)displaySc{
+    return [NSString stringWithFormat:@"%@级",self.sc];
+}
 @end

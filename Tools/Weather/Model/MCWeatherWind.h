@@ -14,4 +14,7 @@
 @property(nonatomic,copy)NSString *sc;//风力等级
 @property(nonatomic,copy)NSString *spd;//风速(Kmph)
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
+
+-(NSString *)displaySc;
+
 @end

@@ -25,6 +25,7 @@
 		4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C30C3151BDF767900E6E2C5 /* MCTableViewController.xib */; };
 		4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */; };
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
+		4C8109771BF1D27D00B5508D /* MCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8109761BF1D27D00B5508D /* MCDate.m */; };
 		82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E881BF0EE38002FC16C /* MCCacheManager.m */; };
 		82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E8B1BF0EFB4002FC16C /* MCFilePath.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
@@ -96,6 +97,8 @@
 		4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringExtension.m; sourceTree = "<group>"; };
 		4C57B6AE1BE203B50091E2EF /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
 		4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
+		4C8109751BF1D27D00B5508D /* MCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDate.h; sourceTree = "<group>"; };
+		4C8109761BF1D27D00B5508D /* MCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDate.m; sourceTree = "<group>"; };
 		82022E871BF0EE38002FC16C /* MCCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCacheManager.h; sourceTree = "<group>"; };
 		82022E881BF0EE38002FC16C /* MCCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCacheManager.m; sourceTree = "<group>"; };
 		82022E8A1BF0EFB4002FC16C /* MCFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFilePath.h; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 		82EFB7081BDC9AE7008A978C /* MingleChang */ = {
 			isa = PBXGroup;
 			children = (
+				4C8109751BF1D27D00B5508D /* MCDate.h */,
+				4C8109761BF1D27D00B5508D /* MCDate.m */,
 				82022E8A1BF0EFB4002FC16C /* MCFilePath.h */,
 				82022E8B1BF0EFB4002FC16C /* MCFilePath.m */,
 				82022E871BF0EE38002FC16C /* MCCacheManager.h */,
@@ -571,6 +576,7 @@
 			files = (
 				4C30C2FA1BDF6BB900E6E2C5 /* MCWeatherCond.m in Sources */,
 				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
+				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
 				4C30C2F41BDF6B4000E6E2C5 /* MCWeatherSuggestion.m in Sources */,
 				4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */,
 				4C30C30F1BDF6E7500E6E2C5 /* MCWeatherInfo.m in Sources */,

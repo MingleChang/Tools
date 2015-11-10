@@ -1,0 +1,28 @@
+[
+  {
+    "cateId": 1,
+    "name": "常用工具",
+    "tools": [
+      {
+        "toolId": 100,
+        "name": "手电筒",
+        "type": 0,
+        "image": "",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "cateId": 2,
+    "name": "生活查询",
+    "tools": [
+      {
+        "toolId": 200,
+        "name": "汇率查询",
+        "type": 0,
+        "image": "",
+        "url": ""
+      }
+    ]
+  }
+]

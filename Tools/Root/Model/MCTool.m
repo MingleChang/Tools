@@ -19,4 +19,16 @@
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
+
+#pragma mark - Setter And Getter
+-(UIImage *)localImage{
+    switch (self.toolId) {
+        case MCToolIDTorch:
+            return [UIImage imageNamed:@"root_torch"];
+            break;
+        default:
+            return [UIImage imageNamed:@"tool_default"];
+            break;
+    }
+}
 @end

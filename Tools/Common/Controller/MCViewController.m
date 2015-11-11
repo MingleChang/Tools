@@ -16,16 +16,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self resetNavigationBarItems];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self resetNavigationBar];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+#pragma mark - Base Motheds
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+-(void)resetNavigationBarItems{
+    UIBarButtonItem *lBackBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStyleDone target:self action:@selector(backBarButtonItemClick:)];
+    self.navigationItem.leftBarButtonItem=lBackBarButtonItem;
 }
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Event Response
+-(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /*
 #pragma mark - Navigation

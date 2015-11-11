@@ -6,8 +6,8 @@
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
+@class MCTool;
 @interface MCToolManager : NSObject
 @property(nonatomic,copy)NSArray *toolsInfo;
 +(MCToolManager *)manager;

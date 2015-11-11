@@ -40,7 +40,17 @@
 +(BOOL)isRetina{
     return ([UIScreen mainScreen].scale>=2.0);
 }
++(CGSize)screenSize{
+    return [UIScreen mainScreen].bounds.size;
+}
++(CGFloat)screenWidth{
+    return [UIScreen mainScreen].bounds.size.width;
+}
++(CGFloat)screenHeight{
+    return [UIScreen mainScreen].bounds.size.height;
+}
 
+#pragma mark - First View Controller
 +(UIViewController *)getAppFrontViewController{
     UIViewController *result = nil;
     UIWindow * window = [self getAppFrontWindow];

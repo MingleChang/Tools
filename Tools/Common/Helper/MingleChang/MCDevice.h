@@ -62,6 +62,24 @@
  */
 +(BOOL)isRetina;
 /*
+ 获取屏幕尺寸
+ 参数：N/A
+ 返回值：CGFloat，返回屏幕尺寸
+ */
++(CGSize)screenSize;
+/*
+ 获取屏幕宽度
+ 参数：N/A
+ 返回值：CGFloat，返回屏幕宽度
+ */
++(CGFloat)screenWidth;
+/*
+ 获取屏幕高度
+ 参数：N/A
+ 返回值：CGFloat，返回屏幕宽度
+ */
++(CGFloat)screenHeight;
+/*
  获取应用正在用于显示的ViewController
  参数：N/A
  返回值：UIViewController，返回对应的视图控制器

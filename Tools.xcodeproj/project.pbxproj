@@ -28,6 +28,12 @@
 		4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */; };
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
 		4C8109771BF1D27D00B5508D /* MCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8109761BF1D27D00B5508D /* MCDate.m */; };
+		4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */; };
+		4CD06AEF1BF33B4A0065E215 /* MCFlashlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */; };
+		4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */; };
+		4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */; };
+		4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */; };
+		4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF91BF33BD00065E215 /* Mirror.storyboard */; };
 		82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E881BF0EE38002FC16C /* MCCacheManager.m */; };
 		82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E8B1BF0EFB4002FC16C /* MCFilePath.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
@@ -108,6 +114,14 @@
 		4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
 		4C8109751BF1D27D00B5508D /* MCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDate.h; sourceTree = "<group>"; };
 		4C8109761BF1D27D00B5508D /* MCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDate.m; sourceTree = "<group>"; };
+		4CD06AEB1BF33B4A0065E215 /* MCFlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFlashlightViewController.h; sourceTree = "<group>"; };
+		4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFlashlightViewController.m; sourceTree = "<group>"; };
+		4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCFlashlightViewController.xib; sourceTree = "<group>"; };
+		4CD06AF01BF33B5C0065E215 /* MCMirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMirrorViewController.h; sourceTree = "<group>"; };
+		4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMirrorViewController.m; sourceTree = "<group>"; };
+		4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMirrorViewController.xib; sourceTree = "<group>"; };
+		4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flashlight.storyboard; sourceTree = "<group>"; };
+		4CD06AF91BF33BD00065E215 /* Mirror.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mirror.storyboard; sourceTree = "<group>"; };
 		82022E871BF0EE38002FC16C /* MCCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCacheManager.h; sourceTree = "<group>"; };
 		82022E881BF0EE38002FC16C /* MCCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCacheManager.m; sourceTree = "<group>"; };
 		82022E8A1BF0EFB4002FC16C /* MCFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFilePath.h; sourceTree = "<group>"; };
@@ -243,6 +257,60 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4CD06AE71BF33B020065E215 /* Flashlight */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AF51BF33B810065E215 /* Resources */,
+				4CD06AE81BF33B020065E215 /* ViewController */,
+			);
+			path = Flashlight;
+			sourceTree = "<group>";
+		};
+		4CD06AE81BF33B020065E215 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AEB1BF33B4A0065E215 /* MCFlashlightViewController.h */,
+				4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */,
+				4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4CD06AE91BF33B020065E215 /* Mirror */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AF61BF33B940065E215 /* Resources */,
+				4CD06AEA1BF33B020065E215 /* ViewController */,
+			);
+			path = Mirror;
+			sourceTree = "<group>";
+		};
+		4CD06AEA1BF33B020065E215 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AF01BF33B5C0065E215 /* MCMirrorViewController.h */,
+				4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */,
+				4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4CD06AF51BF33B810065E215 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CD06AF61BF33B940065E215 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AF91BF33BD00065E215 /* Mirror.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8205FE301BD68BB400EC838E = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +335,8 @@
 				822E20F11BD9394F00F41211 /* Common */,
 				82273FA91BDB297D00AFDEAF /* Root */,
 				82273FE91BDB347800AFDEAF /* Weather */,
+				4CD06AE71BF33B020065E215 /* Flashlight */,
+				4CD06AE91BF33B020065E215 /* Mirror */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
@@ -553,12 +623,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
+				4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */,
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,
+				4CD06AEF1BF33B4A0065E215 /* MCFlashlightViewController.xib in Resources */,
 				82273FE61BDB2AB200AFDEAF /* MCRootViewController.xib in Resources */,
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
+				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
 				82EFB6F81BDC8DD1008A978C /* weather_citylist.json in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
@@ -646,6 +720,7 @@
 				82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */,
 				82EFB72B1BDC9AE7008A978C /* MCHTTPConnection.m in Sources */,
 				82EFB7281BDC9AE7008A978C /* MCDevice.m in Sources */,
+				4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */,
 				82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */,
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
@@ -668,6 +743,7 @@
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
+				4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

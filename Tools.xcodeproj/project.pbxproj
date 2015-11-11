@@ -45,6 +45,7 @@
 		820935CF1BF2341500F032AA /* MCCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCCate.m */; };
 		820935D21BF2342300F032AA /* MCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935D11BF2342300F032AA /* MCTool.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
+		821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 821FF0B71BF398C200EBC169 /* dream.sqlite */; };
 		82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */; };
 		82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FCA1BDB2A6100AFDEAF /* MCNavigationController.xib */; };
 		82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FCC1BDB2A6100AFDEAF /* MCTabBarController.m */; };
@@ -141,6 +142,7 @@
 		820935D01BF2342300F032AA /* MCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTool.h; sourceTree = "<group>"; };
 		820935D11BF2342300F032AA /* MCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTool.m; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		821FF0B71BF398C200EBC169 /* dream.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dream.sqlite; sourceTree = "<group>"; };
 		82273FC81BDB2A6100AFDEAF /* MCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNavigationController.h; sourceTree = "<group>"; };
 		82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNavigationController.m; sourceTree = "<group>"; };
 		82273FCA1BDB2A6100AFDEAF /* MCNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNavigationController.xib; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				82273FE91BDB347800AFDEAF /* Weather */,
 				4CD06AE71BF33B020065E215 /* Flashlight */,
 				4CD06AE91BF33B020065E215 /* Mirror */,
+				821FF0B51BF398B400EBC169 /* Dream */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
@@ -394,6 +397,22 @@
 			children = (
 				821166671BE265D0009227D2 /* Root.storyboard */,
 				820935CB1BF2340100F032AA /* tools.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		821FF0B51BF398B400EBC169 /* Dream */ = {
+			isa = PBXGroup;
+			children = (
+				821FF0B61BF398B400EBC169 /* Resources */,
+			);
+			path = Dream;
+			sourceTree = "<group>";
+		};
+		821FF0B61BF398B400EBC169 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				821FF0B71BF398C200EBC169 /* dream.sqlite */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -625,6 +644,7 @@
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
+				821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */,
 				4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */,
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,

@@ -10,6 +10,12 @@
 typedef NS_ENUM(NSInteger,MCToolID){
     MCToolIDFlashlight=100,
     MCToolIDMirror=101,
+    MCToolIDDream=102,
+    MCToolIDCompass=103,
+    MCToolIDNotepad=104,
+    MCToolIDSizeControl=105,
+    MCToolIDBirthday=106,
+    MCToolIDReciprocalDay=107,
     MCToolIDCurrency=200,
 };
 typedef NS_ENUM(NSInteger,MCToolType){
@@ -24,5 +30,6 @@ typedef NS_ENUM(NSInteger,MCToolType){
 @property(nonatomic,copy)NSString *url;
 
 @property(nonatomic,strong,readonly)UIImage *localImage;
+@property(nonatomic,copy,readonly)NSString *segueId;
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

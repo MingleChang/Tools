@@ -12,4 +12,5 @@
 -(void)resetNavigationBar;
 -(void)resetNavigationBarItems;
 -(void)backBarButtonItemClick:(UIBarButtonItem *)sender;
+-(IBAction)backClick:(id)sender;
 @end

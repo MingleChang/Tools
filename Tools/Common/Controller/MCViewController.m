@@ -39,7 +39,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 -(void)resetNavigationBarItems{
-    UIBarButtonItem *lBackBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStyleDone target:self action:@selector(backBarButtonItemClick:)];
+    UIBarButtonItem *lBackBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_arrow_left"] style:UIBarButtonItemStyleDone target:self action:@selector(backBarButtonItemClick:)];
     self.navigationItem.leftBarButtonItem=lBackBarButtonItem;
 }
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -49,6 +49,9 @@
 
 #pragma mark - Event Response
 -(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(IBAction)backClick:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
 /*

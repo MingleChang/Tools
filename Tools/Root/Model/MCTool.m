@@ -22,17 +22,47 @@
 
 #pragma mark - Setter And Getter
 -(UIImage *)localImage{
-    return [UIImage imageNamed:@"tool_default"];
-//    switch (self.toolId) {
-//        case MCToolIDFlashlight:
-//            return [UIImage imageNamed:@"root_flashlight"];
-//            break;
-//        case MCToolIDMirror:
-//            return [UIImage imageNamed:@"root_mirror"];
-//            break;
-//        default:
-//            return [UIImage imageNamed:@"tool_default"];
-//            break;
-//    }
+    switch (self.toolId) {
+        case MCToolIDFlashlight:
+            return [UIImage imageNamed:@"tool_flashlight"];
+            break;
+        case MCToolIDMirror:
+            return [UIImage imageNamed:@"tool_mirror"];
+            break;
+        case MCToolIDDream:
+            return [UIImage imageNamed:@"tool_dream"];
+            break;
+        case MCToolIDCompass:
+            return [UIImage imageNamed:@"tool_compass"];
+            break;
+        case MCToolIDNotepad:
+            return [UIImage imageNamed:@"tool_notepad"];
+            break;
+        case MCToolIDSizeControl:
+            return [UIImage imageNamed:@"tool_sizecontrol"];
+            break;
+        case MCToolIDBirthday:
+            return [UIImage imageNamed:@"tool_birthday"];
+            break;
+        case MCToolIDReciprocalDay:
+            return [UIImage imageNamed:@"tool_reciprocalday"];
+            break;
+        default:
+            return [UIImage imageNamed:@"tool_default"];
+            break;
+    }
+}
+-(NSString *)segueId{
+    switch (self.toolId) {
+        case MCToolIDFlashlight:
+            return @"MCFlashlightViewController";
+            break;
+        case MCToolIDMirror:
+            return @"MCMirrorViewController";
+            break;
+        default:
+            return @"MCFlashlightViewController";
+            break;
+    }
 }
 @end

@@ -12,10 +12,12 @@
 #import "MCTool.h"
 #import "MCToolCell.h"
 #import "MingleChang.h"
+#import "MCRootChooseView.h"
 
 #define TOOL_CELL_ID @"MCToolCell"
 
-@interface MCRootViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface MCRootViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,MCRootChooseViewDelegate>
+@property (weak, nonatomic) IBOutlet MCRootChooseView *chooseView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -35,25 +37,34 @@
 -(void)resetNavigationBar{
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
-
+-(void)openTool:(MCTool *)tool{
+    MCLOG(@"%@",tool.name);
+    [self performSegueWithIdentifier:tool.segueId sender:nil];
+}
 #pragma mark - Delegate
 #pragma mark - CollectionView DataSource
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    MCCate *lCate=[MCToolManager manager].toolsInfo[0];
+    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
     return lCate.allTools.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row=[indexPath row];
-    MCCate *lCate=[MCToolManager manager].toolsInfo[0];
+    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
     MCTool *lTool=lCate.allTools[row];
     MCToolCell *lCell=[collectionView dequeueReusableCellWithReuseIdentifier:TOOL_CELL_ID forIndexPath:indexPath];
     [lCell setupTool:lTool];
     return lCell;
 }
 #pragma mark - CollectionView Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
+    MCTool *lTool=lCate.allTools[row];
+    [self openTool:lTool];
+}
 #pragma mark - UICollectionViewFlowLayout Delegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat side=[MCDevice screenWidth]/4;
@@ -74,6 +85,11 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
     return CGSizeZero;
 }
+#pragma mark - RootChooseView Delegate
+-(void)rootChooseView:(MCRootChooseView *)chooseView selectedIndex:(NSInteger)index{
+    [self.collectionView reloadData];
+    [self.collectionView setContentOffset:CGPointZero];
+}
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];
@@ -83,7 +99,8 @@
     
 }
 -(void)configureData{
-    
+    NSArray *lTitles=[[MCToolManager manager].toolsInfo valueForKey:@"name"];
+    [self.chooseView setupAllTitles:lTitles];
 }
 /*
 #pragma mark - Navigation

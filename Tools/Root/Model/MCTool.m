@@ -22,13 +22,17 @@
 
 #pragma mark - Setter And Getter
 -(UIImage *)localImage{
-    switch (self.toolId) {
-        case MCToolIDTorch:
-            return [UIImage imageNamed:@"root_torch"];
-            break;
-        default:
-            return [UIImage imageNamed:@"tool_default"];
-            break;
-    }
+    return [UIImage imageNamed:@"tool_default"];
+//    switch (self.toolId) {
+//        case MCToolIDFlashlight:
+//            return [UIImage imageNamed:@"root_flashlight"];
+//            break;
+//        case MCToolIDMirror:
+//            return [UIImage imageNamed:@"root_mirror"];
+//            break;
+//        default:
+//            return [UIImage imageNamed:@"tool_default"];
+//            break;
+//    }
 }
 @end

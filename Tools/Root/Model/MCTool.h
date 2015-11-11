@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSInteger,MCToolID){
-    MCToolIDTorch=100,
+    MCToolIDFlashlight=100,
+    MCToolIDMirror=101,
     MCToolIDCurrency=200,
 };
 typedef NS_ENUM(NSInteger,MCToolType){

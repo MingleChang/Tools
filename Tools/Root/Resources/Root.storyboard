@@ -166,11 +166,22 @@
                     <navigationItem key="navigationItem" id="DDz-ko-EUM"/>
                     <connections>
                         <outlet property="collectionView" destination="zk6-Ng-BvM" id="rLg-Gh-eDs"/>
+                        <segue destination="TLY-yS-h6M" kind="push" identifier="MCMirrorViewController" id="499-QI-czj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18" y="171"/>
+        </scene>
+        <!--MCMirrorViewController-->
+        <scene sceneID="pmx-TG-GQm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mirror" referencedIdentifier="MCMirrorViewController" id="TLY-yS-h6M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nnQ-yB-11a"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erQ-GA-PVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="198"/>
         </scene>
         <!--MCRootWeatherViewController-->
         <scene sceneID="Epc-qS-Lkz">

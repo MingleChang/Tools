@@ -34,6 +34,8 @@
 		4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */; };
 		4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */; };
 		4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF91BF33BD00065E215 /* Mirror.storyboard */; };
+		4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AFC1BF344220065E215 /* Weather.storyboard */; };
+		4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AFD1BF344220065E215 /* weather_citylist.json */; };
 		82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E881BF0EE38002FC16C /* MCCacheManager.m */; };
 		82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 82022E8B1BF0EFB4002FC16C /* MCFilePath.m */; };
 		8205FE3E1BD68BB400EC838E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8205FE3D1BD68BB400EC838E /* main.m */; };
@@ -61,12 +63,10 @@
 		82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */; };
 		82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66D1BDE641300FCA1C2 /* MCAddress.m */; };
 		82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */; };
-		82EFB6F81BDC8DD1008A978C /* weather_citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 82EFB6F71BDC8DD1008A978C /* weather_citylist.json */; };
 		82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */; };
 		82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FD1BDC8E5B008A978C /* MCWeatherCity.m */; };
 		82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB7001BDC8E6E008A978C /* MCWeatherArea.m */; };
 		82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB7031BDC91EE008A978C /* MCWeatherManager.m */; };
-		82EFB7061BDC9209008A978C /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EFB7051BDC9209008A978C /* Weather.storyboard */; };
 		82EFB7281BDC9AE7008A978C /* MCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB7161BDC9AE7008A978C /* MCDevice.m */; };
 		82EFB72A1BDC9AE7008A978C /* MCDrawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB71A1BDC9AE7008A978C /* MCDrawImage.m */; };
 		82EFB72B1BDC9AE7008A978C /* MCHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB71C1BDC9AE7008A978C /* MCHTTPConnection.m */; };
@@ -122,6 +122,8 @@
 		4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMirrorViewController.xib; sourceTree = "<group>"; };
 		4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flashlight.storyboard; sourceTree = "<group>"; };
 		4CD06AF91BF33BD00065E215 /* Mirror.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mirror.storyboard; sourceTree = "<group>"; };
+		4CD06AFC1BF344220065E215 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		4CD06AFD1BF344220065E215 /* weather_citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather_citylist.json; sourceTree = "<group>"; };
 		82022E871BF0EE38002FC16C /* MCCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCacheManager.h; sourceTree = "<group>"; };
 		82022E881BF0EE38002FC16C /* MCCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCacheManager.m; sourceTree = "<group>"; };
 		82022E8A1BF0EFB4002FC16C /* MCFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFilePath.h; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 		82B4D66D1BDE641300FCA1C2 /* MCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAddress.m; sourceTree = "<group>"; };
 		82B4D66F1BDE692100FCA1C2 /* APIStoreRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreRequest.h; sourceTree = "<group>"; };
 		82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIStoreRequest.m; sourceTree = "<group>"; };
-		82EFB6F71BDC8DD1008A978C /* weather_citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather_citylist.json; sourceTree = "<group>"; };
 		82EFB6F91BDC8E4B008A978C /* MCWeatherProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherProvince.h; sourceTree = "<group>"; };
 		82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherProvince.m; sourceTree = "<group>"; };
 		82EFB6FC1BDC8E5B008A978C /* MCWeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherCity.h; sourceTree = "<group>"; };
@@ -176,7 +177,6 @@
 		82EFB7001BDC8E6E008A978C /* MCWeatherArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherArea.m; sourceTree = "<group>"; };
 		82EFB7021BDC91EE008A978C /* MCWeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherManager.h; sourceTree = "<group>"; };
 		82EFB7031BDC91EE008A978C /* MCWeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherManager.m; sourceTree = "<group>"; };
-		82EFB7051BDC9209008A978C /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		82EFB7151BDC9AE7008A978C /* MCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDevice.h; sourceTree = "<group>"; };
 		82EFB7161BDC9AE7008A978C /* MCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDevice.m; sourceTree = "<group>"; };
 		82EFB7191BDC9AE7008A978C /* MCDrawImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDrawImage.h; sourceTree = "<group>"; };
@@ -311,6 +311,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4CD06AFB1BF344220065E215 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CD06AFC1BF344220065E215 /* Weather.storyboard */,
+				4CD06AFD1BF344220065E215 /* weather_citylist.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8205FE301BD68BB400EC838E = {
 			isa = PBXGroup;
 			children = (
@@ -431,11 +440,10 @@
 		82273FE91BDB347800AFDEAF /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				82EFB6F61BDC8DB8008A978C /* Resources */,
+				4CD06AFB1BF344220065E215 /* Resources */,
 				82273FEA1BDB347800AFDEAF /* Controller */,
 				82273FEB1BDB347800AFDEAF /* Helper */,
 				82273FEC1BDB347800AFDEAF /* Model */,
-				82273FED1BDB347800AFDEAF /* View */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -471,13 +479,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		82273FED1BDB347800AFDEAF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		822E20EC1BD938FB00F41211 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,15 +494,6 @@
 				82273FC41BDB2A6100AFDEAF /* Controller */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		82EFB6F61BDC8DB8008A978C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				82EFB6F71BDC8DD1008A978C /* weather_citylist.json */,
-				82EFB7051BDC9209008A978C /* Weather.storyboard */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		82EFB7071BDC9ADB008A978C /* Helper */ = {
@@ -624,8 +616,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */,
+				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
+				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
 				4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */,
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,
@@ -633,12 +627,10 @@
 				82273FE61BDB2AB200AFDEAF /* MCRootViewController.xib in Resources */,
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
-				82EFB6F81BDC8DD1008A978C /* weather_citylist.json in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
 				82273FD91BDB2A6100AFDEAF /* MCTabBarController.xib in Resources */,
 				82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */,
-				82EFB7061BDC9209008A978C /* Weather.storyboard in Resources */,
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
 				4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */,

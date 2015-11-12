@@ -7,8 +7,8 @@
 //
 
 #import "MCNavigationController.h"
-
-@interface MCNavigationController ()
+#import "MingleChang.h"
+@interface MCNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setNavigationBarHidden:YES animated:YES];
+    self.interactivePopGestureRecognizer.enabled=YES;
+    self.interactivePopGestureRecognizer.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +28,18 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - InteractivePopGestureRecognizer Delegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    if (self.navigationController.viewControllers.count == 1)//关闭主界面的右滑返回
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 /*
 #pragma mark - Navigation

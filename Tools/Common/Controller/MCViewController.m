@@ -16,9 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self resetNavigationItem];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self resetNavigationBar];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -33,12 +35,22 @@
     [super didReceiveMemoryWarning];
 }
 #pragma mark - Base Motheds
+-(void)resetNavigationItem{
+    UIBarButtonItem *lBackBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_arrow_left"] style:UIBarButtonItemStyleDone target:self action:@selector(backBarButtonItemClick:)];
+    self.navigationItem.leftBarButtonItem=lBackBarButtonItem;
+}
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Event Response
+-(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 -(IBAction)backClick:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }

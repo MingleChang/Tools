@@ -40,4 +40,9 @@
     }
     return [lMutableArray copy];
 }
+#pragma mark - Setter And Getter
+-(UIImage *)localImage{
+    NSString *lImageName=[NSString stringWithFormat:@"dream_cate_%@",self.cateId];
+    return [UIImage imageNamed:lImageName];
+}
 @end

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MCViewController : UIViewController
+-(void)resetNavigationItem;
+-(void)resetNavigationBar;
+-(void)backBarButtonItemClick:(UIBarButtonItem *)sender;
 -(IBAction)backClick:(id)sender;
 @end

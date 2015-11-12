@@ -33,4 +33,8 @@
 }
 */
 
+#pragma mark - Override
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 @end

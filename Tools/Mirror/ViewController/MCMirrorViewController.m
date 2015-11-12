@@ -32,5 +32,8 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - Override
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 @end

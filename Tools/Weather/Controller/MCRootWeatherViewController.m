@@ -101,4 +101,9 @@
     self.humLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.displayHum;
     self.humDesLabel.text=@"湿度";
 }
+
+#pragma mark - Override
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 @end

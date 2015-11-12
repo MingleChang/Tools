@@ -99,6 +99,10 @@
     NSArray *lTitles=[[MCToolManager manager].toolsInfo valueForKey:@"name"];
     [self.chooseView setupAllTitles:lTitles];
 }
+#pragma mark - Override
+-(void)resetNavigationBar{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 /*
 #pragma mark - Navigation
 

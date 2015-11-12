@@ -6,15 +6,18 @@ PODS:
     - FMDB/common
   - IQKeyboardManager (3.3.3.1)
   - MBProgressHUD (0.9.1)
+  - MJRefresh (3.0.2)
 
 DEPENDENCIES:
   - FMDB (~> 2.5)
   - IQKeyboardManager (~> 3.3.3.1)
   - MBProgressHUD (~> 0.9.1)
+  - MJRefresh (~> 3.0.1)
 
 SPEC CHECKSUMS:
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   IQKeyboardManager: acacb9f4a7646841e2472cae42d3d90687c95940
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJRefresh: 85377dc8c70395cf329e102a5c55505ef387c2e1
 
 COCOAPODS: 0.39.0

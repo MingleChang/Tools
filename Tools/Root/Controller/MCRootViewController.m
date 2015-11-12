@@ -13,7 +13,6 @@
 #import "MCToolCell.h"
 #import "MingleChang.h"
 #import "MCRootChooseView.h"
-#import "MCDreamManager.h"
 
 #define TOOL_CELL_ID @"MCToolCell"
 
@@ -29,15 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configure];
-    [[MCDreamManager maneger]selectedZGDreamByKey:@"人"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(void)resetNavigationBar{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 -(void)openTool:(MCTool *)tool{
     MCLOG(@"%@",tool.name);

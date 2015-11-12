@@ -60,6 +60,9 @@
         case MCToolIDMirror:
             return @"MCMirrorViewController";
             break;
+        case MCToolIDDream:
+            return @"MCDreamCateViewController";
+            break;
         default:
             return @"MCFlashlightViewController";
             break;

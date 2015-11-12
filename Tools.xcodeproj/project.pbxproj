@@ -37,6 +37,7 @@
 		4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */; };
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
 		4C8109771BF1D27D00B5508D /* MCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8109761BF1D27D00B5508D /* MCDate.m */; };
+		4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D4DB71BF4593C002A3814 /* Dream.storyboard */; };
 		4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */; };
 		4CD06AEF1BF33B4A0065E215 /* MCFlashlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */; };
 		4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */; };
@@ -140,6 +141,7 @@
 		4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
 		4C8109751BF1D27D00B5508D /* MCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDate.h; sourceTree = "<group>"; };
 		4C8109761BF1D27D00B5508D /* MCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDate.m; sourceTree = "<group>"; };
+		4C8D4DB71BF4593C002A3814 /* Dream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dream.storyboard; sourceTree = "<group>"; };
 		4CD06AEB1BF33B4A0065E215 /* MCFlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFlashlightViewController.h; sourceTree = "<group>"; };
 		4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFlashlightViewController.m; sourceTree = "<group>"; };
 		4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCFlashlightViewController.xib; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				821FF0B71BF398C200EBC169 /* dream.sqlite */,
+				4C8D4DB71BF4593C002A3814 /* Dream.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
+				4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
 				82273FD91BDB2A6100AFDEAF /* MCTabBarController.xib in Resources */,
 				82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */,

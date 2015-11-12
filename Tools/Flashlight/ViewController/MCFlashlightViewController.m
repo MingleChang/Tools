@@ -23,9 +23,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)resetNavigationBar{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
 /*
 #pragma mark - Navigation
 

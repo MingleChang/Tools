@@ -6,10 +6,10 @@
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import "MCCate.h"
+#import "MCToolCate.h"
 #import "MCTool.h"
 
-@implementation MCCate
+@implementation MCToolCate
 -(instancetype)initWithDictionary:(NSDictionary *)dic{
     self=[super init];
     if (self) {

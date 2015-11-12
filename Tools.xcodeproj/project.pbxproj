@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C28F2581BF41F0C0017DAF0 /* MCDreamCateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */; };
+		4C28F2591BF41F0C0017DAF0 /* MCDreamCateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */; };
+		4C28F25D1BF41F1C0017DAF0 /* MCDreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */; };
+		4C28F25E1BF41F1C0017DAF0 /* MCDreamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */; };
+		4C28F2621BF41F2F0017DAF0 /* MCDreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */; };
+		4C28F2631BF41F2F0017DAF0 /* MCDreamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */; };
+		4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2651BF41F450017DAF0 /* MCDreamManager.m */; };
+		4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2691BF4213B0017DAF0 /* MCDreamCate.m */; };
+		4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F26C1BF4214B0017DAF0 /* MCZGDream.m */; };
 		4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30C2E71BDF0DF800E6E2C5 /* IPAddress.m */; };
 		4C30C2F11BDF6AAC00E6E2C5 /* MCWeatherIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30C2F01BDF6AAC00E6E2C5 /* MCWeatherIndex.m */; };
 		4C30C2F41BDF6B4000E6E2C5 /* MCWeatherSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30C2F31BDF6B4000E6E2C5 /* MCWeatherSuggestion.m */; };
@@ -42,7 +51,7 @@
 		8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8205FE481BD68BB500EC838E /* Assets.xcassets */; };
 		820935CA1BF231F600F032AA /* MCToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935C91BF231F600F032AA /* MCToolManager.m */; };
 		820935CC1BF2340100F032AA /* tools.json in Resources */ = {isa = PBXBuildFile; fileRef = 820935CB1BF2340100F032AA /* tools.json */; };
-		820935CF1BF2341500F032AA /* MCCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCCate.m */; };
+		820935CF1BF2341500F032AA /* MCToolCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCToolCate.m */; };
 		820935D21BF2342300F032AA /* MCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935D11BF2342300F032AA /* MCTool.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
 		821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 821FF0B71BF398C200EBC169 /* dream.sqlite */; };
@@ -77,6 +86,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C28F2551BF41F0C0017DAF0 /* MCDreamCateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateViewController.h; sourceTree = "<group>"; };
+		4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCateViewController.m; sourceTree = "<group>"; };
+		4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamCateViewController.xib; sourceTree = "<group>"; };
+		4C28F25A1BF41F1C0017DAF0 /* MCDreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamListViewController.h; sourceTree = "<group>"; };
+		4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListViewController.m; sourceTree = "<group>"; };
+		4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListViewController.xib; sourceTree = "<group>"; };
+		4C28F25F1BF41F2F0017DAF0 /* MCDreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamDetailViewController.h; sourceTree = "<group>"; };
+		4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamDetailViewController.m; sourceTree = "<group>"; };
+		4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamDetailViewController.xib; sourceTree = "<group>"; };
+		4C28F2641BF41F450017DAF0 /* MCDreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamManager.h; sourceTree = "<group>"; };
+		4C28F2651BF41F450017DAF0 /* MCDreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamManager.m; sourceTree = "<group>"; };
+		4C28F2681BF4213B0017DAF0 /* MCDreamCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCate.h; sourceTree = "<group>"; };
+		4C28F2691BF4213B0017DAF0 /* MCDreamCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCate.m; sourceTree = "<group>"; };
+		4C28F26B1BF4214B0017DAF0 /* MCZGDream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCZGDream.h; sourceTree = "<group>"; };
+		4C28F26C1BF4214B0017DAF0 /* MCZGDream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCZGDream.m; sourceTree = "<group>"; };
 		4C30C2E61BDF0DF800E6E2C5 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
 		4C30C2E71BDF0DF800E6E2C5 /* IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
 		4C30C2EF1BDF6AAC00E6E2C5 /* MCWeatherIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherIndex.h; sourceTree = "<group>"; };
@@ -137,8 +161,8 @@
 		820935C81BF231F600F032AA /* MCToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCToolManager.h; sourceTree = "<group>"; };
 		820935C91BF231F600F032AA /* MCToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCToolManager.m; sourceTree = "<group>"; };
 		820935CB1BF2340100F032AA /* tools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tools.json; sourceTree = "<group>"; };
-		820935CD1BF2341500F032AA /* MCCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCate.h; sourceTree = "<group>"; };
-		820935CE1BF2341500F032AA /* MCCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCate.m; sourceTree = "<group>"; };
+		820935CD1BF2341500F032AA /* MCToolCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCToolCate.h; sourceTree = "<group>"; };
+		820935CE1BF2341500F032AA /* MCToolCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCToolCate.m; sourceTree = "<group>"; };
 		820935D01BF2342300F032AA /* MCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTool.h; sourceTree = "<group>"; };
 		820935D11BF2342300F032AA /* MCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTool.m; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
@@ -208,6 +232,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C28F2531BF41EA00017DAF0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4C28F2641BF41F450017DAF0 /* MCDreamManager.h */,
+				4C28F2651BF41F450017DAF0 /* MCDreamManager.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4C28F2541BF41EA00017DAF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C28F2551BF41F0C0017DAF0 /* MCDreamCateViewController.h */,
+				4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */,
+				4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */,
+				4C28F25A1BF41F1C0017DAF0 /* MCDreamListViewController.h */,
+				4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */,
+				4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */,
+				4C28F25F1BF41F2F0017DAF0 /* MCDreamDetailViewController.h */,
+				4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */,
+				4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4C28F2671BF4212E0017DAF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C28F2681BF4213B0017DAF0 /* MCDreamCate.h */,
+				4C28F2691BF4213B0017DAF0 /* MCDreamCate.m */,
+				4C28F26B1BF4214B0017DAF0 /* MCZGDream.h */,
+				4C28F26C1BF4214B0017DAF0 /* MCZGDream.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4C30C2ED1BDF67DB00E6E2C5 /* CityModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,8 +435,8 @@
 		820935C01BF2319B00F032AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				820935CD1BF2341500F032AA /* MCCate.h */,
-				820935CE1BF2341500F032AA /* MCCate.m */,
+				820935CD1BF2341500F032AA /* MCToolCate.h */,
+				820935CE1BF2341500F032AA /* MCToolCate.m */,
 				820935D01BF2342300F032AA /* MCTool.h */,
 				820935D11BF2342300F032AA /* MCTool.m */,
 			);
@@ -404,6 +464,9 @@
 		821FF0B51BF398B400EBC169 /* Dream */ = {
 			isa = PBXGroup;
 			children = (
+				4C28F2671BF4212E0017DAF0 /* Model */,
+				4C28F2531BF41EA00017DAF0 /* Helper */,
+				4C28F2541BF41EA00017DAF0 /* ViewController */,
 				821FF0B61BF398B400EBC169 /* Resources */,
 			);
 			path = Dream;
@@ -639,10 +702,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C28F25E1BF41F1C0017DAF0 /* MCDreamListViewController.xib in Resources */,
 				4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */,
 				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
+				4C28F2631BF41F2F0017DAF0 /* MCDreamDetailViewController.xib in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
 				821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */,
 				4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */,
@@ -657,6 +722,7 @@
 				82273FD91BDB2A6100AFDEAF /* MCTabBarController.xib in Resources */,
 				82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */,
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
+				4C28F2591BF41F0C0017DAF0 /* MCDreamCateViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
 				4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */,
 			);
@@ -718,8 +784,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C30C2FA1BDF6BB900E6E2C5 /* MCWeatherCond.m in Sources */,
+				4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */,
 				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
-				820935CF1BF2341500F032AA /* MCCate.m in Sources */,
+				820935CF1BF2341500F032AA /* MCToolCate.m in Sources */,
+				4C28F2581BF41F0C0017DAF0 /* MCDreamCateViewController.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
 				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
 				82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */,
@@ -741,12 +809,14 @@
 				4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */,
 				82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */,
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
+				4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */,
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,
 				820935D21BF2342300F032AA /* MCTool.m in Sources */,
 				4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */,
 				82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */,
 				4C30C3161BDF767900E6E2C5 /* MCCollectionViewController.m in Sources */,
+				4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */,
 				82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */,
 				82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */,
 				4C30C2F71BDF6B7200E6E2C5 /* MCWeatherWind.m in Sources */,
@@ -758,10 +828,12 @@
 				4C30C2F11BDF6AAC00E6E2C5 /* MCWeatherIndex.m in Sources */,
 				82273FE01BDB2A8B00AFDEAF /* AppDelegate.m in Sources */,
 				82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */,
+				4C28F25D1BF41F1C0017DAF0 /* MCDreamListViewController.m in Sources */,
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
 				4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */,
+				4C28F2621BF41F2F0017DAF0 /* MCDreamDetailViewController.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

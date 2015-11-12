@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MCCate : NSObject
+@interface MCToolCate : NSObject
 @property(nonatomic,assign)NSInteger cateId;
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSArray *allTools;

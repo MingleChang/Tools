@@ -8,11 +8,12 @@
 
 #import "MCRootViewController.h"
 #import "MCToolManager.h"
-#import "MCCate.h"
+#import "MCToolCate.h"
 #import "MCTool.h"
 #import "MCToolCell.h"
 #import "MingleChang.h"
 #import "MCRootChooseView.h"
+#import "MCDreamManager.h"
 
 #define TOOL_CELL_ID @"MCToolCell"
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configure];
+    [[MCDreamManager maneger]selectedZGDreamByKey:@"人"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,12 +49,12 @@
     return 1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
+    MCToolCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
     return lCate.allTools.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row=[indexPath row];
-    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
+    MCToolCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
     MCTool *lTool=lCate.allTools[row];
     MCToolCell *lCell=[collectionView dequeueReusableCellWithReuseIdentifier:TOOL_CELL_ID forIndexPath:indexPath];
     [lCell setupTool:lTool];
@@ -61,7 +63,7 @@
 #pragma mark - CollectionView Delegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row=[indexPath row];
-    MCCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
+    MCToolCate *lCate=[MCToolManager manager].toolsInfo[self.chooseView.selectedIndex];
     MCTool *lTool=lCate.allTools[row];
     [self openTool:lTool];
 }

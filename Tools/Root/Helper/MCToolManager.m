@@ -7,7 +7,7 @@
 //
 
 #import "MCToolManager.h"
-#import "MCCate.h"
+#import "MCToolCate.h"
 #import "MCTool.h"
 
 @implementation MCToolManager
@@ -32,7 +32,7 @@
     NSArray *lArray=[NSJSONSerialization JSONObjectWithData:lData options:NSJSONReadingAllowFragments error:nil];
     NSMutableArray *lToolInfo=[NSMutableArray array];
     for (NSDictionary *lDic in lArray) {
-        MCCate *lCate=[[MCCate alloc]initWithDictionary:lDic];
+        MCToolCate *lCate=[[MCToolCate alloc]initWithDictionary:lDic];
         [lToolInfo addObject:lCate];
     }
     self.toolsInfo=lToolInfo;

@@ -7,9 +7,12 @@
 //
 
 #import "MCMirrorViewController.h"
-
+@import AVFoundation;
 @interface MCMirrorViewController ()
-
+@property(nonatomic,strong)AVCaptureSession *captureSession;
+@property (strong,nonatomic) AVCaptureDeviceInput *captureDeviceInput;//负责从AVCaptureDevice获得输入数据
+@property (strong,nonatomic) AVCaptureStillImageOutput *captureStillImageOutput;//照片输出流
+@property (strong,nonatomic) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;//相机拍摄预览图层
 @end
 
 @implementation MCMirrorViewController

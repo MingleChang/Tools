@@ -63,6 +63,9 @@
         case MCToolIDDream:
             return @"MCDreamCateViewController";
             break;
+        case MCToolIDCompass:
+            return @"MCCompassViewController";
+            break;
         default:
             return @"MCFlashlightViewController";
             break;

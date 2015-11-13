@@ -188,7 +188,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erQ-GA-PVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="198"/>
+            <point key="canvasLocation" x="494" y="132"/>
         </scene>
         <!--MCFlashlightViewController-->
         <scene sceneID="8aQ-Ud-U8s">
@@ -198,7 +198,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPO-lK-AhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="74"/>
+            <point key="canvasLocation" x="505" y="67"/>
         </scene>
         <!--MCDreamCateViewController-->
         <scene sceneID="qed-v1-9mf">
@@ -208,7 +208,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Pw-Fq-fip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380.5" y="338"/>
+            <point key="canvasLocation" x="508.5" y="199"/>
         </scene>
         <!--MCCompassViewController-->
         <scene sceneID="0SS-1R-uKw">
@@ -218,7 +218,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6X-C2-xCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="441"/>
+            <point key="canvasLocation" x="503" y="268"/>
         </scene>
         <!--MCRootWeatherViewController-->
         <scene sceneID="Epc-qS-Lkz">
@@ -226,7 +226,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="MCRootWeatherViewController" storyboardName="Weather" referencedIdentifier="MCRootWeatherViewController" id="usg-Nv-Kvf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxR-Xi-ZiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464.5" y="-182"/>
+            <point key="canvasLocation" x="429.5" y="-213"/>
         </scene>
     </scenes>
     <resources>

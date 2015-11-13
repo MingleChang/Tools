@@ -40,6 +40,9 @@
 +(BOOL)isRetina{
     return ([UIScreen mainScreen].scale>=2.0);
 }
++(CGRect)screenBounds{
+    return [UIScreen mainScreen].bounds;
+}
 +(CGSize)screenSize{
     return [UIScreen mainScreen].bounds.size;
 }

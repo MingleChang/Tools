@@ -62,6 +62,12 @@
  */
 +(BOOL)isRetina;
 /*
+ 获取屏幕frame
+ 参数：N/A
+ 返回值：CGRect，返回屏幕frame
+ */
++(CGRect)screenBounds;
+/*
  获取屏幕尺寸
  参数：N/A
  返回值：CGFloat，返回屏幕尺寸

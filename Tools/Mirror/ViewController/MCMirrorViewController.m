@@ -7,6 +7,8 @@
 //
 
 #import "MCMirrorViewController.h"
+#import "MingleChang.h"
+
 @import AVFoundation;
 @interface MCMirrorViewController ()
 @property(nonatomic,strong)AVCaptureSession *captureSession;
@@ -16,15 +18,45 @@
 @end
 
 @implementation MCMirrorViewController
-
+-(void)dealloc{
+    [self.captureSession stopRunning];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configure];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private Mothed
+-(AVCaptureDevice *)cameraWithPostion:(AVCaptureDevicePosition) position{
+    NSArray *lDevices=[AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in lDevices) {
+        if (device.position==position) {
+            return device;
+        }
+    }
+    return nil;
+}
+-(AVCaptureDevice *)frontCamera{
+    return [self cameraWithPostion:AVCaptureDevicePositionFront];
+}
+-(AVCaptureDevice *)backCamera{
+    return [self cameraWithPostion:AVCaptureDevicePositionBack];
 }
 /*
 #pragma mark - Navigation
@@ -41,13 +73,58 @@
     [self configureData];
 }
 -(void)configureView{
+    if (self.captureDeviceInput&&[self.captureSession canAddInput:self.captureDeviceInput]) {
+        [self.captureSession addInput:self.captureDeviceInput];
+    }
+    if (self.captureStillImageOutput&&[self.captureSession canAddOutput:self.captureStillImageOutput]) {
+        [self.captureSession addOutput:self.captureStillImageOutput];
+    }
+    [self.view.layer insertSublayer:self.captureVideoPreviewLayer atIndex:0];
     
+    [self.captureSession startRunning];
 }
 -(void)configureData{
     
 }
+
+
 #pragma mark - Override
 -(void)resetNavigationBar{
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+#pragma mark - Setter And Getter
+-(AVCaptureSession *)captureSession{
+    if (_captureSession) {
+        return _captureSession;
+    }
+    _captureSession=[[AVCaptureSession alloc]init];
+    _captureSession.sessionPreset=AVCaptureSessionPresetHigh;
+    return _captureSession;
+}
+-(AVCaptureDeviceInput *)captureDeviceInput{
+    if (_captureDeviceInput) {
+        return _captureDeviceInput;
+    }
+    _captureDeviceInput=[[AVCaptureDeviceInput alloc]initWithDevice:[self frontCamera] error:nil];
+    return _captureDeviceInput;
+}
+-(AVCaptureStillImageOutput *)captureStillImageOutput{
+    if (_captureStillImageOutput) {
+        return _captureStillImageOutput;
+    }
+    _captureStillImageOutput=[[AVCaptureStillImageOutput alloc]init];
+    [_captureStillImageOutput setOutputSettings:@{AVVideoCodecKey:AVVideoCodecJPEG}];
+    return _captureStillImageOutput;
+}
+-(AVCaptureVideoPreviewLayer *)captureVideoPreviewLayer{
+    if (_captureVideoPreviewLayer) {
+        return _captureVideoPreviewLayer;
+    }
+    _captureVideoPreviewLayer=[[AVCaptureVideoPreviewLayer alloc]initWithSession:self.captureSession];
+    _captureVideoPreviewLayer.frame=SCREEN_BOUNDS;
+    _captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    _captureVideoPreviewLayer.backgroundColor=[UIColor blackColor].CGColor;
+    return _captureVideoPreviewLayer;
 }
 @end

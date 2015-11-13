@@ -35,6 +35,7 @@ NSLog(@"%@",[NSString stringWithFormat:(s), ##__VA_ARGS__])
 //建议之后一直使用MCLOG代替NSLog
 /*************************************/
 
+#define SCREEN_BOUNDS [MCDevice screenBounds]
 #define SCREEN_SIZE [MCDevice screenSize]
 #define SCREEN_WIDTH [MCDevice screenWidth]
 #define SCREEN_HEIGHT [MCDevice screenHeight]

@@ -38,6 +38,11 @@
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
 		4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */; };
 		4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */; };
+		4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */; };
+		4C7657B61BF58F6600FD75D3 /* MCCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */; };
+		4C7657B71BF58F6600FD75D3 /* MCCompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */; };
+		4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657B91BF5917D00FD75D3 /* MCTextField.m */; };
+		4C7657BD1BF5917D00FD75D3 /* MCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657BB1BF5917D00FD75D3 /* MCTextView.m */; };
 		4C8109771BF1D27D00B5508D /* MCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8109761BF1D27D00B5508D /* MCDate.m */; };
 		4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D4DB71BF4593C002A3814 /* Dream.storyboard */; };
 		4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */; };
@@ -149,6 +154,14 @@
 		4C7657A91BF5874800FD75D3 /* MCDreamListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamListCell.h; sourceTree = "<group>"; };
 		4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListCell.m; sourceTree = "<group>"; };
 		4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListCell.xib; sourceTree = "<group>"; };
+		4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compass.storyboard; sourceTree = "<group>"; };
+		4C7657B31BF58F6600FD75D3 /* MCCompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCompassViewController.h; sourceTree = "<group>"; };
+		4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCompassViewController.m; sourceTree = "<group>"; };
+		4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCompassViewController.xib; sourceTree = "<group>"; };
+		4C7657B81BF5917D00FD75D3 /* MCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextField.h; sourceTree = "<group>"; };
+		4C7657B91BF5917D00FD75D3 /* MCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextField.m; sourceTree = "<group>"; };
+		4C7657BA1BF5917D00FD75D3 /* MCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextView.h; sourceTree = "<group>"; };
+		4C7657BB1BF5917D00FD75D3 /* MCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextView.m; sourceTree = "<group>"; };
 		4C8109751BF1D27D00B5508D /* MCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDate.h; sourceTree = "<group>"; };
 		4C8109761BF1D27D00B5508D /* MCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDate.m; sourceTree = "<group>"; };
 		4C8D4DB71BF4593C002A3814 /* Dream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dream.storyboard; sourceTree = "<group>"; };
@@ -344,6 +357,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4C7657AE1BF58F3F00FD75D3 /* Compass */ = {
+			isa = PBXGroup;
+			children = (
+				4C7657AF1BF58F3F00FD75D3 /* Resources */,
+				4C7657B01BF58F3F00FD75D3 /* ViewController */,
+			);
+			path = Compass;
+			sourceTree = "<group>";
+		};
+		4C7657AF1BF58F3F00FD75D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C7657B01BF58F3F00FD75D3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C7657B31BF58F6600FD75D3 /* MCCompassViewController.h */,
+				4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */,
+				4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4CD06AE71BF33B020065E215 /* Flashlight */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +473,7 @@
 				82273FE91BDB347800AFDEAF /* Weather */,
 				4CD06AE71BF33B020065E215 /* Flashlight */,
 				4CD06AE91BF33B020065E215 /* Mirror */,
+				4C7657AE1BF58F3F00FD75D3 /* Compass */,
 				821FF0B51BF398B400EBC169 /* Dream */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
@@ -446,10 +487,10 @@
 			children = (
 				82273FDE1BDB2A8B00AFDEAF /* AppDelegate.h */,
 				82273FDF1BDB2A8B00AFDEAF /* AppDelegate.m */,
-				8205FE4D1BD68BB500EC838E /* Info.plist */,
-				8205FE3D1BD68BB400EC838E /* main.m */,
 				829C08341BF4C9090043905E /* AppDelegate+Base.h */,
 				829C08351BF4C9090043905E /* AppDelegate+Base.m */,
+				8205FE4D1BD68BB500EC838E /* Info.plist */,
+				8205FE3D1BD68BB400EC838E /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -638,6 +679,10 @@
 		82EFB7081BDC9AE7008A978C /* MingleChang */ = {
 			isa = PBXGroup;
 			children = (
+				4C7657B81BF5917D00FD75D3 /* MCTextField.h */,
+				4C7657B91BF5917D00FD75D3 /* MCTextField.m */,
+				4C7657BA1BF5917D00FD75D3 /* MCTextView.h */,
+				4C7657BB1BF5917D00FD75D3 /* MCTextView.m */,
 				4C8109751BF1D27D00B5508D /* MCDate.h */,
 				4C8109761BF1D27D00B5508D /* MCDate.m */,
 				82022E8A1BF0EFB4002FC16C /* MCFilePath.h */,
@@ -745,6 +790,7 @@
 				8245AA0C1BF4D91E009B5640 /* MCDreamCateCell.xib in Resources */,
 				4C28F25E1BF41F1C0017DAF0 /* MCDreamListViewController.xib in Resources */,
 				4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */,
+				4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */,
 				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
@@ -768,6 +814,7 @@
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
 				4C28F2591BF41F0C0017DAF0 /* MCDreamCateViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
+				4C7657B71BF58F6600FD75D3 /* MCCompassViewController.xib in Resources */,
 				4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,10 +881,12 @@
 				4C28F2581BF41F0C0017DAF0 /* MCDreamCateViewController.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
 				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
+				4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */,
 				82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */,
 				4C30C2F41BDF6B4000E6E2C5 /* MCWeatherSuggestion.m in Sources */,
 				4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */,
 				4C30C30F1BDF6E7500E6E2C5 /* MCWeatherInfo.m in Sources */,
+				4C7657BD1BF5917D00FD75D3 /* MCTextView.m in Sources */,
 				820935CA1BF231F600F032AA /* MCToolManager.m in Sources */,
 				4C30C3061BDF6CEC00E6E2C5 /* MCWeatherTmp.m in Sources */,
 				82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */,
@@ -872,6 +921,7 @@
 				82EFB72C1BDC9AE7008A978C /* MCImageExtension.m in Sources */,
 				4C30C3091BDF6D0500E6E2C5 /* MCWeatherBasic.m in Sources */,
 				82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */,
+				4C7657B61BF58F6600FD75D3 /* MCCompassViewController.m in Sources */,
 				8245AA061BF4D904009B5640 /* MCDreamCateSearchHeader.m in Sources */,
 				4C30C2F11BDF6AAC00E6E2C5 /* MCWeatherIndex.m in Sources */,
 				82273FE01BDB2A8B00AFDEAF /* AppDelegate.m in Sources */,

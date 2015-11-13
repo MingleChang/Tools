@@ -10,7 +10,7 @@
         <scene sceneID="UnQ-qX-nTY">
             <objects>
                 <navigationController id="pTX-mk-27O" customClass="MCNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="nav_arrow_left" id="Hzi-Lq-fn1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hzi-Lq-fn1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -26,7 +26,7 @@
         <!--Delegate-->
         <scene sceneID="3eM-yH-7bV">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="PI3-9F-hZr" customClass="MCRootViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCRootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PI3-9F-hZr" customClass="MCRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="je4-ti-laV"/>
                         <viewControllerLayoutGuide type="bottom" id="8qL-PW-rck"/>
@@ -173,6 +173,7 @@
                         <segue destination="TLY-yS-h6M" kind="push" identifier="MCMirrorViewController" id="499-QI-czj"/>
                         <segue destination="XN6-20-Xai" kind="push" identifier="MCFlashlightViewController" id="iO9-2e-byO"/>
                         <segue destination="gNg-z8-8SK" kind="push" identifier="MCDreamCateViewController" id="Cev-I0-UNt"/>
+                        <segue destination="4La-Lp-tsS" kind="push" identifier="MCCompassViewController" id="yL2-cK-lmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +183,7 @@
         <!--MCMirrorViewController-->
         <scene sceneID="pmx-TG-GQm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Mirror" referencedIdentifier="MCMirrorViewController" id="TLY-yS-h6M" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MCMirrorViewController" storyboardName="Mirror" referencedIdentifier="MCMirrorViewController" id="TLY-yS-h6M" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nnQ-yB-11a"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erQ-GA-PVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,7 +193,7 @@
         <!--MCFlashlightViewController-->
         <scene sceneID="8aQ-Ud-U8s">
             <objects>
-                <viewControllerPlaceholder storyboardName="Flashlight" referencedIdentifier="MCFlashlightViewController" id="XN6-20-Xai" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MCFlashlightViewController" storyboardName="Flashlight" referencedIdentifier="MCFlashlightViewController" id="XN6-20-Xai" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sL1-KC-9vt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPO-lK-AhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,17 +203,27 @@
         <!--MCDreamCateViewController-->
         <scene sceneID="qed-v1-9mf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Dream" referencedIdentifier="MCDreamCateViewController" id="gNg-z8-8SK" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MCDreamCateViewController" storyboardName="Dream" referencedIdentifier="MCDreamCateViewController" id="gNg-z8-8SK" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="yDg-Cd-De3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Pw-Fq-fip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="380.5" y="338"/>
         </scene>
+        <!--MCCompassViewController-->
+        <scene sceneID="0SS-1R-uKw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MCCompassViewController" storyboardName="Compass" referencedIdentifier="MCCompassViewController" id="4La-Lp-tsS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hec-lP-js5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6X-C2-xCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="441"/>
+        </scene>
         <!--MCRootWeatherViewController-->
         <scene sceneID="Epc-qS-Lkz">
             <objects>
-                <viewControllerPlaceholder storyboardName="Weather" referencedIdentifier="MCRootWeatherViewController" id="usg-Nv-Kvf" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MCRootWeatherViewController" storyboardName="Weather" referencedIdentifier="MCRootWeatherViewController" id="usg-Nv-Kvf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxR-Xi-ZiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="464.5" y="-182"/>
@@ -220,7 +231,6 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="nav_arrow_left" width="16" height="16"/>
         <image name="tool_default" width="32" height="32"/>
     </resources>
 </document>

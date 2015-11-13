@@ -39,7 +39,6 @@
         NSDictionary *lResultDic=[resultSet resultDictionary];
         MCZGDream *lDream=[[MCZGDream alloc]initWithDictionary:lResultDic];
         [lMutableArray addObject:lDream];
-        NSLog(@"%@",lDream);
     }
     return [lMutableArray copy];
 }

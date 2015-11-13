@@ -7,6 +7,7 @@
 //
 
 #import "MCDreamCateViewController.h"
+#import "MCDreamListViewController.h"
 #import "MCDreamCateSearchHeader.h"
 #import "MCDreamCateCell.h"
 #import "MCDreamManager.h"
@@ -16,7 +17,9 @@
 #define DREAM_CATE_HEADER_ID @"MCDreamCateSearchHeader"
 #define DREAM_CATE_CELL_ID @"MCDreamCateCell"
 
-@interface MCDreamCateViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+#define DREAM_LIST_VC_SEGUE_ID @"MCDreamListViewController"
+
+@interface MCDreamCateViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MCDreamCateSearchHeaderDelegate>
 
 @property(nonatomic,copy)NSArray *dreamCates;
 @end
@@ -51,9 +54,17 @@
 }
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     if ([kind isEqualToString:UICollectionElementKindSectionHeader] ){
-        return [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DREAM_CATE_HEADER_ID forIndexPath:indexPath];
+        MCDreamCateSearchHeader *lHeader=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DREAM_CATE_HEADER_ID forIndexPath:indexPath];
+        lHeader.delegate=self;
+        return lHeader;
     }
     return nil;
+}
+#pragma mark - UICollectionView Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCDreamCate *lDreamCate=[self.dreamCates objectAtIndex:row];
+    [self performSegueWithIdentifier:DREAM_LIST_VC_SEGUE_ID sender:lDreamCate];
 }
 #pragma mark - UICollectionView Delegate FlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -74,15 +85,24 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
     return CGSizeZero;
 }
-/*
+#pragma mark - MCDreamCateSearchHeader Delegate
+-(void)dreamCateSearchHeader:(MCDreamCateSearchHeader *)header search:(NSString *)key{
+    [self performSegueWithIdentifier:DREAM_LIST_VC_SEGUE_ID sender:key];
+}
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:DREAM_LIST_VC_SEGUE_ID]) {
+        MCDreamListViewController *lViewConstroller=segue.destinationViewController;
+        if ([sender isKindOfClass:[MCDreamCate class]]) {
+            lViewConstroller.dreamCate=sender;
+        }
+        if ([sender isKindOfClass:[NSString class]]) {
+            lViewConstroller.searchKey=sender;
+        }
+    }
 }
-*/
+
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MCDreamCateSearchHeader;
 
+@protocol MCDreamCateSearchHeaderDelegate <NSObject>
+
+-(void)dreamCateSearchHeader:(MCDreamCateSearchHeader *)header search:(NSString *)key;
+
+@end
 @interface MCDreamCateSearchHeader : UICollectionReusableView
-
+@property(nonatomic,assign)id<MCDreamCateSearchHeaderDelegate> delegate;
 @end

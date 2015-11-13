@@ -7,8 +7,10 @@
 //
 
 #import "MCDreamDetailViewController.h"
+#import "MCZGDream.h"
 
 @interface MCDreamDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end
 
@@ -16,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self configure];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +35,20 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - Init Methods
+-(void)configure{
+    [self configureView];
+    [self configureData];
+}
+-(void)configureView{
+    self.detailLabel.text=self.dream.context;
+}
+-(void)configureData{
+    
+}
+#pragma mark - Override
+-(void)resetNavigationItem{
+    [super resetNavigationItem];
+    self.navigationItem.title=self.dream.title;
+}
 @end

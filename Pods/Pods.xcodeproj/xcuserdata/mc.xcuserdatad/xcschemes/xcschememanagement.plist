@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,12 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>11F137C4C528ECFDE8272B55AAED200C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>17BA9304BBD30327354E0002F305E612</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>55DBDD8B7D446F1D618F303A9FB53209</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>

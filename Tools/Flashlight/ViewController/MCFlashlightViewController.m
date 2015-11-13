@@ -7,7 +7,7 @@
 //
 
 #import "MCFlashlightViewController.h"
-
+@import AVFoundation;
 @interface MCFlashlightViewController ()
 
 @end
@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self configure];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +32,17 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - Init Methods
+-(void)configure{
+    [self configureView];
+    [self configureData];
+}
+-(void)configureView{
+    
+}
+-(void)configureData{
+    
+}
 #pragma mark - Override
 -(void)resetNavigationBar{
     [self.navigationController setNavigationBarHidden:YES animated:YES];

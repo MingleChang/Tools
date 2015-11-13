@@ -7,7 +7,8 @@
 //
 
 #import "MCViewController.h"
-
+@class MCDreamCate;
 @interface MCDreamListViewController : MCViewController
-
+@property(nonatomic,strong)MCDreamCate *dreamCate;
+@property(nonatomic,copy)NSString *searchKey;
 @end

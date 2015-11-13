@@ -7,7 +7,7 @@
 //
 
 #import "MCViewController.h"
-
+@class MCZGDream;
 @interface MCDreamDetailViewController : MCViewController
-
+@property(nonatomic,strong)MCZGDream *dream;
 @end

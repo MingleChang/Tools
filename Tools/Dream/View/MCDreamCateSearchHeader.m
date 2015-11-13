@@ -37,6 +37,9 @@
     [searchBar resignFirstResponder];
 }
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    MCLOG(@"%@",searchBar.text);
+    NSString *lSearchKey=searchBar.text;
+    if ([self.delegate respondsToSelector:@selector(dreamCateSearchHeader:search:)]) {
+        [self.delegate dreamCateSearchHeader:self search:lSearchKey];
+    }
 }
 @end

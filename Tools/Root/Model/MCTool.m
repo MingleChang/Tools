@@ -66,6 +66,12 @@
         case MCToolIDCompass:
             return @"MCCompassViewController";
             break;
+        case MCToolIDNotepad:
+            return @"MCNotepadViewController";
+            break;
+        case MCToolIDSizeControl:
+            return @"MCSizeControlViewController";
+            break;
         default:
             return @"MCFlashlightViewController";
             break;

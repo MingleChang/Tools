@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C28F2581BF41F0C0017DAF0 /* MCDreamCateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */; };
-		4C28F2591BF41F0C0017DAF0 /* MCDreamCateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */; };
-		4C28F25D1BF41F1C0017DAF0 /* MCDreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */; };
-		4C28F25E1BF41F1C0017DAF0 /* MCDreamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */; };
-		4C28F2621BF41F2F0017DAF0 /* MCDreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */; };
-		4C28F2631BF41F2F0017DAF0 /* MCDreamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */; };
 		4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2651BF41F450017DAF0 /* MCDreamManager.m */; };
 		4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2691BF4213B0017DAF0 /* MCDreamCate.m */; };
 		4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F26C1BF4214B0017DAF0 /* MCZGDream.m */; };
@@ -39,16 +33,10 @@
 		4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */; };
 		4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */; };
 		4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */; };
-		4C7657B61BF58F6600FD75D3 /* MCCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */; };
-		4C7657B71BF58F6600FD75D3 /* MCCompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */; };
 		4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657B91BF5917D00FD75D3 /* MCTextField.m */; };
 		4C7657BD1BF5917D00FD75D3 /* MCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657BB1BF5917D00FD75D3 /* MCTextView.m */; };
 		4C8109771BF1D27D00B5508D /* MCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8109761BF1D27D00B5508D /* MCDate.m */; };
 		4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D4DB71BF4593C002A3814 /* Dream.storyboard */; };
-		4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */; };
-		4CD06AEF1BF33B4A0065E215 /* MCFlashlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */; };
-		4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */; };
-		4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */; };
 		4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */; };
 		4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF91BF33BD00065E215 /* Mirror.storyboard */; };
 		4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AFC1BF344220065E215 /* Weather.storyboard */; };
@@ -62,6 +50,24 @@
 		820935CF1BF2341500F032AA /* MCToolCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCToolCate.m */; };
 		820935D21BF2342300F032AA /* MCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935D11BF2342300F032AA /* MCTool.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
+		82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */; };
+		82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */; };
+		82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F281BF70E4C00EAF2E5 /* MCDreamCateViewController.m */; };
+		82198F311BF70E4C00EAF2E5 /* MCDreamCateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F291BF70E4C00EAF2E5 /* MCDreamCateViewController.xib */; };
+		82198F321BF70E4C00EAF2E5 /* MCDreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F2B1BF70E4C00EAF2E5 /* MCDreamDetailViewController.m */; };
+		82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F2C1BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib */; };
+		82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F2E1BF70E4C00EAF2E5 /* MCDreamListViewController.m */; };
+		82198F351BF70E4C00EAF2E5 /* MCDreamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F2F1BF70E4C00EAF2E5 /* MCDreamListViewController.xib */; };
+		82198F3A1BF70E6400EAF2E5 /* MCFlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F381BF70E6400EAF2E5 /* MCFlashlightViewController.m */; };
+		82198F3B1BF70E6400EAF2E5 /* MCFlashlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F391BF70E6400EAF2E5 /* MCFlashlightViewController.xib */; };
+		82198F3D1BF70E9800EAF2E5 /* Notepad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82198F3C1BF70E9800EAF2E5 /* Notepad.storyboard */; };
+		82198F411BF70EBF00EAF2E5 /* MCNotepadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F3F1BF70EBF00EAF2E5 /* MCNotepadViewController.m */; };
+		82198F421BF70EBF00EAF2E5 /* MCNotepadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F401BF70EBF00EAF2E5 /* MCNotepadViewController.xib */; };
+		82198F471BF7106D00EAF2E5 /* MCMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F451BF7106D00EAF2E5 /* MCMirrorViewController.m */; };
+		82198F481BF7106D00EAF2E5 /* MCMirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F461BF7106D00EAF2E5 /* MCMirrorViewController.xib */; };
+		82198F4D1BF710B700EAF2E5 /* SizeControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82198F4C1BF710B700EAF2E5 /* SizeControl.storyboard */; };
+		82198F511BF710CA00EAF2E5 /* MCSizeControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F4F1BF710CA00EAF2E5 /* MCSizeControlViewController.m */; };
+		82198F521BF710CA00EAF2E5 /* MCSizeControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F501BF710CA00EAF2E5 /* MCSizeControlViewController.xib */; };
 		821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 821FF0B71BF398C200EBC169 /* dream.sqlite */; };
 		82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */; };
 		82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FCA1BDB2A6100AFDEAF /* MCNavigationController.xib */; };
@@ -99,15 +105,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C28F2551BF41F0C0017DAF0 /* MCDreamCateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateViewController.h; sourceTree = "<group>"; };
-		4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCateViewController.m; sourceTree = "<group>"; };
-		4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamCateViewController.xib; sourceTree = "<group>"; };
-		4C28F25A1BF41F1C0017DAF0 /* MCDreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamListViewController.h; sourceTree = "<group>"; };
-		4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListViewController.m; sourceTree = "<group>"; };
-		4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListViewController.xib; sourceTree = "<group>"; };
-		4C28F25F1BF41F2F0017DAF0 /* MCDreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamDetailViewController.h; sourceTree = "<group>"; };
-		4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamDetailViewController.m; sourceTree = "<group>"; };
-		4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamDetailViewController.xib; sourceTree = "<group>"; };
 		4C28F2641BF41F450017DAF0 /* MCDreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamManager.h; sourceTree = "<group>"; };
 		4C28F2651BF41F450017DAF0 /* MCDreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamManager.m; sourceTree = "<group>"; };
 		4C28F2681BF4213B0017DAF0 /* MCDreamCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCate.h; sourceTree = "<group>"; };
@@ -155,9 +152,6 @@
 		4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListCell.m; sourceTree = "<group>"; };
 		4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListCell.xib; sourceTree = "<group>"; };
 		4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compass.storyboard; sourceTree = "<group>"; };
-		4C7657B31BF58F6600FD75D3 /* MCCompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCompassViewController.h; sourceTree = "<group>"; };
-		4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCompassViewController.m; sourceTree = "<group>"; };
-		4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCompassViewController.xib; sourceTree = "<group>"; };
 		4C7657B81BF5917D00FD75D3 /* MCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextField.h; sourceTree = "<group>"; };
 		4C7657B91BF5917D00FD75D3 /* MCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextField.m; sourceTree = "<group>"; };
 		4C7657BA1BF5917D00FD75D3 /* MCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextView.h; sourceTree = "<group>"; };
@@ -165,12 +159,6 @@
 		4C8109751BF1D27D00B5508D /* MCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDate.h; sourceTree = "<group>"; };
 		4C8109761BF1D27D00B5508D /* MCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDate.m; sourceTree = "<group>"; };
 		4C8D4DB71BF4593C002A3814 /* Dream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dream.storyboard; sourceTree = "<group>"; };
-		4CD06AEB1BF33B4A0065E215 /* MCFlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFlashlightViewController.h; sourceTree = "<group>"; };
-		4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFlashlightViewController.m; sourceTree = "<group>"; };
-		4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCFlashlightViewController.xib; sourceTree = "<group>"; };
-		4CD06AF01BF33B5C0065E215 /* MCMirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMirrorViewController.h; sourceTree = "<group>"; };
-		4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMirrorViewController.m; sourceTree = "<group>"; };
-		4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMirrorViewController.xib; sourceTree = "<group>"; };
 		4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flashlight.storyboard; sourceTree = "<group>"; };
 		4CD06AF91BF33BD00065E215 /* Mirror.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mirror.storyboard; sourceTree = "<group>"; };
 		4CD06AFC1BF344220065E215 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
@@ -191,6 +179,32 @@
 		820935D01BF2342300F032AA /* MCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTool.h; sourceTree = "<group>"; };
 		820935D11BF2342300F032AA /* MCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTool.m; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		82198F211BF70E3900EAF2E5 /* MCCompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCompassViewController.h; sourceTree = "<group>"; };
+		82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCompassViewController.m; sourceTree = "<group>"; };
+		82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCompassViewController.xib; sourceTree = "<group>"; };
+		82198F271BF70E4C00EAF2E5 /* MCDreamCateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateViewController.h; sourceTree = "<group>"; };
+		82198F281BF70E4C00EAF2E5 /* MCDreamCateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCateViewController.m; sourceTree = "<group>"; };
+		82198F291BF70E4C00EAF2E5 /* MCDreamCateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamCateViewController.xib; sourceTree = "<group>"; };
+		82198F2A1BF70E4C00EAF2E5 /* MCDreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamDetailViewController.h; sourceTree = "<group>"; };
+		82198F2B1BF70E4C00EAF2E5 /* MCDreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamDetailViewController.m; sourceTree = "<group>"; };
+		82198F2C1BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamDetailViewController.xib; sourceTree = "<group>"; };
+		82198F2D1BF70E4C00EAF2E5 /* MCDreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamListViewController.h; sourceTree = "<group>"; };
+		82198F2E1BF70E4C00EAF2E5 /* MCDreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListViewController.m; sourceTree = "<group>"; };
+		82198F2F1BF70E4C00EAF2E5 /* MCDreamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListViewController.xib; sourceTree = "<group>"; };
+		82198F371BF70E6400EAF2E5 /* MCFlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFlashlightViewController.h; sourceTree = "<group>"; };
+		82198F381BF70E6400EAF2E5 /* MCFlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFlashlightViewController.m; sourceTree = "<group>"; };
+		82198F391BF70E6400EAF2E5 /* MCFlashlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCFlashlightViewController.xib; sourceTree = "<group>"; };
+		82198F3C1BF70E9800EAF2E5 /* Notepad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notepad.storyboard; sourceTree = "<group>"; };
+		82198F3E1BF70EBF00EAF2E5 /* MCNotepadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadViewController.h; sourceTree = "<group>"; };
+		82198F3F1BF70EBF00EAF2E5 /* MCNotepadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadViewController.m; sourceTree = "<group>"; };
+		82198F401BF70EBF00EAF2E5 /* MCNotepadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadViewController.xib; sourceTree = "<group>"; };
+		82198F441BF7106D00EAF2E5 /* MCMirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMirrorViewController.h; sourceTree = "<group>"; };
+		82198F451BF7106D00EAF2E5 /* MCMirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMirrorViewController.m; sourceTree = "<group>"; };
+		82198F461BF7106D00EAF2E5 /* MCMirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMirrorViewController.xib; sourceTree = "<group>"; };
+		82198F4C1BF710B700EAF2E5 /* SizeControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SizeControl.storyboard; sourceTree = "<group>"; };
+		82198F4E1BF710CA00EAF2E5 /* MCSizeControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSizeControlViewController.h; sourceTree = "<group>"; };
+		82198F4F1BF710CA00EAF2E5 /* MCSizeControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSizeControlViewController.m; sourceTree = "<group>"; };
+		82198F501BF710CA00EAF2E5 /* MCSizeControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCSizeControlViewController.xib; sourceTree = "<group>"; };
 		821FF0B71BF398C200EBC169 /* dream.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dream.sqlite; sourceTree = "<group>"; };
 		82273FC81BDB2A6100AFDEAF /* MCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNavigationController.h; sourceTree = "<group>"; };
 		82273FC91BDB2A6100AFDEAF /* MCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNavigationController.m; sourceTree = "<group>"; };
@@ -274,22 +288,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		4C28F2541BF41EA00017DAF0 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4C28F2551BF41F0C0017DAF0 /* MCDreamCateViewController.h */,
-				4C28F2561BF41F0C0017DAF0 /* MCDreamCateViewController.m */,
-				4C28F2571BF41F0C0017DAF0 /* MCDreamCateViewController.xib */,
-				4C28F25A1BF41F1C0017DAF0 /* MCDreamListViewController.h */,
-				4C28F25B1BF41F1C0017DAF0 /* MCDreamListViewController.m */,
-				4C28F25C1BF41F1C0017DAF0 /* MCDreamListViewController.xib */,
-				4C28F25F1BF41F2F0017DAF0 /* MCDreamDetailViewController.h */,
-				4C28F2601BF41F2F0017DAF0 /* MCDreamDetailViewController.m */,
-				4C28F2611BF41F2F0017DAF0 /* MCDreamDetailViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		4C28F2671BF4212E0017DAF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,8 +358,8 @@
 		4C7657AE1BF58F3F00FD75D3 /* Compass */ = {
 			isa = PBXGroup;
 			children = (
+				82198F201BF70E3900EAF2E5 /* Controller */,
 				4C7657AF1BF58F3F00FD75D3 /* Resources */,
-				4C7657B01BF58F3F00FD75D3 /* ViewController */,
 			);
 			path = Compass;
 			sourceTree = "<group>";
@@ -374,52 +372,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4C7657B01BF58F3F00FD75D3 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4C7657B31BF58F6600FD75D3 /* MCCompassViewController.h */,
-				4C7657B41BF58F6600FD75D3 /* MCCompassViewController.m */,
-				4C7657B51BF58F6600FD75D3 /* MCCompassViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		4CD06AE71BF33B020065E215 /* Flashlight */ = {
 			isa = PBXGroup;
 			children = (
+				82198F361BF70E6400EAF2E5 /* Controller */,
 				4CD06AF51BF33B810065E215 /* Resources */,
-				4CD06AE81BF33B020065E215 /* ViewController */,
 			);
 			path = Flashlight;
-			sourceTree = "<group>";
-		};
-		4CD06AE81BF33B020065E215 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4CD06AEB1BF33B4A0065E215 /* MCFlashlightViewController.h */,
-				4CD06AEC1BF33B4A0065E215 /* MCFlashlightViewController.m */,
-				4CD06AED1BF33B4A0065E215 /* MCFlashlightViewController.xib */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		4CD06AE91BF33B020065E215 /* Mirror */ = {
 			isa = PBXGroup;
 			children = (
+				82198F431BF7106D00EAF2E5 /* Controller */,
 				4CD06AF61BF33B940065E215 /* Resources */,
-				4CD06AEA1BF33B020065E215 /* ViewController */,
 			);
 			path = Mirror;
-			sourceTree = "<group>";
-		};
-		4CD06AEA1BF33B020065E215 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4CD06AF01BF33B5C0065E215 /* MCMirrorViewController.h */,
-				4CD06AF11BF33B5C0065E215 /* MCMirrorViewController.m */,
-				4CD06AF21BF33B5C0065E215 /* MCMirrorViewController.xib */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		4CD06AF51BF33B810065E215 /* Resources */ = {
@@ -475,6 +443,8 @@
 				4CD06AE91BF33B020065E215 /* Mirror */,
 				4C7657AE1BF58F3F00FD75D3 /* Compass */,
 				821FF0B51BF398B400EBC169 /* Dream */,
+				82198F171BF70DFD00EAF2E5 /* Notepad */,
+				82198F491BF710A800EAF2E5 /* SizeControl */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
@@ -524,13 +494,113 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		82198F171BF70DFD00EAF2E5 /* Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				82198F181BF70DFD00EAF2E5 /* Controller */,
+				82198F191BF70DFD00EAF2E5 /* Resources */,
+			);
+			path = Notepad;
+			sourceTree = "<group>";
+		};
+		82198F181BF70DFD00EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F3E1BF70EBF00EAF2E5 /* MCNotepadViewController.h */,
+				82198F3F1BF70EBF00EAF2E5 /* MCNotepadViewController.m */,
+				82198F401BF70EBF00EAF2E5 /* MCNotepadViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F191BF70DFD00EAF2E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82198F3C1BF70E9800EAF2E5 /* Notepad.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82198F201BF70E3900EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F211BF70E3900EAF2E5 /* MCCompassViewController.h */,
+				82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */,
+				82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F261BF70E4C00EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F271BF70E4C00EAF2E5 /* MCDreamCateViewController.h */,
+				82198F281BF70E4C00EAF2E5 /* MCDreamCateViewController.m */,
+				82198F291BF70E4C00EAF2E5 /* MCDreamCateViewController.xib */,
+				82198F2A1BF70E4C00EAF2E5 /* MCDreamDetailViewController.h */,
+				82198F2B1BF70E4C00EAF2E5 /* MCDreamDetailViewController.m */,
+				82198F2C1BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib */,
+				82198F2D1BF70E4C00EAF2E5 /* MCDreamListViewController.h */,
+				82198F2E1BF70E4C00EAF2E5 /* MCDreamListViewController.m */,
+				82198F2F1BF70E4C00EAF2E5 /* MCDreamListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F361BF70E6400EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F371BF70E6400EAF2E5 /* MCFlashlightViewController.h */,
+				82198F381BF70E6400EAF2E5 /* MCFlashlightViewController.m */,
+				82198F391BF70E6400EAF2E5 /* MCFlashlightViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F431BF7106D00EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F441BF7106D00EAF2E5 /* MCMirrorViewController.h */,
+				82198F451BF7106D00EAF2E5 /* MCMirrorViewController.m */,
+				82198F461BF7106D00EAF2E5 /* MCMirrorViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F491BF710A800EAF2E5 /* SizeControl */ = {
+			isa = PBXGroup;
+			children = (
+				82198F4A1BF710A800EAF2E5 /* Controller */,
+				82198F4B1BF710A800EAF2E5 /* Resources */,
+			);
+			path = SizeControl;
+			sourceTree = "<group>";
+		};
+		82198F4A1BF710A800EAF2E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82198F4E1BF710CA00EAF2E5 /* MCSizeControlViewController.h */,
+				82198F4F1BF710CA00EAF2E5 /* MCSizeControlViewController.m */,
+				82198F501BF710CA00EAF2E5 /* MCSizeControlViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82198F4B1BF710A800EAF2E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82198F4C1BF710B700EAF2E5 /* SizeControl.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		821FF0B51BF398B400EBC169 /* Dream */ = {
 			isa = PBXGroup;
 			children = (
+				82198F261BF70E4C00EAF2E5 /* Controller */,
 				829C08371BF4D35C0043905E /* View */,
 				4C28F2671BF4212E0017DAF0 /* Model */,
 				4C28F2531BF41EA00017DAF0 /* Helper */,
-				4C28F2541BF41EA00017DAF0 /* ViewController */,
 				821FF0B61BF398B400EBC169 /* Resources */,
 			);
 			path = Dream;
@@ -788,33 +858,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				8245AA0C1BF4D91E009B5640 /* MCDreamCateCell.xib in Resources */,
-				4C28F25E1BF41F1C0017DAF0 /* MCDreamListViewController.xib in Resources */,
-				4CD06AF41BF33B5C0065E215 /* MCMirrorViewController.xib in Resources */,
+				82198F351BF70E4C00EAF2E5 /* MCDreamListViewController.xib in Resources */,
 				4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */,
 				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
+				82198F421BF70EBF00EAF2E5 /* MCNotepadViewController.xib in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
-				4C28F2631BF41F2F0017DAF0 /* MCDreamDetailViewController.xib in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
 				4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */,
+				82198F4D1BF710B700EAF2E5 /* SizeControl.storyboard in Resources */,
 				821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */,
+				82198F3D1BF70E9800EAF2E5 /* Notepad.storyboard in Resources */,
 				4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */,
 				8205FE491BD68BB500EC838E /* Assets.xcassets in Resources */,
+				82198F521BF710CA00EAF2E5 /* MCSizeControlViewController.xib in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,
-				4CD06AEF1BF33B4A0065E215 /* MCFlashlightViewController.xib in Resources */,
+				82198F3B1BF70E6400EAF2E5 /* MCFlashlightViewController.xib in Resources */,
 				82273FE61BDB2AB200AFDEAF /* MCRootViewController.xib in Resources */,
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
+				82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
+				82198F481BF7106D00EAF2E5 /* MCMirrorViewController.xib in Resources */,
 				4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
 				82273FD91BDB2A6100AFDEAF /* MCTabBarController.xib in Resources */,
 				8245AA071BF4D904009B5640 /* MCDreamCateSearchHeader.xib in Resources */,
 				82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */,
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
-				4C28F2591BF41F0C0017DAF0 /* MCDreamCateViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
-				4C7657B71BF58F6600FD75D3 /* MCCompassViewController.xib in Resources */,
+				82198F311BF70E4C00EAF2E5 /* MCDreamCateViewController.xib in Resources */,
+				82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */,
 				4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,7 +952,6 @@
 				4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */,
 				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
 				820935CF1BF2341500F032AA /* MCToolCate.m in Sources */,
-				4C28F2581BF41F0C0017DAF0 /* MCDreamCateViewController.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
 				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
 				4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */,
@@ -892,16 +965,20 @@
 				82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */,
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
+				82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */,
 				4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */,
+				82198F321BF70E4C00EAF2E5 /* MCDreamDetailViewController.m in Sources */,
+				82198F511BF710CA00EAF2E5 /* MCSizeControlViewController.m in Sources */,
 				4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */,
 				82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */,
 				82273FF11BDB395600AFDEAF /* MCWeatherViewController.m in Sources */,
 				8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */,
+				82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */,
+				82198F471BF7106D00EAF2E5 /* MCMirrorViewController.m in Sources */,
 				4C30C3001BDF6C8000E6E2C5 /* MCWeatherHourInfo.m in Sources */,
 				82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */,
 				82EFB72B1BDC9AE7008A978C /* MCHTTPConnection.m in Sources */,
 				82EFB7281BDC9AE7008A978C /* MCDevice.m in Sources */,
-				4CD06AEE1BF33B4A0065E215 /* MCFlashlightViewController.m in Sources */,
 				829C08361BF4C9090043905E /* AppDelegate+Base.m in Sources */,
 				82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */,
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
@@ -911,27 +988,26 @@
 				820935D21BF2342300F032AA /* MCTool.m in Sources */,
 				4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */,
 				82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */,
+				82198F411BF70EBF00EAF2E5 /* MCNotepadViewController.m in Sources */,
 				4C30C3161BDF767900E6E2C5 /* MCCollectionViewController.m in Sources */,
 				4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */,
 				82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */,
 				82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */,
 				4C30C2F71BDF6B7200E6E2C5 /* MCWeatherWind.m in Sources */,
 				82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */,
+				82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */,
 				82EFB72A1BDC9AE7008A978C /* MCDrawImage.m in Sources */,
 				82EFB72C1BDC9AE7008A978C /* MCImageExtension.m in Sources */,
 				4C30C3091BDF6D0500E6E2C5 /* MCWeatherBasic.m in Sources */,
 				82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */,
-				4C7657B61BF58F6600FD75D3 /* MCCompassViewController.m in Sources */,
 				8245AA061BF4D904009B5640 /* MCDreamCateSearchHeader.m in Sources */,
 				4C30C2F11BDF6AAC00E6E2C5 /* MCWeatherIndex.m in Sources */,
+				82198F3A1BF70E6400EAF2E5 /* MCFlashlightViewController.m in Sources */,
 				82273FE01BDB2A8B00AFDEAF /* AppDelegate.m in Sources */,
 				82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */,
-				4C28F25D1BF41F1C0017DAF0 /* MCDreamListViewController.m in Sources */,
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
-				4CD06AF31BF33B5C0065E215 /* MCMirrorViewController.m in Sources */,
-				4C28F2621BF41F2F0017DAF0 /* MCDreamDetailViewController.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

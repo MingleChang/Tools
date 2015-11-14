@@ -1,22 +1,22 @@
 //
-//  MCCompassViewController.m
+//  MCNotepadViewController.m
 //  Tools
 //
-//  Created by cjw on 15/11/13.
+//  Created by 常峻玮 on 15/11/14.
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import "MCCompassViewController.h"
+#import "MCNotepadViewController.h"
 
-@interface MCCompassViewController ()
+@interface MCNotepadViewController ()
 
 @end
 
-@implementation MCCompassViewController
+@implementation MCNotepadViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self configure];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +33,20 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - Init Methods
+-(void)configure{
+    [self configureView];
+    [self configureData];
+}
+-(void)configureView{
+    
+}
+-(void)configureData{
+    
+}
+#pragma mark - Override
+-(void)resetNavigationItem{
+    [super resetNavigationItem];
+    self.navigationItem.title=@"记事本";
+}
 @end

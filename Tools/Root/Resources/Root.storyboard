@@ -174,6 +174,8 @@
                         <segue destination="XN6-20-Xai" kind="push" identifier="MCFlashlightViewController" id="iO9-2e-byO"/>
                         <segue destination="gNg-z8-8SK" kind="push" identifier="MCDreamCateViewController" id="Cev-I0-UNt"/>
                         <segue destination="4La-Lp-tsS" kind="push" identifier="MCCompassViewController" id="yL2-cK-lmH"/>
+                        <segue destination="aU6-1L-OaM" kind="push" identifier="MCNotepadViewController" id="Ycm-HO-Kvv"/>
+                        <segue destination="obx-pf-vXa" kind="push" identifier="MCSizeControlViewController" id="gle-CS-BZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,6 +221,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6X-C2-xCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="503" y="268"/>
+        </scene>
+        <!--MCNotepadViewController-->
+        <scene sceneID="51s-Lw-GK3">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MCNotepadViewController" storyboardName="Notepad" referencedIdentifier="MCNotepadViewController" id="aU6-1L-OaM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8jg-ba-kJm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fV1-kY-XKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="340"/>
+        </scene>
+        <!--MCSizeControlViewController-->
+        <scene sceneID="dQM-k3-hIa">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MCSizeControlViewController" storyboardName="SizeControl" referencedIdentifier="MCSizeControlViewController" id="obx-pf-vXa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lnp-Yv-64h"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFS-1U-vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510.5" y="414"/>
         </scene>
         <!--MCRootWeatherViewController-->
         <scene sceneID="Epc-qS-Lkz">

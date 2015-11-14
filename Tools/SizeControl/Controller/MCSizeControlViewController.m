@@ -1,18 +1,18 @@
 //
-//  MCFlashlightViewController.m
+//  MCSizeControlViewController.m
 //  Tools
 //
-//  Created by cjw on 15/11/11.
+//  Created by 常峻玮 on 15/11/14.
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import "MCFlashlightViewController.h"
-@import AVFoundation;
-@interface MCFlashlightViewController ()
+#import "MCSizeControlViewController.h"
+
+@interface MCSizeControlViewController ()
 
 @end
 
-@implementation MCFlashlightViewController
+@implementation MCSizeControlViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +23,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 /*
 #pragma mark - Navigation
 
@@ -44,7 +45,8 @@
     
 }
 #pragma mark - Override
--(void)resetNavigationBar{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+-(void)resetNavigationItem{
+    [super resetNavigationItem];
+    self.navigationItem.title=@"尺码对照表";
 }
 @end

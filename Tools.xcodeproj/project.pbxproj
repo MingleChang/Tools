@@ -83,6 +83,8 @@
 		82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82273FF41BDB397B00AFDEAF /* MCRootWeatherViewController.m */; };
 		82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82273FF51BDB397B00AFDEAF /* MCRootWeatherViewController.xib */; };
 		822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D2D581BDFB4AC00BB0CD1 /* MCWeatherNow.m */; };
+		823476851BF8D31C00A99554 /* MCSizeControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 823476841BF8D31C00A99554 /* MCSizeControlButton.m */; };
+		823476881BF8D3DD00A99554 /* MCSizeControlChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 823476871BF8D3DD00A99554 /* MCSizeControlChooseView.m */; };
 		82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82359E331BF37376000AB501 /* MCRootChooseView.m */; };
 		8245AA061BF4D904009B5640 /* MCDreamCateSearchHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245AA041BF4D904009B5640 /* MCDreamCateSearchHeader.m */; };
 		8245AA071BF4D904009B5640 /* MCDreamCateSearchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8245AA051BF4D904009B5640 /* MCDreamCateSearchHeader.xib */; };
@@ -228,6 +230,10 @@
 		82273FF51BDB397B00AFDEAF /* MCRootWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCRootWeatherViewController.xib; sourceTree = "<group>"; };
 		822D2D571BDFB4AC00BB0CD1 /* MCWeatherNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherNow.h; sourceTree = "<group>"; };
 		822D2D581BDFB4AC00BB0CD1 /* MCWeatherNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherNow.m; sourceTree = "<group>"; };
+		823476831BF8D31C00A99554 /* MCSizeControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSizeControlButton.h; sourceTree = "<group>"; };
+		823476841BF8D31C00A99554 /* MCSizeControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSizeControlButton.m; sourceTree = "<group>"; };
+		823476861BF8D3DD00A99554 /* MCSizeControlChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSizeControlChooseView.h; sourceTree = "<group>"; };
+		823476871BF8D3DD00A99554 /* MCSizeControlChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSizeControlChooseView.m; sourceTree = "<group>"; };
 		82359E321BF37376000AB501 /* MCRootChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootChooseView.h; sourceTree = "<group>"; };
 		82359E331BF37376000AB501 /* MCRootChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootChooseView.m; sourceTree = "<group>"; };
 		8245AA031BF4D904009B5640 /* MCDreamCateSearchHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateSearchHeader.h; sourceTree = "<group>"; };
@@ -570,6 +576,7 @@
 		82198F491BF710A800EAF2E5 /* SizeControl */ = {
 			isa = PBXGroup;
 			children = (
+				823476821BF8D2FD00A99554 /* View */,
 				82198F4A1BF710A800EAF2E5 /* Controller */,
 				82198F4B1BF710A800EAF2E5 /* Resources */,
 			);
@@ -716,6 +723,17 @@
 				82273FC41BDB2A6100AFDEAF /* Controller */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		823476821BF8D2FD00A99554 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				823476831BF8D31C00A99554 /* MCSizeControlButton.h */,
+				823476841BF8D31C00A99554 /* MCSizeControlButton.m */,
+				823476861BF8D3DD00A99554 /* MCSizeControlChooseView.h */,
+				823476871BF8D3DD00A99554 /* MCSizeControlChooseView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		829C08371BF4D35C0043905E /* View */ = {
@@ -991,6 +1009,7 @@
 				82198F411BF70EBF00EAF2E5 /* MCNotepadViewController.m in Sources */,
 				4C30C3161BDF767900E6E2C5 /* MCCollectionViewController.m in Sources */,
 				4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */,
+				823476881BF8D3DD00A99554 /* MCSizeControlChooseView.m in Sources */,
 				82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */,
 				82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */,
 				4C30C2F71BDF6B7200E6E2C5 /* MCWeatherWind.m in Sources */,
@@ -1004,6 +1023,7 @@
 				4C30C2F11BDF6AAC00E6E2C5 /* MCWeatherIndex.m in Sources */,
 				82198F3A1BF70E6400EAF2E5 /* MCFlashlightViewController.m in Sources */,
 				82273FE01BDB2A8B00AFDEAF /* AppDelegate.m in Sources */,
+				823476851BF8D31C00A99554 /* MCSizeControlButton.m in Sources */,
 				82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */,
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,

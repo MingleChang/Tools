@@ -16,6 +16,12 @@
  */
 +(CGFloat)systemVersion;
 /*
+ 获取当前设备的uuid
+ 参数：N/A
+ 返回值：NSString，返回设备的uuid
+ */
++(NSString *)uuid;
+/*
  判断当前设备是否是iPhone
  参数：N/A
  返回值：BOOL，返回YES或者NO

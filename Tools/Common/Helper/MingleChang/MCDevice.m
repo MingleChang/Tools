@@ -12,7 +12,9 @@
 +(CGFloat)systemVersion{
     return [[[UIDevice currentDevice]systemVersion]floatValue];
 }
-
++(NSString *)uuid{
+    return [UIDevice currentDevice].identifierForVendor.UUIDString;
+}
 +(BOOL)iPhone{
     return [UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPhone;
 }

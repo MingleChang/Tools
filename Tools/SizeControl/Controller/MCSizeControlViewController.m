@@ -28,6 +28,7 @@
 #define KID_CLOTHES @"kid_clothes"//童装
 
 @interface MCSizeControlViewController ()<MCSizeControlChooseViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(strong,nonatomic)UIButton *selectedButton;
 @property (weak, nonatomic) IBOutlet UIButton *womanButton;
 @property (weak, nonatomic) IBOutlet UIButton *manButton;
@@ -37,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet MCSizeControlChooseView *kidChooseView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *infoImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *infoImageViewHeightConstraint;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineHeightConstraint;
 - (IBAction)womanButtonClick:(UIButton *)sender;
@@ -51,7 +53,6 @@
     [super viewDidLoad];
     [self configure];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -111,7 +112,7 @@
                 imageName=WOMAN_SHOES;
                 break;
         }
-        self.infoImageView.image=[UIImage imageNamed:imageName];
+        [self resetInfoImageViewWith:imageName];
         return;
     }
     if ([self.selectedButton isEqual:self.manButton]) {
@@ -139,8 +140,7 @@
                 imageName=MAN_SHOES;
                 break;
         }
-        self.infoImageView.image=[UIImage imageNamed:imageName];
-        return;
+        [self resetInfoImageViewWith:imageName];
         return;
     }
     if ([self.selectedButton isEqual:self.kidButton]) {
@@ -156,10 +156,15 @@
                 imageName=KID_SHOES;
                 break;
         }
-        self.infoImageView.image=[UIImage imageNamed:imageName];
-        return;
+        [self resetInfoImageViewWith:imageName];
         return;
     }
+}
+-(void)resetInfoImageViewWith:(NSString *)imageName{
+    UIImage *lImage=[UIImage imageNamed:imageName];
+    self.infoImageView.image=lImage;
+    self.infoImageViewHeightConstraint.constant=lImage.size.height/lImage.size.width*SCREEN_WIDTH;
+    [self.scrollView setContentOffset:CGPointZero];
 }
 #pragma mark - Event Response
 - (IBAction)womanButtonClick:(UIButton *)sender {

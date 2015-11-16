@@ -919,6 +919,9 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kid_shoes" translatesAutoresizingMaskIntoConstraints="NO" id="rsm-M8-mvt">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="988"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="988" id="REV-St-GqK"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <animations/>
@@ -963,11 +966,13 @@
                     </view>
                     <connections>
                         <outlet property="infoImageView" destination="rsm-M8-mvt" id="3Ud-9w-hlP"/>
+                        <outlet property="infoImageViewHeightConstraint" destination="REV-St-GqK" id="54s-P0-3l7"/>
                         <outlet property="kidButton" destination="eFb-hX-9aR" id="SxH-Pb-Lof"/>
                         <outlet property="kidChooseView" destination="nQu-cL-wt8" id="nSl-R0-K6Z"/>
                         <outlet property="lineHeightConstraint" destination="hhP-1H-yGP" id="gSp-Xl-D7m"/>
                         <outlet property="manButton" destination="aMi-sj-1RK" id="dwM-xz-pSi"/>
                         <outlet property="manChooseView" destination="sYt-vS-fPY" id="IdH-ob-eFn"/>
+                        <outlet property="scrollView" destination="EpI-6H-4Ls" id="9te-jc-H0q"/>
                         <outlet property="womanButton" destination="qtP-wB-84J" id="gGH-ta-xGB"/>
                         <outlet property="womanChooseView" destination="ZUe-b2-eVh" id="9wt-4b-PSQ"/>
                     </connections>

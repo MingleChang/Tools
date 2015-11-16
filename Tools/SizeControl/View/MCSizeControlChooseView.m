@@ -33,6 +33,9 @@
 }
 #pragma mark - Event Response
 -(IBAction)sizeControlButtonClick:(MCSizeControlButton *)sender{
+    if ([self.selectedButton isEqual:sender]) {
+        return;
+    }
     [self selectedButton:sender];
     if ([self.delegate respondsToSelector:@selector(sizeControlChooseView:selectedIndex:)]) {
         [self.delegate sizeControlChooseView:self selectedIndex:self.selectedButton.tag-MIN_TAG];

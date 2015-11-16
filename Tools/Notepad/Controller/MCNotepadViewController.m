@@ -24,6 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Event Response
+-(void)addBarButtonItemClick:(UIBarButtonItem *)sender{
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -48,5 +52,7 @@
 -(void)resetNavigationItem{
     [super resetNavigationItem];
     self.navigationItem.title=@"记事本";
+    UIBarButtonItem *lAddBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_add"] style:UIBarButtonItemStyleDone target:self action:@selector(addBarButtonItemClick:)];
+    self.navigationItem.rightBarButtonItem=lAddBarButtonItem;
 }
 @end

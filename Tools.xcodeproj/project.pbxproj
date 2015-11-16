@@ -92,6 +92,8 @@
 		8245AA071BF4D904009B5640 /* MCDreamCateSearchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8245AA051BF4D904009B5640 /* MCDreamCateSearchHeader.xib */; };
 		8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245AA091BF4D91E009B5640 /* MCDreamCateCell.m */; };
 		8245AA0C1BF4D91E009B5640 /* MCDreamCateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8245AA0A1BF4D91E009B5640 /* MCDreamCateCell.xib */; };
+		824D5CE71BFA3786006069FE /* MCNotepadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 824D5CE51BFA3786006069FE /* MCNotepadCell.m */; };
+		824D5CE81BFA3786006069FE /* MCNotepadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824D5CE61BFA3786006069FE /* MCNotepadCell.xib */; };
 		829C08361BF4C9090043905E /* AppDelegate+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C08351BF4C9090043905E /* AppDelegate+Base.m */; };
 		82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6681BDE51C500FCA1C2 /* MCLocationManager.m */; };
 		82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */; };
@@ -248,6 +250,9 @@
 		8245AA081BF4D91E009B5640 /* MCDreamCateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateCell.h; sourceTree = "<group>"; };
 		8245AA091BF4D91E009B5640 /* MCDreamCateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCateCell.m; sourceTree = "<group>"; };
 		8245AA0A1BF4D91E009B5640 /* MCDreamCateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamCateCell.xib; sourceTree = "<group>"; };
+		824D5CE41BFA3786006069FE /* MCNotepadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadCell.h; sourceTree = "<group>"; };
+		824D5CE51BFA3786006069FE /* MCNotepadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadCell.m; sourceTree = "<group>"; };
+		824D5CE61BFA3786006069FE /* MCNotepadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadCell.xib; sourceTree = "<group>"; };
 		829C08341BF4C9090043905E /* AppDelegate+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Base.h"; sourceTree = "<group>"; };
 		829C08351BF4C9090043905E /* AppDelegate+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Base.m"; sourceTree = "<group>"; };
 		82B4D6671BDE51C500FCA1C2 /* MCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLocationManager.h; sourceTree = "<group>"; };
@@ -527,6 +532,7 @@
 		82198F171BF70DFD00EAF2E5 /* Notepad */ = {
 			isa = PBXGroup;
 			children = (
+				824D5CE31BFA3768006069FE /* View */,
 				4C44BAD51BF9A6B6005D5FEA /* Model */,
 				4C44BAD01BF9A402005D5FEA /* Helper */,
 				82198F181BF70DFD00EAF2E5 /* Controller */,
@@ -762,6 +768,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		824D5CE31BFA3768006069FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				824D5CE41BFA3786006069FE /* MCNotepadCell.h */,
+				824D5CE51BFA3786006069FE /* MCNotepadCell.m */,
+				824D5CE61BFA3786006069FE /* MCNotepadCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		829C08371BF4D35C0043905E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +918,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8245AA0C1BF4D91E009B5640 /* MCDreamCateCell.xib in Resources */,
+				824D5CE81BFA3786006069FE /* MCNotepadCell.xib in Resources */,
 				82198F351BF70E4C00EAF2E5 /* MCDreamListViewController.xib in Resources */,
 				4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */,
 				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
@@ -1033,6 +1050,7 @@
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,
 				820935D21BF2342300F032AA /* MCTool.m in Sources */,
 				4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */,
+				824D5CE71BFA3786006069FE /* MCNotepadCell.m in Sources */,
 				82022E891BF0EE38002FC16C /* MCCacheManager.m in Sources */,
 				82198F411BF70EBF00EAF2E5 /* MCNotepadViewController.m in Sources */,
 				4C30C3161BDF767900E6E2C5 /* MCCollectionViewController.m in Sources */,

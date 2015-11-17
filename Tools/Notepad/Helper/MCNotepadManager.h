@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MCNotepad;
 
 @interface MCNotepadManager : NSObject
 +(MCNotepadManager *)manager;
+
+-(BOOL)createTable;
+-(BOOL)insertNotepad:(MCNotepad *)notepad;
+-(BOOL)updateNotepad:(MCNotepad *)notepad;
+-(BOOL)deleteNotepad:(MCNotepad *)notepad;
+-(NSArray *)selectAllNotepad;
 @end

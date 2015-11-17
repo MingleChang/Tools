@@ -42,4 +42,23 @@
 +(NSString *)pathWithDirectoryPath:(NSString *)directoryPath andFileName:(NSString *)fileName{
     return [directoryPath stringByAppendingPathComponent:fileName];
 }
++(NSString *)createDirectory:(NSString *)path{
+    BOOL isDirectory=NO;
+    if ([[NSFileManager defaultManager]fileExistsAtPath:path isDirectory:&isDirectory]) {
+        if (isDirectory==YES) {
+            return path;
+        }else{
+            if ([[NSFileManager defaultManager]createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil]) {
+                return path;
+            }else{
+                return nil;
+            }
+        }
+    }
+    if ([[NSFileManager defaultManager]createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil]) {
+        return path;
+    }else{
+        return nil;
+    }
+}
 @end

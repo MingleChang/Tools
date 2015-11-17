@@ -7,6 +7,8 @@
 //
 
 #import "MCNotepadViewController.h"
+#import "MCNotepadManager.h"
+#import "MCNotepad.h"
 
 @interface MCNotepadViewController ()
 

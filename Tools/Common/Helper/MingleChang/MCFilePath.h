@@ -20,4 +20,5 @@
 +(NSString *)pathInCacheWithFileName:(NSString *)fileName;
 +(NSString *)pathInTmpFileName:(NSString *)fileName;
 +(NSString *)pathWithDirectoryPath:(NSString *)directoryPath andFileName:(NSString *)fileName;
++(NSString *)createDirectory:(NSString *)path;
 @end

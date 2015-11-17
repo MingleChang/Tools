@@ -99,6 +99,8 @@
 		82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */; };
 		82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66D1BDE641300FCA1C2 /* MCAddress.m */; };
 		82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */; };
+		82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */; };
+		82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */; };
 		82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */; };
 		82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FD1BDC8E5B008A978C /* MCWeatherCity.m */; };
 		82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB7001BDC8E6E008A978C /* MCWeatherArea.m */; };
@@ -262,6 +264,9 @@
 		82B4D66D1BDE641300FCA1C2 /* MCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAddress.m; sourceTree = "<group>"; };
 		82B4D66F1BDE692100FCA1C2 /* APIStoreRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreRequest.h; sourceTree = "<group>"; };
 		82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIStoreRequest.m; sourceTree = "<group>"; };
+		82D806211BFB7FE00092F3D4 /* MCNotepadEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadEditViewController.h; sourceTree = "<group>"; };
+		82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadEditViewController.m; sourceTree = "<group>"; };
+		82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadEditViewController.xib; sourceTree = "<group>"; };
 		82EFB6F91BDC8E4B008A978C /* MCWeatherProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherProvince.h; sourceTree = "<group>"; };
 		82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherProvince.m; sourceTree = "<group>"; };
 		82EFB6FC1BDC8E5B008A978C /* MCWeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherCity.h; sourceTree = "<group>"; };
@@ -547,6 +552,9 @@
 				82198F3E1BF70EBF00EAF2E5 /* MCNotepadViewController.h */,
 				82198F3F1BF70EBF00EAF2E5 /* MCNotepadViewController.m */,
 				82198F401BF70EBF00EAF2E5 /* MCNotepadViewController.xib */,
+				82D806211BFB7FE00092F3D4 /* MCNotepadEditViewController.h */,
+				82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */,
+				82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -939,6 +947,7 @@
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
 				82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */,
+				82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
 				82198F481BF7106D00EAF2E5 /* MCMirrorViewController.xib in Resources */,
 				4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */,
@@ -1027,6 +1036,7 @@
 				4C30C3061BDF6CEC00E6E2C5 /* MCWeatherTmp.m in Sources */,
 				82B4D66E1BDE641300FCA1C2 /* MCAddress.m in Sources */,
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
+				82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
 				82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */,
 				4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */,

@@ -40,10 +40,45 @@
                             <constraint firstItem="Fwv-at-vMK" firstAttribute="top" secondItem="a8Z-Hk-89I" secondAttribute="bottom" id="wse-II-qbd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="3da-bY-R9w" kind="push" identifier="MCNotepadEditViewController" id="AUE-xU-pdS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIB-hN-Uzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="181"/>
+        </scene>
+        <!--Notepad Edit View Controller-->
+        <scene sceneID="7De-V6-Gik">
+            <objects>
+                <viewController storyboardIdentifier="MCNotepadEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3da-bY-R9w" customClass="MCNotepadEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uhs-ZB-8oE"/>
+                        <viewControllerLayoutGuide type="bottom" id="zVU-0W-7bh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="486-dy-t1j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-77-nUy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0cV-77-nUy" firstAttribute="top" secondItem="486-dy-t1j" secondAttribute="top" id="CLl-yF-DFd"/>
+                            <constraint firstAttribute="bottom" secondItem="0cV-77-nUy" secondAttribute="bottom" id="XBr-Er-NJH"/>
+                            <constraint firstAttribute="trailing" secondItem="0cV-77-nUy" secondAttribute="trailing" id="XDe-jk-SGu"/>
+                            <constraint firstItem="0cV-77-nUy" firstAttribute="leading" secondItem="486-dy-t1j" secondAttribute="leading" id="aDe-aK-dbE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0lJ-Th-fCk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZA-bS-g2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="181"/>
         </scene>
     </scenes>
     <resources>

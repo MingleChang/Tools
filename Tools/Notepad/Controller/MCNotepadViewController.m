@@ -9,6 +9,9 @@
 #import "MCNotepadViewController.h"
 #import "MCNotepadManager.h"
 #import "MCNotepad.h"
+#import "MCNotepadEditViewController.h"
+
+#define NOTEPAD_EDIT_VC_SEGUE_ID @"MCNotepadEditViewController"
 
 @interface MCNotepadViewController ()
 
@@ -28,17 +31,16 @@
 
 #pragma mark - Event Response
 -(void)addBarButtonItemClick:(UIBarButtonItem *)sender{
-    
+    [self performSegueWithIdentifier:NOTEPAD_EDIT_VC_SEGUE_ID sender:nil];
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
 }
-*/
+
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];

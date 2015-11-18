@@ -7,7 +7,7 @@
 //
 
 #import "MCViewController.h"
-
+@class MCNotepad;
 @interface MCNotepadEditViewController : MCViewController
-
+@property(nonatomic,strong)MCNotepad *notepad;
 @end

@@ -51,6 +51,8 @@
 		820935CC1BF2340100F032AA /* tools.json in Resources */ = {isa = PBXBuildFile; fileRef = 820935CB1BF2340100F032AA /* tools.json */; };
 		820935CF1BF2341500F032AA /* MCToolCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCToolCate.m */; };
 		820935D21BF2342300F032AA /* MCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935D11BF2342300F032AA /* MCTool.m */; };
+		820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632A1BFCD88600205A82 /* MCDottedLineView.m */; };
+		820D632E1BFCD96300205A82 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632D1BFCD96300205A82 /* MCLineView.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
 		82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */; };
 		82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */; };
@@ -190,6 +192,10 @@
 		820935CE1BF2341500F032AA /* MCToolCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCToolCate.m; sourceTree = "<group>"; };
 		820935D01BF2342300F032AA /* MCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTool.h; sourceTree = "<group>"; };
 		820935D11BF2342300F032AA /* MCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTool.m; sourceTree = "<group>"; };
+		820D63291BFCD88600205A82 /* MCDottedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDottedLineView.h; sourceTree = "<group>"; };
+		820D632A1BFCD88600205A82 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
+		820D632C1BFCD96300205A82 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
+		820D632D1BFCD96300205A82 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		82198F211BF70E3900EAF2E5 /* MCCompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCompassViewController.h; sourceTree = "<group>"; };
 		82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCompassViewController.m; sourceTree = "<group>"; };
@@ -817,6 +823,10 @@
 		82EFB7081BDC9AE7008A978C /* MingleChang */ = {
 			isa = PBXGroup;
 			children = (
+				820D63291BFCD88600205A82 /* MCDottedLineView.h */,
+				820D632A1BFCD88600205A82 /* MCDottedLineView.m */,
+				820D632C1BFCD96300205A82 /* MCLineView.h */,
+				820D632D1BFCD96300205A82 /* MCLineView.m */,
 				4C7657B81BF5917D00FD75D3 /* MCTextField.h */,
 				4C7657B91BF5917D00FD75D3 /* MCTextField.m */,
 				4C7657BA1BF5917D00FD75D3 /* MCTextView.h */,
@@ -1038,6 +1048,7 @@
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
+				820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */,
 				82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */,
 				4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */,
 				82198F321BF70E4C00EAF2E5 /* MCDreamDetailViewController.m in Sources */,
@@ -1057,6 +1068,7 @@
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
 				4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */,
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
+				820D632E1BFCD96300205A82 /* MCLineView.m in Sources */,
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,
 				820935D21BF2342300F032AA /* MCTool.m in Sources */,
 				4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */,

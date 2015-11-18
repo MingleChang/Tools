@@ -16,9 +16,13 @@
 @property(nonatomic,strong)NSDate *create;
 @property(nonatomic,strong)NSDate *modify;
 
+@property(nonatomic,assign)BOOL isSave;
+
 -(instancetype)init;
 -(instancetype)initWithDBDictionary:(NSDictionary *)dic;
 -(NSDictionary *)toDBDictionary;
+
+-(BOOL)isValid;
 
 -(BOOL)save;
 -(BOOL)update;

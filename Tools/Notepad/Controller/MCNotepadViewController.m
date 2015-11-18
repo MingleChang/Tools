@@ -10,10 +10,13 @@
 #import "MCNotepadManager.h"
 #import "MCNotepad.h"
 #import "MCNotepadEditViewController.h"
+#import "MCNotepadCell.h"
 
 #define NOTEPAD_EDIT_VC_SEGUE_ID @"MCNotepadEditViewController"
+#define NOTEPAD_CELL_ID @"MCNotepadCell"
 
-@interface MCNotepadViewController ()
+@interface MCNotepadViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -23,7 +26,19 @@
     [super viewDidLoad];
     [self configure];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -31,14 +46,36 @@
 
 #pragma mark - Event Response
 -(void)addBarButtonItemClick:(UIBarButtonItem *)sender{
-    [self performSegueWithIdentifier:NOTEPAD_EDIT_VC_SEGUE_ID sender:nil];
+    MCNotepad *lNotepad=[[MCNotepad alloc]init];
+    [self performSegueWithIdentifier:NOTEPAD_EDIT_VC_SEGUE_ID sender:lNotepad];
 }
-
+#pragma mark - Delegate
+#pragma mark - TableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [MCNotepadManager manager].notepadArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCNotepad *lNotepad=[MCNotepadManager manager].notepadArray[row];
+    MCNotepadCell *lCell=[tableView dequeueReusableCellWithIdentifier:NOTEPAD_CELL_ID forIndexPath:indexPath];
+    lCell.notepad=lNotepad;
+    return lCell;
+}
+#pragma mark - TableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row=[indexPath row];
+    MCNotepad *lNotepad=[MCNotepadManager manager].notepadArray[row];
+    [self performSegueWithIdentifier:NOTEPAD_EDIT_VC_SEGUE_ID sender:lNotepad];
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if ([segue.identifier isEqualToString:NOTEPAD_EDIT_VC_SEGUE_ID]) {
+        MCNotepadEditViewController *lViewController=(MCNotepadEditViewController *)segue.destinationViewController;
+        lViewController.notepad=sender;
+    }
 }
 
 #pragma mark - Init Methods

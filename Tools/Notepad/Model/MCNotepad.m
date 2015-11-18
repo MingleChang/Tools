@@ -25,6 +25,7 @@
         self.imageNames=@[];
         self.create=[NSDate date];
         self.modify=[NSDate date];
+        self.isSave=NO;
     }
     return self;
 }
@@ -32,10 +33,16 @@
     self=[super init];
     if (self) {
         [self setValuesForKeysWithDictionary:dic];
+        self.isSave=YES;
     }
     return self;
 }
-
+-(BOOL)isValid{
+    if (self.content.length==0&&self.imageNames.count==0) {
+        return NO;
+    }
+    return YES;
+}
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     if ([key isEqualToString:@"imageName"]&&[value isKindOfClass:[NSString class]]) {
         NSString *lValueStr=(NSString *)value;

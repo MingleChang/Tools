@@ -30,6 +30,7 @@
     self=[super init];
     if (self) {
         [self createTable];
+        self.notepadArray=[[self selectAllNotepad]mutableCopy];
     }
     return self;
 }

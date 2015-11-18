@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MCNotepad;
 @interface MCNotepadCell : UITableViewCell
-
+@property(nonatomic,strong)MCNotepad *notepad;
 @end

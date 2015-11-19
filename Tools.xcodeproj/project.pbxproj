@@ -51,6 +51,10 @@
 		820935CC1BF2340100F032AA /* tools.json in Resources */ = {isa = PBXBuildFile; fileRef = 820935CB1BF2340100F032AA /* tools.json */; };
 		820935CF1BF2341500F032AA /* MCToolCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935CE1BF2341500F032AA /* MCToolCate.m */; };
 		820935D21BF2342300F032AA /* MCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 820935D11BF2342300F032AA /* MCTool.m */; };
+		8209D7151BFE0118005029A1 /* MCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209D7131BFE0118005029A1 /* MCImagePickerViewController.m */; };
+		8209D7161BFE0118005029A1 /* MCImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8209D7141BFE0118005029A1 /* MCImagePickerViewController.xib */; };
+		8209D71A1BFE0896005029A1 /* MCNotepadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209D7181BFE0896005029A1 /* MCNotepadImageCell.m */; };
+		8209D71B1BFE0896005029A1 /* MCNotepadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8209D7191BFE0896005029A1 /* MCNotepadImageCell.xib */; };
 		820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632A1BFCD88600205A82 /* MCDottedLineView.m */; };
 		820D632E1BFCD96300205A82 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632D1BFCD96300205A82 /* MCLineView.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
@@ -192,6 +196,12 @@
 		820935CE1BF2341500F032AA /* MCToolCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCToolCate.m; sourceTree = "<group>"; };
 		820935D01BF2342300F032AA /* MCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTool.h; sourceTree = "<group>"; };
 		820935D11BF2342300F032AA /* MCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTool.m; sourceTree = "<group>"; };
+		8209D7121BFE0118005029A1 /* MCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImagePickerViewController.h; sourceTree = "<group>"; };
+		8209D7131BFE0118005029A1 /* MCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImagePickerViewController.m; sourceTree = "<group>"; };
+		8209D7141BFE0118005029A1 /* MCImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCImagePickerViewController.xib; sourceTree = "<group>"; };
+		8209D7171BFE0896005029A1 /* MCNotepadImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadImageCell.h; sourceTree = "<group>"; };
+		8209D7181BFE0896005029A1 /* MCNotepadImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadImageCell.m; sourceTree = "<group>"; };
+		8209D7191BFE0896005029A1 /* MCNotepadImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadImageCell.xib; sourceTree = "<group>"; };
 		820D63291BFCD88600205A82 /* MCDottedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDottedLineView.h; sourceTree = "<group>"; };
 		820D632A1BFCD88600205A82 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
 		820D632C1BFCD96300205A82 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
@@ -698,6 +708,9 @@
 				82273FD11BDB2A6100AFDEAF /* MCViewController.h */,
 				82273FD21BDB2A6100AFDEAF /* MCViewController.m */,
 				82273FD31BDB2A6100AFDEAF /* MCViewController.xib */,
+				8209D7121BFE0118005029A1 /* MCImagePickerViewController.h */,
+				8209D7131BFE0118005029A1 /* MCImagePickerViewController.m */,
+				8209D7141BFE0118005029A1 /* MCImagePickerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -788,6 +801,9 @@
 				824D5CE41BFA3786006069FE /* MCNotepadCell.h */,
 				824D5CE51BFA3786006069FE /* MCNotepadCell.m */,
 				824D5CE61BFA3786006069FE /* MCNotepadCell.xib */,
+				8209D7171BFE0896005029A1 /* MCNotepadImageCell.h */,
+				8209D7181BFE0896005029A1 /* MCNotepadImageCell.m */,
+				8209D7191BFE0896005029A1 /* MCNotepadImageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -959,6 +975,8 @@
 				82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */,
 				82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
+				8209D71B1BFE0896005029A1 /* MCNotepadImageCell.xib in Resources */,
+				8209D7161BFE0118005029A1 /* MCImagePickerViewController.xib in Resources */,
 				82198F481BF7106D00EAF2E5 /* MCMirrorViewController.xib in Resources */,
 				4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
@@ -1084,6 +1102,7 @@
 				82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */,
 				82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */,
 				82EFB72A1BDC9AE7008A978C /* MCDrawImage.m in Sources */,
+				8209D7151BFE0118005029A1 /* MCImagePickerViewController.m in Sources */,
 				82EFB72C1BDC9AE7008A978C /* MCImageExtension.m in Sources */,
 				4C30C3091BDF6D0500E6E2C5 /* MCWeatherBasic.m in Sources */,
 				82273FD61BDB2A6100AFDEAF /* MCNavigationController.m in Sources */,
@@ -1096,6 +1115,7 @@
 				82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
+				8209D71A1BFE0896005029A1 /* MCNotepadImageCell.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

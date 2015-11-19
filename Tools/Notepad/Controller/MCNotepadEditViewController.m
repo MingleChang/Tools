@@ -11,10 +11,16 @@
 #import "MingleChang.h"
 #import "MCNotepad.h"
 #import "MCNotepadManager.h"
+#import "MCImagePickerViewController.h"
+#import "MCNotepadImageCell.h"
 
-#define TEXTVIEW_WIDTH SCREEN_WIDTH-20
+#define NOTEPAD_IMAGE_CELL_ID @"MCNotepadImageCell"
 
-@interface MCNotepadEditViewController ()<UITextViewDelegate>
+#define TEXTVIEW_WIDTH (SCREEN_WIDTH-20)
+#define COLLECTIONVIEW_WIDTH (SCREEN_WIDTH-20)
+
+@interface MCNotepadEditViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MCNotepadImageCellDelegate>
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet MCTextView *textView;
@@ -71,11 +77,86 @@
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)resetCollectionView{
+    MCLOG(@"%f",COLLECTIONVIEW_WIDTH);
+    if (self.notepad.images.count==0) {
+        self.collectionViewHeightConstraint.constant=0;
+    }else if (self.notepad.images.count==1){
+        self.collectionViewHeightConstraint.constant=COLLECTIONVIEW_WIDTH/3*2;
+    }else if (self.notepad.images.count==2){
+        self.collectionViewHeightConstraint.constant=COLLECTIONVIEW_WIDTH/2;
+    }else{
+        self.collectionViewHeightConstraint.constant=COLLECTIONVIEW_WIDTH/3;
+    }
+    [self.collectionView reloadData];
+}
 #pragma mark - Delegate
 #pragma mark - UITextView Delegate
 -(void)textViewDidChange:(UITextView *)textView{
     self.notepad.content=textView.text;
     [self resetTextViewHeight];
+}
+#pragma mark - UIImagePickerController Delegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *lImage=[info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    [self.notepad.images addObject:lImage];
+    [self.notepad.imageNames addObject:[NSUUID UUID].UUIDString];
+    [self resetCollectionView];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UICollectionView DataSource
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.notepad.images.count;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    UIImage *lImage=self.notepad.images[row];
+    MCNotepadImageCell *lCell=[collectionView dequeueReusableCellWithReuseIdentifier:NOTEPAD_IMAGE_CELL_ID forIndexPath:indexPath];
+    lCell.delegate=self;
+    [lCell setNotepadImage:lImage];
+    return lCell;
+}
+#pragma mark - UICollectionView Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+#pragma mark - UICollectionView Delegate FlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.notepad.images.count==0) {
+        return CGSizeZero;
+    }else if (self.notepad.images.count==1){
+        return CGSizeMake(COLLECTIONVIEW_WIDTH, COLLECTIONVIEW_WIDTH/3*2);
+    }else if (self.notepad.images.count==2){
+        return CGSizeMake(COLLECTIONVIEW_WIDTH/2, COLLECTIONVIEW_WIDTH/2);
+    }else{
+        return CGSizeMake(COLLECTIONVIEW_WIDTH/3, COLLECTIONVIEW_WIDTH/3);
+    }
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsZero;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    return 0;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    return 0;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeZero;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    return CGSizeZero;
+}
+#pragma mark - MCNotepadImageCell Delegate
+-(void)notepadImageCellDeleteButtonClick:(MCNotepadImageCell *)cell{
+    NSIndexPath *indexPath=[self.collectionView indexPathForCell:cell];
+    NSInteger row=[indexPath row];
+    [self.notepad deleteImageWithIndex:row];
+    [self resetCollectionView];
 }
 /*
 #pragma mark - Navigation
@@ -99,16 +180,28 @@
     self.textViewHeightConstraint.constant=lSize.height;
 }
 -(void)configureData{
-    
+    [self resetCollectionView];
 }
 
 #pragma mark - Event Response
 -(void)cameraBarButtonItemClick:(UIBarButtonItem *)sender{
-    UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *lAction=[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [lAlertController dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"选择图片" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *lAlbumAction=[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        MCImagePickerViewController *lViewController=[[MCImagePickerViewController alloc]init];
+        lViewController.delegate=self;
+        [self.navigationController presentViewController:lViewController animated:YES completion:nil];
     }];
-    [lAlertController addAction:lAction];
+    [lAlertController addAction:lAlbumAction];
+    UIAlertAction *lCameraAction=[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        MCImagePickerViewController *lViewController=[[MCImagePickerViewController alloc]init];
+        lViewController.delegate=self;
+        lViewController.sourceType=UIImagePickerControllerSourceTypeCamera;
+        [self.navigationController presentViewController:lViewController animated:YES completion:nil];
+    }];
+    [lAlertController addAction:lCameraAction];
+    UIAlertAction *lCancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    [lAlertController addAction:lCancelAction];
     [self presentViewController:lAlertController animated:YES completion:nil];
 }
 #pragma mark - Override

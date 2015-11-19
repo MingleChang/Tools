@@ -14,6 +14,8 @@
 #define DIRECTORY_NAME @"Notepad"
 #define DB_NAME @"Notepad.db"
 
+#define DIRECTORY_PATH [MCFilePath pathInDocumentWithFileName:DIRECTORY_NAME]
+
 @interface MCNotepadManager()
 @property(nonatomic,strong)FMDatabaseQueue *dbQueue;
 @end
@@ -80,7 +82,7 @@
     if (_dbQueue) {
         return _dbQueue;
     }
-    NSString *lPath=[MCFilePath createDirectory:[MCFilePath pathInDocumentWithFileName:DIRECTORY_NAME]];
+    NSString *lPath=[MCFilePath createDirectory:DIRECTORY_PATH];
     lPath=[MCFilePath pathWithDirectoryPath:lPath andFileName:DB_NAME];
     MCLOG(@"Notepad DB Path:%@",lPath);
     _dbQueue=[[FMDatabaseQueue alloc]initWithPath:lPath];

@@ -6,13 +6,13 @@
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class FMResultSet;
 @interface MCNotepad : NSObject
 @property(nonatomic,copy)NSString *notepadId;
 @property(nonatomic,copy)NSString *content;
-@property(nonatomic,copy)NSArray *images;
-@property(nonatomic,copy)NSArray *imageNames;
+@property(nonatomic,strong)NSMutableArray *images;
+@property(nonatomic,strong)NSMutableArray *imageNames;
 @property(nonatomic,strong)NSDate *create;
 @property(nonatomic,strong)NSDate *modify;
 
@@ -21,6 +21,9 @@
 -(instancetype)init;
 -(instancetype)initWithDBDictionary:(NSDictionary *)dic;
 -(NSDictionary *)toDBDictionary;
+
+-(void)deleteImageWithIndex:(NSInteger)index;
+-(NSString *)displayContent;
 
 -(BOOL)isValid;
 

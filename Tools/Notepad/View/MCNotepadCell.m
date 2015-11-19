@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *infoImageView;
 
 @end
 
@@ -44,7 +45,9 @@
 #pragma mark - Setter And Getter
 -(void)setNotepad:(MCNotepad *)notepad{
     _notepad=notepad;
-    self.infoLabel.text=notepad.content;
+    self.infoLabel.text=[notepad displayContent];
+    self.dateLabel.text=[notepad.modify toStringWithFormat:@"yyyy年MM月dd日 HH:mm:ss" withTimeZone:nil];
+    self.infoImageView.hidden=!notepad.imageNames.count;
 }
 
 @end

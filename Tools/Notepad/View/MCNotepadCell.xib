@@ -13,21 +13,8 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xz9-8e-T3E">
-                        <rect key="frame" x="10" y="10" width="300" height="101"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </subviews>
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="xz9-8e-T3E" secondAttribute="bottom" id="UcS-KL-EJ6"/>
-                    <constraint firstAttribute="trailing" secondItem="xz9-8e-T3E" secondAttribute="trailing" constant="10" id="cYb-RC-5Ra"/>
-                    <constraint firstItem="xz9-8e-T3E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gHo-ia-uh8"/>
-                    <constraint firstItem="xz9-8e-T3E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tzA-WW-H0o"/>
-                </constraints>
             </tableViewCellContentView>
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

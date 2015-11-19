@@ -12,6 +12,8 @@
 #import "MCNotepad.h"
 #import "MCNotepadManager.h"
 
+#define TEXTVIEW_WIDTH SCREEN_WIDTH-20
+
 @interface MCNotepadEditViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
@@ -45,7 +47,7 @@
 }
 #pragma mark - Private Mothed
 -(void)resetTextViewHeight{
-    CGSize lSize=[self.textView sizeThatFits:CGSizeMake(CGRectGetWidth(self.textView.frame), MAXFLOAT)];
+    CGSize lSize=[self.textView sizeThatFits:CGSizeMake(TEXTVIEW_WIDTH, MAXFLOAT)];
     [UIView animateWithDuration:1.0 animations:^{
         self.textViewHeightConstraint.constant=lSize.height;
         [self.textView layoutIfNeeded];
@@ -53,10 +55,19 @@
 }
 -(void)saveNotepad{
     if (self.notepad.isSave) {
-        [self.notepad update];
+        if ([self.notepad isValid]) {
+            [self.notepad update];
+        }else{
+            [self.notepad destroy];
+            [[MCNotepadManager manager].notepadArray removeObject:self.notepad];
+        }
     }else{
-        [self.notepad save];
-        [[MCNotepadManager manager].notepadArray addObject:self.notepad];
+        if ([self.notepad isValid]) {
+            [self.notepad save];
+            [[MCNotepadManager manager].notepadArray addObject:self.notepad];
+        }else{
+            
+        }
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -81,16 +92,30 @@
     [self configureData];
 }
 -(void)configureView{
-    self.textView.font=[UIFont systemFontOfSize:20];
+    self.textView.font=[UIFont systemFontOfSize:18];
     self.textView.placeholderString=@"请输入记事内容";
     self.textView.text=self.notepad.content;
+    CGSize lSize=[self.textView sizeThatFits:CGSizeMake(TEXTVIEW_WIDTH, MAXFLOAT)];
+    self.textViewHeightConstraint.constant=lSize.height;
 }
 -(void)configureData{
     
 }
+
+#pragma mark - Event Response
+-(void)cameraBarButtonItemClick:(UIBarButtonItem *)sender{
+    UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *lAction=[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [lAlertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [lAlertController addAction:lAction];
+    [self presentViewController:lAlertController animated:YES completion:nil];
+}
 #pragma mark - Override
 -(void)resetNavigationItem{
     [super resetNavigationItem];
+    UIBarButtonItem *lCameraBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_camera"] style:UIBarButtonItemStyleDone target:self action:@selector(cameraBarButtonItemClick:)];
+    self.navigationItem.rightBarButtonItem=lCameraBarButtonItem;
 }
 -(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
     [self saveNotepad];

@@ -91,7 +91,7 @@
 }
 -(NSString *)displayContent{
     if (self.content.length==0) {
-        return @"时间记事";
+        return @"图片记事";
     }
     return self.content;
 }
@@ -109,7 +109,8 @@
                 continue;
             }
             UIImage *lImage=[self.images objectAtIndex:i];
-            NSData *lData=UIImagePNGRepresentation(lImage);
+//            NSData *lData=UIImagePNGRepresentation(lImage);
+            NSData *lData=UIImageJPEGRepresentation(lImage, 0.5);
             [lData writeToFile:lImagePath atomically:YES];
         }
     });
@@ -129,7 +130,8 @@
                 continue;
             }
             UIImage *lImage=[self.images objectAtIndex:i];
-            NSData *lData=UIImagePNGRepresentation(lImage);
+//            NSData *lData=UIImagePNGRepresentation(lImage);
+            NSData *lData=UIImageJPEGRepresentation(lImage, 0.5);
             [lData writeToFile:lImagePath atomically:YES];
         }
     });

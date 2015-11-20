@@ -78,7 +78,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)resetCollectionView{
-    MCLOG(@"%f",COLLECTIONVIEW_WIDTH);
     if (self.notepad.images.count==0) {
         self.collectionViewHeightConstraint.constant=0;
     }else if (self.notepad.images.count==1){
@@ -98,7 +97,7 @@
 }
 #pragma mark - UIImagePickerController Delegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    UIImage *lImage=[info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    UIImage *lImage=[info objectForKey:UIImagePickerControllerOriginalImage];
     [self.notepad.images addObject:lImage];
     [self.notepad.imageNames addObject:[NSUUID UUID].UUIDString];
     [self resetCollectionView];
@@ -122,7 +121,7 @@
 }
 #pragma mark - UICollectionView Delegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 #pragma mark - UICollectionView Delegate FlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -158,15 +157,13 @@
     [self.notepad deleteImageWithIndex:row];
     [self resetCollectionView];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];

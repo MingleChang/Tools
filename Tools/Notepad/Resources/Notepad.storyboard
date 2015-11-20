@@ -303,11 +303,32 @@
                         <outlet property="collectionViewHeightConstraint" destination="E4G-mR-TUv" id="P4v-8g-Q1f"/>
                         <outlet property="textView" destination="78h-Gg-cKi" id="f0w-as-VtD"/>
                         <outlet property="textViewHeightConstraint" destination="DvN-WL-IpU" id="kWM-gD-RMl"/>
+                        <segue destination="XDS-QY-9fz" kind="push" identifier="MCNotepadImageShowViewController" id="PeG-TK-pbp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZA-bS-g2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="551" y="181"/>
+        </scene>
+        <!--Notepad Image Show View Controller-->
+        <scene sceneID="xDH-0W-frW">
+            <objects>
+                <viewController storyboardIdentifier="MCNotepadImageShowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XDS-QY-9fz" customClass="MCNotepadImageShowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aak-3C-EbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="S1C-dS-NOL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DVh-iu-HZp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kpz-I3-oRA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sge-sd-mrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="181"/>
         </scene>
     </scenes>
     <resources>

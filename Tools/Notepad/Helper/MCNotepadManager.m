@@ -88,4 +88,11 @@
     _dbQueue=[[FMDatabaseQueue alloc]initWithPath:lPath];
     return _dbQueue;
 }
+-(NSMutableArray *)notepadArray{
+    if (_notepadArray) {
+        return _notepadArray;
+    }
+    _notepadArray=[[self selectAllNotepad]mutableCopy];
+    return _notepadArray;
+}
 @end

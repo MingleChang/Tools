@@ -16,6 +16,8 @@
 @property(nonatomic,strong)NSDate *create;
 @property(nonatomic,strong)NSDate *modify;
 
+@property(nonatomic,copy,readonly)NSString *displayContent;
+
 @property(nonatomic,assign)BOOL isSave;
 
 -(instancetype)init;
@@ -23,7 +25,6 @@
 -(NSDictionary *)toDBDictionary;
 
 -(void)deleteImageWithIndex:(NSInteger)index;
--(NSString *)displayContent;
 
 -(BOOL)isValid;
 

@@ -30,6 +30,9 @@
 		4C44BAD81BF9A6CB005D5FEA /* MCNotepad.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44BAD71BF9A6CB005D5FEA /* MCNotepad.m */; };
 		4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C96EE1BF30C2100471135 /* MCToolCell.m */; };
 		4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C96EF1BF30C2100471135 /* MCToolCell.xib */; };
+		4C4FB39C1BFF11C8006D3325 /* MCNotepadImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FB39A1BFF11C8006D3325 /* MCNotepadImageShowViewController.m */; };
+		4C4FB39D1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FB39B1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib */; };
+		4C4FB3A01BFF1692006D3325 /* MCImageViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FB39F1BFF1692006D3325 /* MCImageViewExtension.m */; };
 		4C57B6AD1BE202AF0091E2EF /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */; };
 		4C57B6B01BE203B50091E2EF /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B6AF1BE203B50091E2EF /* MCDateExtension.m */; };
 		4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */; };
@@ -162,6 +165,11 @@
 		4C4C96ED1BF30C2100471135 /* MCToolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCToolCell.h; sourceTree = "<group>"; };
 		4C4C96EE1BF30C2100471135 /* MCToolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCToolCell.m; sourceTree = "<group>"; };
 		4C4C96EF1BF30C2100471135 /* MCToolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCToolCell.xib; sourceTree = "<group>"; };
+		4C4FB3991BFF11C8006D3325 /* MCNotepadImageShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadImageShowViewController.h; sourceTree = "<group>"; };
+		4C4FB39A1BFF11C8006D3325 /* MCNotepadImageShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadImageShowViewController.m; sourceTree = "<group>"; };
+		4C4FB39B1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadImageShowViewController.xib; sourceTree = "<group>"; };
+		4C4FB39E1BFF1692006D3325 /* MCImageViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageViewExtension.h; sourceTree = "<group>"; };
+		4C4FB39F1BFF1692006D3325 /* MCImageViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageViewExtension.m; sourceTree = "<group>"; };
 		4C57B6AB1BE202AF0091E2EF /* MCStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCStringExtension.h; sourceTree = "<group>"; };
 		4C57B6AC1BE202AF0091E2EF /* MCStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringExtension.m; sourceTree = "<group>"; };
 		4C57B6AE1BE203B50091E2EF /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
@@ -571,6 +579,9 @@
 				82D806211BFB7FE00092F3D4 /* MCNotepadEditViewController.h */,
 				82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */,
 				82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */,
+				4C4FB3991BFF11C8006D3325 /* MCNotepadImageShowViewController.h */,
+				4C4FB39A1BFF11C8006D3325 /* MCNotepadImageShowViewController.m */,
+				4C4FB39B1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -839,6 +850,8 @@
 		82EFB7081BDC9AE7008A978C /* MingleChang */ = {
 			isa = PBXGroup;
 			children = (
+				4C4FB39E1BFF1692006D3325 /* MCImageViewExtension.h */,
+				4C4FB39F1BFF1692006D3325 /* MCImageViewExtension.m */,
 				820D63291BFCD88600205A82 /* MCDottedLineView.h */,
 				820D632A1BFCD88600205A82 /* MCDottedLineView.m */,
 				820D632C1BFCD96300205A82 /* MCLineView.h */,
@@ -984,6 +997,7 @@
 				8245AA071BF4D904009B5640 /* MCDreamCateSearchHeader.xib in Resources */,
 				82273FD71BDB2A6100AFDEAF /* MCNavigationController.xib in Resources */,
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
+				4C4FB39D1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
 				82198F311BF70E4C00EAF2E5 /* MCDreamCateViewController.xib in Resources */,
 				82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */,
@@ -1072,6 +1086,7 @@
 				82198F321BF70E4C00EAF2E5 /* MCDreamDetailViewController.m in Sources */,
 				82198F511BF710CA00EAF2E5 /* MCSizeControlViewController.m in Sources */,
 				4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */,
+				4C4FB3A01BFF1692006D3325 /* MCImageViewExtension.m in Sources */,
 				82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */,
 				82273FF11BDB395600AFDEAF /* MCWeatherViewController.m in Sources */,
 				8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */,
@@ -1117,6 +1132,7 @@
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
 				8209D71A1BFE0896005029A1 /* MCNotepadImageCell.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
+				4C4FB39C1BFF11C8006D3325 /* MCNotepadImageShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

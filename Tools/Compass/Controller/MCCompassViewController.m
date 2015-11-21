@@ -7,9 +7,13 @@
 //
 
 #import "MCCompassViewController.h"
+@import CoreLocation;
 
-@interface MCCompassViewController ()
+#define DEGREES_TO_RADIANS(x) (M_PI * x / 180.0)
 
+@interface MCCompassViewController ()<CLLocationManagerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *compassImageView;
+@property(nonatomic,strong) CLLocationManager *locationManager;
 @end
 
 @implementation MCCompassViewController
@@ -18,12 +22,33 @@
     [super viewDidLoad];
     [self configure];
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([CLLocationManager headingAvailable]) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingHeading];
+    }else{
+        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"提示" message:@"您的设备不支持该功能" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *lCancelAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [lAlertController addAction:lCancelAction];
+        [self presentViewController:lAlertController animated:YES completion:nil];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - Delegate
+#pragma mark - CLLocationManager Delegate
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    //根据角度旋转图片 ，newHeading.magneticHeading为夹角
+    CGAffineTransform transform = CGAffineTransformMakeRotation(-1 * DEGREES_TO_RADIANS(newHeading.magneticHeading));
+    self.compassImageView.transform = transform;
+    
+}
 /*
 #pragma mark - Navigation
 

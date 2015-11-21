@@ -176,6 +176,7 @@
                         <segue destination="4La-Lp-tsS" kind="push" identifier="MCCompassViewController" id="yL2-cK-lmH"/>
                         <segue destination="aU6-1L-OaM" kind="push" identifier="MCNotepadViewController" id="Ycm-HO-Kvv"/>
                         <segue destination="obx-pf-vXa" kind="push" identifier="MCSizeControlViewController" id="gle-CS-BZA"/>
+                        <segue destination="Dea-iU-Aj2" kind="push" identifier="MCBirthdayViewController" id="YN8-bf-Ijr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,6 +242,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFS-1U-vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510.5" y="414"/>
+        </scene>
+        <!--MCBirthdayViewController-->
+        <scene sceneID="N2B-CP-LfH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MCBirthdayViewController" storyboardName="Birthday" referencedIdentifier="MCBirthdayViewController" id="Dea-iU-Aj2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4nX-bx-0dv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPL-96-TN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="597"/>
         </scene>
         <!--MCRootWeatherViewController-->
         <scene sceneID="Epc-qS-Lkz">

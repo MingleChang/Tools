@@ -10,23 +10,71 @@
 
 @interface MCDate : NSObject
 @property(nonatomic,strong)NSDate *date;
+@property(nonatomic,strong)NSCalendar *calendar;
+@property(nonatomic,strong)NSTimeZone *timeZone;
 
-@property(nonatomic,assign,readonly)NSInteger year;
-@property(nonatomic,assign,readonly)NSInteger month;
-@property(nonatomic,assign,readonly)NSInteger day;
-@property(nonatomic,assign,readonly)NSInteger hour;
-@property(nonatomic,assign,readonly)NSInteger minute;
-@property(nonatomic,assign,readonly)NSInteger second;
-@property(nonatomic,assign,readonly)NSInteger weekday;
-@property(nonatomic,assign,readonly)NSInteger weekdayOrdinal;
-@property(nonatomic,assign,readonly)NSInteger weekOfMonth;
-@property(nonatomic,assign,readonly)NSInteger weekOfYear;
+@property(nonatomic,assign)NSInteger year;
+@property(nonatomic,assign)NSInteger month;
+@property(nonatomic,assign)NSInteger day;
+@property(nonatomic,assign)NSInteger hour;
+@property(nonatomic,assign)NSInteger minute;
+@property(nonatomic,assign)NSInteger second;
+@property(nonatomic,assign)NSInteger weekday;
+@property(nonatomic,assign)NSInteger weekdayOrdinal;
+@property(nonatomic,assign)NSInteger weekOfMonth;
+@property(nonatomic,assign)NSInteger weekOfYear;
+@property(nonatomic,assign)BOOL isLeapMonth;//是否是闰月，只针对阴历有效
 
--(instancetype)initWithInterval:(NSTimeInterval)timestamp;
--(instancetype)initWithDate:(NSDate *)date;
--(instancetype)initWithYear:(NSInteger)year andMonth:(NSInteger)month andDay:(NSInteger)day andHour:(NSInteger)hour andMinute:(NSInteger)minute andSecond:(NSInteger)second;
--(MCDate *)dateAddDays:(NSInteger)days;
--(MCDate *)dateAddMonth:(NSInteger)months;
--(BOOL)isSameDayToDate:(MCDate *)date;
--(BOOL)isSameMonthToDate:(MCDate *)date;
+@property(nonatomic,assign,readonly)NSInteger daysInMonth;
+@property(nonatomic,assign,readonly)NSInteger daysInYear;//一年有多少天，只针对阳历有效
+@property(nonatomic,assign,readonly)NSInteger dayOfYear;
+@property(nonatomic,assign,readonly)BOOL isLeapYear;//是否是闰年，只针对阳历有效
+
+#pragma mark - Ceate Date
++(MCDate *)dateWithInterval:(NSTimeInterval)timestamp;
++(MCDate *)dateWithDateComponent:(NSDateComponents *)dateComponent;
++(MCDate *)dateWithDate:(NSDate *)date;
++(MCDate *)dateWithDate:(NSDate *)date calendar:(NSCalendar *)calendar;
++(MCDate *)dateWithMCDate:(MCDate *)date;
++(MCDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
++(MCDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
+@end
+
+#pragma mark - Date Compare
+@interface MCDate (Compare)
+-(BOOL)isSameYear:(MCDate *)date;
+-(BOOL)isSameMonth:(MCDate *)date;
+-(BOOL)isSameDay:(MCDate *)date;
+
+-(NSInteger)yearsFrom:(MCDate *)date;
+-(NSInteger)monthsFrom:(MCDate *)date;
+-(NSInteger)weeksFrom:(MCDate *)date;
+-(NSInteger)daysFrom:(MCDate *)date;
+-(double)hoursFrom:(MCDate *)date;
+-(double)minutesFrom:(MCDate *)date;
+-(double)secondsFrom:(MCDate *)date;
+
+@end
+
+
+#pragma mark - Date Editing
+@interface MCDate (Editing)
+#pragma mark Date By Adding
+//日期加法
+- (MCDate *)dateByAddYears:(NSInteger)years;
+- (MCDate *)dateByAddMonths:(NSInteger)months;
+- (MCDate *)dateByAddWeeks:(NSInteger)weeks;
+- (MCDate *)dateByAddDays:(NSInteger)days;
+- (MCDate *)dateByAddHours:(NSInteger)hours;
+- (MCDate *)dateByAddMinutes:(NSInteger)minutes;
+- (MCDate *)dateByAddSeconds:(NSInteger)seconds;
+#pragma mark Date By Subtracting
+//日期减法
+- (MCDate *)dateBySubYears:(NSInteger)years;
+- (MCDate *)dateBySubMonths:(NSInteger)months;
+- (MCDate *)dateBySubWeeks:(NSInteger)weeks;
+- (MCDate *)dateBySubDays:(NSInteger)days;
+- (MCDate *)dateBySubHours:(NSInteger)hours;
+- (MCDate *)dateBySubMinutes:(NSInteger)minutes;
+- (MCDate *)dateBySubSeconds:(NSInteger)seconds;
 @end

@@ -11,10 +11,12 @@
 #import "MingleChang.h"
 #import "MCNotepad.h"
 #import "MCNotepadManager.h"
-#import "MCImagePickerViewController.h"
 #import "MCNotepadImageCell.h"
+#import "MCNotepadImageShowViewController.h"
 
 #define NOTEPAD_IMAGE_CELL_ID @"MCNotepadImageCell"
+
+#define NOTEPAD_IMAGE_SHOW_VC_SEGUE_ID @"MCNotepadImageShowViewController"
 
 #define TEXTVIEW_WIDTH (SCREEN_WIDTH-20)
 #define COLLECTIONVIEW_WIDTH (SCREEN_WIDTH-20)
@@ -122,6 +124,7 @@
 #pragma mark - UICollectionView Delegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:NOTEPAD_IMAGE_SHOW_VC_SEGUE_ID sender:indexPath];
 }
 #pragma mark - UICollectionView Delegate FlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -160,8 +163,11 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:NOTEPAD_IMAGE_SHOW_VC_SEGUE_ID]) {
+        MCNotepadImageShowViewController *lViewController=(MCNotepadImageShowViewController *)segue.destinationViewController;
+        lViewController.images=self.notepad.images;
+        lViewController.index=[sender row];
+    }
 }
 
 #pragma mark - Init Methods
@@ -170,6 +176,7 @@
     [self configureData];
 }
 -(void)configureView{
+    self.automaticallyAdjustsScrollViewInsets=YES;
     self.textView.font=[UIFont systemFontOfSize:18];
     self.textView.placeholderString=@"请输入记事内容";
     self.textView.text=self.notepad.content;
@@ -182,15 +189,16 @@
 
 #pragma mark - Event Response
 -(void)cameraBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self.textView resignFirstResponder];
     UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"选择图片" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *lAlbumAction=[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        MCImagePickerViewController *lViewController=[[MCImagePickerViewController alloc]init];
+        UIImagePickerController *lViewController=[[UIImagePickerController alloc]init];
         lViewController.delegate=self;
         [self.navigationController presentViewController:lViewController animated:YES completion:nil];
     }];
     [lAlertController addAction:lAlbumAction];
     UIAlertAction *lCameraAction=[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        MCImagePickerViewController *lViewController=[[MCImagePickerViewController alloc]init];
+        UIImagePickerController *lViewController=[[UIImagePickerController alloc]init];
         lViewController.delegate=self;
         lViewController.sourceType=UIImagePickerControllerSourceTypeCamera;
         [self.navigationController presentViewController:lViewController animated:YES completion:nil];
@@ -201,11 +209,30 @@
     [lAlertController addAction:lCancelAction];
     [self presentViewController:lAlertController animated:YES completion:nil];
 }
+-(void)trashBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self.textView resignFirstResponder];
+    UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"删除记事?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *lCancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    [lAlertController addAction:lCancelAction];
+    UIAlertAction *lOKAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if (self.notepad.isSave) {
+            [self.notepad destroy];
+            [[MCNotepadManager manager].notepadArray removeObject:self.notepad];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [lAlertController addAction:lOKAction];
+    [self presentViewController:lAlertController animated:YES completion:nil];
+}
 #pragma mark - Override
 -(void)resetNavigationItem{
     [super resetNavigationItem];
+    
     UIBarButtonItem *lCameraBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_camera"] style:UIBarButtonItemStyleDone target:self action:@selector(cameraBarButtonItemClick:)];
-    self.navigationItem.rightBarButtonItem=lCameraBarButtonItem;
+    UIBarButtonItem *lTrashBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_trash"] style:UIBarButtonItemStyleDone target:self action:@selector(trashBarButtonItemClick:)];
+    self.navigationItem.rightBarButtonItems=@[lCameraBarButtonItem,lTrashBarButtonItem];
 }
 -(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
     [self saveNotepad];

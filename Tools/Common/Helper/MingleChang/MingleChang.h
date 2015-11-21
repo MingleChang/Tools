@@ -22,6 +22,7 @@
 #import "MCDateExtension.h"
 #import "MCCacheManager.h"
 #import "MCFilePath.h"
+#import "MCDate.h"
 
 
 /***********自定义的打印方法*************/

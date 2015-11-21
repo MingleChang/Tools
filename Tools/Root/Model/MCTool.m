@@ -72,6 +72,9 @@
         case MCToolIDSizeControl:
             return @"MCSizeControlViewController";
             break;
+        case MCToolIDBirthday:
+            return @"MCBirthdayViewController";
+            break;
         default:
             return @"MCFlashlightViewController";
             break;

@@ -93,7 +93,9 @@
     [self configureData];
 }
 -(void)configureView{
-    
+    MCDate *lDate=[MCDate dateWithYear:2012 month:6 day:8 hour:8 minute:8 second:8];
+    MCDate *lDate1=[MCDate dateWithYear:2012 month:6 day:9 hour:8 minute:8 second:8];
+    MCLOG(@"%i",[lDate daysFrom:lDate1]);
 }
 -(void)configureData{
     NSArray *lTitles=[[MCToolManager manager].toolsInfo valueForKey:@"name"];

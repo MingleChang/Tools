@@ -7,7 +7,7 @@
 //
 
 #import "MCViewController.h"
-
 @interface MCNotepadImageShowViewController : MCViewController
-
+@property(nonatomic,copy)NSArray *images;
+@property(nonatomic,assign)NSInteger index;
 @end

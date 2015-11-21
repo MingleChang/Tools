@@ -11,7 +11,8 @@
 
 @implementation AppDelegate (Base)
 -(void)baseSetting{
-    [[UINavigationBar appearance] setBackgroundImage:[MCDrawImage drawImageSize:CGSizeMake(320, 54) withColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance]setBarTintColor:RGB(11, 57, 113)];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }

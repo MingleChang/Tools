@@ -33,11 +33,17 @@ typedef NS_ENUM(NSInteger,FlashlightStatus){
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    if (self.status==FlashlightStatusInvalid) {
+        return;
+    }
     [self resetFlashLight];
     [self resetFlashlightButton];
 }
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+    if (self.status==FlashlightStatusInvalid) {
+        return;
+    }
     [self tureOffFlashLight];
 }
 - (void)didReceiveMemoryWarning {
@@ -74,8 +80,12 @@ typedef NS_ENUM(NSInteger,FlashlightStatus){
 #pragma mark - Event Response
 - (IBAction)flashlightButtonClick:(UIButton *)sender {
     if (self.status==FlashlightStatusInvalid) {
-        UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前设备没有闪光灯，不能提供手电筒功能" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
+        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"提示" message:@"当前设备没有闪光灯，不能提供手电筒功能" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *lCancelAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [lAlertController addAction:lCancelAction];
+        [self presentViewController:lAlertController animated:YES completion:nil];
         return;
     }
     self.status=!self.status;
@@ -99,8 +109,12 @@ typedef NS_ENUM(NSInteger,FlashlightStatus){
 -(void)configureView{
     self.captureDevice=[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if (![self.captureDevice hasTorch]) {
-        UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前设备没有闪光灯，不能提供手电筒功能" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
+        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"提示" message:@"当前设备没有闪光灯，不能提供手电筒功能" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *lCancelAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [lAlertController addAction:lCancelAction];
+        [self presentViewController:lAlertController animated:YES completion:nil];
         self.status=FlashlightStatusInvalid;
     }else{
         self.status=FlashlightStatusOn;

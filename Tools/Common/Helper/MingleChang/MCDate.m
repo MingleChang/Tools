@@ -52,6 +52,20 @@ const NSInteger SECONDS_IN_MINUTE = 60;
     }
     return self;
 }
+-(instancetype)initWithString:(NSString *)dateString formatString:(NSString *)formatString{
+    self=[super init];
+    if (self) {
+        static NSDateFormatter *formatter = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            formatter = [[NSDateFormatter alloc] init];
+        });
+        [formatter setDateFormat:formatString];
+        NSDate *lDate= [formatter dateFromString:dateString];
+        self.date=lDate;
+    }
+    return self;
+}
 
 +(MCDate *)dateWithInterval:(NSTimeInterval)timestamp{
     return [[MCDate alloc]initWithDate:[NSDate dateWithTimeIntervalSince1970:timestamp] calendar:[NSCalendar currentCalendar]];
@@ -74,7 +88,9 @@ const NSInteger SECONDS_IN_MINUTE = 60;
 +(MCDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second{
     return [[MCDate alloc]initWithYear:year month:month day:day hour:hour minute:minute second:second];
 }
-
++(MCDate *)dateWithString:(NSString *)dateString formatString:(NSString *)formatString{
+    return [[MCDate alloc]initWithString:dateString formatString:formatString];
+}
 
 
 #pragma mark - Setter And Getter
@@ -148,6 +164,13 @@ const NSInteger SECONDS_IN_MINUTE = 60;
     self.dateComponent.weekOfYear=weekOfYear;
     self.date=[self.calendar dateFromComponents:self.dateComponent];
 }
+-(NSInteger)yearForWeekOfYear{
+    return self.dateComponent.yearForWeekOfYear;
+}
+-(void)setYearForWeekOfYear:(NSInteger)yearForWeekOfYear{
+    self.dateComponent.yearForWeekOfYear=yearForWeekOfYear;
+    self.date=[self.calendar dateFromComponents:self.dateComponent];
+}
 -(BOOL)isLeapMonth{
     return self.dateComponent.isLeapMonth;
 }
@@ -206,6 +229,13 @@ const NSInteger SECONDS_IN_MINUTE = 60;
 }
 -(void)setTimeZone:(NSTimeZone *)timeZone{
     self.calendar.timeZone=timeZone;
+    self.dateComponent=[self.calendar components:allCalendarUnitFlags fromDate:self.date];
+}
+-(NSLocale *)locale{
+    return self.calendar.locale;
+}
+-(void)setLocale:(NSLocale *)locale{
+    self.calendar.locale=locale;
     self.dateComponent=[self.calendar components:allCalendarUnitFlags fromDate:self.date];
 }
 -(NSDateComponents *)dateComponent{
@@ -356,6 +386,31 @@ const NSInteger SECONDS_IN_MINUTE = 60;
 }
 -(double)secondsFrom:(MCDate *)date{
     return [self.date timeIntervalSinceDate:date.date]/SECONDS_IN_HOUR;
+}
+
+@end
+
+@implementation MCDate (Formatter)
+-(NSString *)formattedDateWithFormat:(NSString *)format{
+    return [self formattedDateWithFormat:format timeZone:self.timeZone locale:self.locale];
+}
+-(NSString *)formattedDateWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone{
+    return [self formattedDateWithFormat:format timeZone:timeZone locale:self.locale];
+}
+-(NSString *)formattedDateWithFormat:(NSString *)format locale:(NSLocale *)locale{
+    return [self formattedDateWithFormat:format timeZone:self.timeZone locale:locale];
+}
+-(NSString *)formattedDateWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale{
+    static NSDateFormatter *formatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSDateFormatter alloc] init];
+    });
+    
+    [formatter setDateFormat:format];
+    [formatter setTimeZone:timeZone];
+    [formatter setLocale:locale];
+    return [formatter stringFromDate:self.date];
 }
 
 @end

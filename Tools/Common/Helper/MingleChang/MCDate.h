@@ -12,6 +12,7 @@
 @property(nonatomic,strong)NSDate *date;
 @property(nonatomic,strong)NSCalendar *calendar;
 @property(nonatomic,strong)NSTimeZone *timeZone;
+@property(nonatomic,strong)NSLocale *locale;
 
 @property(nonatomic,assign)NSInteger year;
 @property(nonatomic,assign)NSInteger month;
@@ -23,6 +24,7 @@
 @property(nonatomic,assign)NSInteger weekdayOrdinal;
 @property(nonatomic,assign)NSInteger weekOfMonth;
 @property(nonatomic,assign)NSInteger weekOfYear;
+@property(nonatomic,assign)NSInteger yearForWeekOfYear;
 @property(nonatomic,assign)BOOL isLeapMonth;//是否是闰月，只针对阴历有效
 
 @property(nonatomic,assign,readonly)NSInteger daysInMonth;
@@ -38,6 +40,7 @@
 +(MCDate *)dateWithMCDate:(MCDate *)date;
 +(MCDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 +(MCDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
++(MCDate *)dateWithString:(NSString *)dateString formatString:(NSString *)formatString;
 @end
 
 #pragma mark - Date Compare
@@ -77,4 +80,12 @@
 - (MCDate *)dateBySubHours:(NSInteger)hours;
 - (MCDate *)dateBySubMinutes:(NSInteger)minutes;
 - (MCDate *)dateBySubSeconds:(NSInteger)seconds;
+@end
+
+#pragma mark - Date Formatter
+@interface MCDate (Formatter)
+-(NSString *)formattedDateWithFormat:(NSString *)format;
+-(NSString *)formattedDateWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone;
+-(NSString *)formattedDateWithFormat:(NSString *)format locale:(NSLocale *)locale;
+-(NSString *)formattedDateWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;
 @end

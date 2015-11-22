@@ -93,16 +93,17 @@
     [self configureData];
 }
 -(void)configureView{
-    MCDate *lDate=[MCDate dateWithYear:2014 month:7 day:5];
-    MCLOG(@"%@%@",[lDate heavenlyStemYear],[lDate earthlyBranchYear]);
+    
 }
 -(void)configureData{
     NSArray *lTitles=[[MCToolManager manager].toolsInfo valueForKey:@"name"];
     [self.chooseView setupAllTitles:lTitles];
 }
 #pragma mark - Override
--(void)resetNavigationBar{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+-(void)resetNavigationItem{
+//    UISearchBar *lSearchBar=[[UISearchBar alloc]init];
+//    lSearchBar.searchBarStyle=UISearchBarStyleMinimal;
+//    self.navigationItem.titleView=lSearchBar;
 }
 /*
 #pragma mark - Navigation

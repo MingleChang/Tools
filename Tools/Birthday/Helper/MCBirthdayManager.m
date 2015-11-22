@@ -1,30 +1,30 @@
 //
-//  MCNotepadManager.m
+//  MCBirthdayManager.m
 //  Tools
 //
-//  Created by cjw on 15/11/16.
+//  Created by 常峻玮 on 15/11/22.
 //  Copyright © 2015年 Mingle. All rights reserved.
 //
 
-#import "MCNotepadManager.h"
+#import "MCBirthdayManager.h"
 #import "FMDB.h"
-#import "MCNotepad.h"
+#import "MCBirthday.h"
 #import "MingleChang.h"
 
-#define DIRECTORY_NAME @"Notepad"
-#define DB_NAME @"Notepad.db"
+#define DIRECTORY_NAME @"Birthday"
+#define DB_NAME @"Birthday.db"
 
 #define DIRECTORY_PATH [MCFilePath pathInDocumentWithFileName:DIRECTORY_NAME]
 
-@interface MCNotepadManager()
+@interface MCBirthdayManager()
 @property(nonatomic,strong)FMDatabaseQueue *dbQueue;
 @end
-@implementation MCNotepadManager
-+(MCNotepadManager *)manager{
-    static MCNotepadManager *sharedManager = nil;
+@implementation MCBirthdayManager
++(MCBirthdayManager *)manager{
+    static MCBirthdayManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager=[[MCNotepadManager alloc]init];
+        sharedManager=[[MCBirthdayManager alloc]init];
     });
     return sharedManager;
 }
@@ -39,39 +39,39 @@
 -(BOOL)createTable{
     __block BOOL success=NO;
     [self.dbQueue inDatabase:^(FMDatabase *db) {
-        success=[db executeUpdate:[MCNotepad sqlCreateTable]];
+        success=[db executeUpdate:[MCBirthday sqlCreateTable]];
     }];
     return success;
 }
--(BOOL)insertNotepad:(MCNotepad *)notepad{
-    NSDictionary *lDic=[notepad toDBDictionary];
+-(BOOL)insertBirthday:(MCBirthday *)birthday{
+    NSDictionary *lDic=[birthday toDBDictionary];
     __block BOOL success=NO;
     [self.dbQueue inDatabase:^(FMDatabase *db) {
-        success=[db executeUpdate:[MCNotepad sqlInsert] withParameterDictionary:lDic];
+        success=[db executeUpdate:[MCBirthday sqlInsert] withParameterDictionary:lDic];
     }];
     return success;
 }
--(BOOL)updateNotepad:(MCNotepad *)notepad{
-    NSDictionary *lDic=[notepad toDBDictionary];
+-(BOOL)updateBirthday:(MCBirthday *)birthday{
+    NSDictionary *lDic=[birthday toDBDictionary];
     __block BOOL success=NO;
     [self.dbQueue inDatabase:^(FMDatabase *db) {
-        success=[db executeUpdate:[MCNotepad sqlUpdate] withParameterDictionary:lDic];
+        success=[db executeUpdate:[MCBirthday sqlUpdate] withParameterDictionary:lDic];
     }];
     return success;
 }
--(BOOL)deleteNotepad:(MCNotepad *)notepad{
-    NSDictionary *lDic=[notepad toDBDeleteDictionary];
+-(BOOL)deleteBirthday:(MCBirthday *)birthday{
+    NSDictionary *lDic=[birthday toDBDeleteDictionary];
     __block BOOL success=NO;
     [self.dbQueue inDatabase:^(FMDatabase *db) {
-        success=[db executeUpdate:[MCNotepad sqlDelete] withParameterDictionary:lDic];
+        success=[db executeUpdate:[MCBirthday sqlDelete] withParameterDictionary:lDic];
     }];
     return success;
 }
--(NSArray *)selectAllNotepad{
+-(NSArray *)selectAllBirthday{
     __block NSArray *lResultArray=nil;
     [self.dbQueue inDatabase:^(FMDatabase *db) {
-        FMResultSet *lResults=[db executeQuery:[MCNotepad sqlSelectAll]];
-        lResultArray=[MCNotepad notepadArrayByResultSet:lResults];
+        FMResultSet *lResults=[db executeQuery:[MCBirthday sqlSelectAll]];
+        lResultArray=[MCBirthday birthdayArrayByResultSet:lResults];
         [lResults close];
     }];
     return lResultArray;
@@ -83,9 +83,8 @@
     }
     NSString *lPath=[MCFilePath createDirectory:DIRECTORY_PATH];
     lPath=[MCFilePath pathWithDirectoryPath:lPath andFileName:DB_NAME];
-    MCLOG(@"Notepad DB Path:%@",lPath);
+    MCLOG(@"Birthday DB Path:%@",lPath);
     _dbQueue=[[FMDatabaseQueue alloc]initWithPath:lPath];
     return _dbQueue;
 }
-
 @end

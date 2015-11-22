@@ -46,7 +46,7 @@
 -(void)setNotepad:(MCNotepad *)notepad{
     _notepad=notepad;
     self.infoLabel.text=[notepad displayContent];
-    self.dateLabel.text=[notepad.modify toStringWithFormat:@"yyyy年MM月dd日 HH:mm:ss" withTimeZone:nil];
+    self.dateLabel.text=[notepad.modify formattedDateWithFormat:@"yyyy年MM月dd日 HH:mm:ss"];
     self.infoImageView.hidden=!notepad.imageNames.count;
 }
 

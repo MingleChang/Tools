@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 @class FMResultSet;
+@class MCDate;
 @interface MCNotepad : NSObject
 @property(nonatomic,copy)NSString *notepadId;
 @property(nonatomic,copy)NSString *content;
 @property(nonatomic,strong)NSMutableArray *images;
 @property(nonatomic,strong)NSMutableArray *imageNames;
-@property(nonatomic,strong)NSDate *create;
-@property(nonatomic,strong)NSDate *modify;
+@property(nonatomic,strong)MCDate *create;
+@property(nonatomic,strong)MCDate *modify;
 
 @property(nonatomic,copy,readonly)NSString *displayContent;
 
@@ -23,6 +24,7 @@
 -(instancetype)init;
 -(instancetype)initWithDBDictionary:(NSDictionary *)dic;
 -(NSDictionary *)toDBDictionary;
+-(NSDictionary *)toDBDeleteDictionary;
 
 -(void)deleteImageWithIndex:(NSInteger)index;
 

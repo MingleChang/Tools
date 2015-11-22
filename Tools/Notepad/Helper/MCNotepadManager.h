@@ -10,7 +10,7 @@
 @class MCNotepad;
 
 @interface MCNotepadManager : NSObject
-@property(nonatomic,strong)NSMutableArray *notepadArray;
+
 
 +(MCNotepadManager *)manager;
 

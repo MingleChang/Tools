@@ -20,6 +20,12 @@
 +(NSArray *)lunarDayArray{
     return @[@"初一", @"初二", @"初三", @"初四", @"初五", @"初六", @"初七", @"初八", @"初九", @"初十", @"十一", @"十二", @"十三", @"十四", @"十五", @"十六", @"十七", @"十八", @"十九", @"二十", @"廿一", @"廿二", @"廿三", @"廿四", @"廿五", @"廿六", @"廿七", @"廿八", @"廿九", @"三十"];
 }
++(NSArray *)longWeekdayArray{
+    return @[@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六",@"星期天"];
+}
++(NSArray *)shortWeekdayArray{
+    return @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
+}
 //天干
 +(NSArray *)heavenlyStems{
     return @[@"甲",@"乙",@"丙",@"丁",@"戊",@"己",@"庚",@"辛",@"壬",@"癸"];
@@ -60,6 +66,15 @@
     index=index%12;
     NSArray *zodiacArray=[MCDate zodiacArray];
     return [zodiacArray objectAtIndex:index];
+}
+
+-(NSString *)longWeekday{
+    NSArray *longWeekdays=[MCDate longWeekdayArray];
+    return [longWeekdays objectAtIndex:self.weekday];
+}
+-(NSString *)shortWeekday{
+    NSArray *shortWeekdays=[MCDate shortWeekdayArray];
+    return [shortWeekdays objectAtIndex:self.weekday];
 }
 @end
 

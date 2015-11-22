@@ -66,7 +66,9 @@ const NSInteger SECONDS_IN_MINUTE = 60;
     }
     return self;
 }
-
++(MCDate *)date{
+    return [MCDate dateWithDate:[NSDate date]];
+}
 +(MCDate *)dateWithInterval:(NSTimeInterval)timestamp{
     return [[MCDate alloc]initWithDate:[NSDate dateWithTimeIntervalSince1970:timestamp] calendar:[NSCalendar currentCalendar]];
 }

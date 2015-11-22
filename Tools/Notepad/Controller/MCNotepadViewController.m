@@ -18,6 +18,8 @@
 @interface MCNotepadViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property(nonatomic,strong)NSMutableArray *notepadArray;
+
 @end
 
 @implementation MCNotepadViewController
@@ -52,11 +54,11 @@
 #pragma mark - Delegate
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [MCNotepadManager manager].notepadArray.count;
+    return self.notepadArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row=[indexPath row];
-    MCNotepad *lNotepad=[MCNotepadManager manager].notepadArray[row];
+    MCNotepad *lNotepad=self.notepadArray[row];
     MCNotepadCell *lCell=[tableView dequeueReusableCellWithIdentifier:NOTEPAD_CELL_ID forIndexPath:indexPath];
     lCell.notepad=lNotepad;
     return lCell;
@@ -65,7 +67,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger row=[indexPath row];
-    MCNotepad *lNotepad=[MCNotepadManager manager].notepadArray[row];
+    MCNotepad *lNotepad=self.notepadArray[row];
     [self performSegueWithIdentifier:NOTEPAD_EDIT_VC_SEGUE_ID sender:lNotepad];
 }
 #pragma mark - Navigation
@@ -75,6 +77,7 @@
     if ([segue.identifier isEqualToString:NOTEPAD_EDIT_VC_SEGUE_ID]) {
         MCNotepadEditViewController *lViewController=(MCNotepadEditViewController *)segue.destinationViewController;
         lViewController.notepad=sender;
+        lViewController.notepadArray=self.notepadArray;
     }
 }
 
@@ -87,7 +90,7 @@
     
 }
 -(void)configureData{
-    
+    self.notepadArray=[[[MCNotepadManager manager]selectAllNotepad]mutableCopy];
 }
 #pragma mark - Override
 -(void)resetNavigationItem{

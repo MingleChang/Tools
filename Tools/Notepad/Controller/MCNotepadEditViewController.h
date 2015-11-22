@@ -10,4 +10,5 @@
 @class MCNotepad;
 @interface MCNotepadEditViewController : MCViewController
 @property(nonatomic,strong)MCNotepad *notepad;
+@property(nonatomic,strong)NSMutableArray *notepadArray;
 @end

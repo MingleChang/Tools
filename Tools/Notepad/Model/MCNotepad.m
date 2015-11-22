@@ -29,8 +29,8 @@
         self.notepadId=[NSUUID UUID].UUIDString;
         self.content=@"";
         self.imageNames=[NSMutableArray array];
-        self.create=[NSDate date];
-        self.modify=[NSDate date];
+        self.create=[MCDate date];
+        self.modify=[MCDate date];
         self.isSave=NO;
     }
     return self;
@@ -59,10 +59,10 @@
         }
     }
     if ([key isEqualToString:@"createTime"]) {
-        self.create=[NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+        self.create=[MCDate dateWithInterval:[value doubleValue]];
     }
     if ([key isEqualToString:@"updateTime"]) {
-        self.modify=[NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+        self.modify=[MCDate dateWithInterval:[value doubleValue]];
     }
 }
 #pragma mark - Setter And Getter
@@ -154,15 +154,18 @@
         return [self.imageNames componentsJoinedByString:SEPARATED_STR];
     }
     if ([key isEqualToString:@"createTime"]) {
-        return self.create;
+        return self.create.date;
     }
     if ([key isEqualToString:@"updateTime"]) {
-        return self.modify;
+        return self.modify.date;
     }
     return nil;
 }
 -(NSDictionary *)toDBDictionary{
     return [self dictionaryWithValuesForKeys:[MCNotepad getAllSQLParam]];
+}
+-(NSDictionary *)toDBDeleteDictionary{
+    return [self dictionaryWithValuesForKeys:@[@"notepadId"]];
 }
 +(NSArray *)getAllSQLParam{
     return @[@"notepadId",@"content",@"imageName",@"createTime",@"updateTime"];

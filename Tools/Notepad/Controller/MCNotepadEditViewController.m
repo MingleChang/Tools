@@ -67,12 +67,12 @@
             [self.notepad update];
         }else{
             [self.notepad destroy];
-            [[MCNotepadManager manager].notepadArray removeObject:self.notepad];
+            [self.notepadArray removeObject:self.notepad];
         }
     }else{
         if ([self.notepad isValid]) {
             [self.notepad save];
-            [[MCNotepadManager manager].notepadArray addObject:self.notepad];
+            [self.notepadArray addObject:self.notepad];
         }else{
             
         }
@@ -219,7 +219,7 @@
     UIAlertAction *lOKAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if (self.notepad.isSave) {
             [self.notepad destroy];
-            [[MCNotepadManager manager].notepadArray removeObject:self.notepad];
+            [self.notepadArray removeObject:self.notepad];
         }
         [self.navigationController popViewControllerAnimated:YES];
     }];

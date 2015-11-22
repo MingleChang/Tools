@@ -13,6 +13,9 @@
 -(NSString *)solarMonth;
 -(NSString *)solarDay;
 -(NSString *)solarZodiac;
+
+-(NSString *)longWeekday;
+-(NSString *)shortWeekday;
 @end
 
 @interface MCDate (Lunar)

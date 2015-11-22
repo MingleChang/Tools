@@ -77,6 +77,12 @@
 		82198F4D1BF710B700EAF2E5 /* SizeControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82198F4C1BF710B700EAF2E5 /* SizeControl.storyboard */; };
 		82198F511BF710CA00EAF2E5 /* MCSizeControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F4F1BF710CA00EAF2E5 /* MCSizeControlViewController.m */; };
 		82198F521BF710CA00EAF2E5 /* MCSizeControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F501BF710CA00EAF2E5 /* MCSizeControlViewController.xib */; };
+		821E5B981C0211D000F90770 /* MCBirthdayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E5B971C0211D000F90770 /* MCBirthdayManager.m */; };
+		821E5B9C1C0212DF00F90770 /* MCBirthday.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E5B9B1C0212DF00F90770 /* MCBirthday.m */; };
+		821E5BA01C021F9800F90770 /* MCBirthdayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E5B9E1C021F9800F90770 /* MCBirthdayEditViewController.m */; };
+		821E5BA11C021F9800F90770 /* MCBirthdayEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821E5B9F1C021F9800F90770 /* MCBirthdayEditViewController.xib */; };
+		821E5BA51C0229E000F90770 /* MCBirthdayDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 821E5BA41C0229E000F90770 /* MCBirthdayDatePicker.m */; };
+		821E5BA71C0229EB00F90770 /* MCBirthdayDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821E5BA61C0229EB00F90770 /* MCBirthdayDatePicker.xib */; };
 		821FF0B81BF398C200EBC169 /* dream.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 821FF0B71BF398C200EBC169 /* dream.sqlite */; };
 		822250621C00C08200F60708 /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222505F1C00C08200F60708 /* MCDateExtension.m */; };
 		822250631C00C08200F60708 /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 822250611C00C08200F60708 /* MCStringExtension.m */; };
@@ -243,6 +249,16 @@
 		82198F4E1BF710CA00EAF2E5 /* MCSizeControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSizeControlViewController.h; sourceTree = "<group>"; };
 		82198F4F1BF710CA00EAF2E5 /* MCSizeControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSizeControlViewController.m; sourceTree = "<group>"; };
 		82198F501BF710CA00EAF2E5 /* MCSizeControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCSizeControlViewController.xib; sourceTree = "<group>"; };
+		821E5B961C0211D000F90770 /* MCBirthdayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBirthdayManager.h; sourceTree = "<group>"; };
+		821E5B971C0211D000F90770 /* MCBirthdayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBirthdayManager.m; sourceTree = "<group>"; };
+		821E5B9A1C0212DF00F90770 /* MCBirthday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBirthday.h; sourceTree = "<group>"; };
+		821E5B9B1C0212DF00F90770 /* MCBirthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBirthday.m; sourceTree = "<group>"; };
+		821E5B9D1C021F9800F90770 /* MCBirthdayEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBirthdayEditViewController.h; sourceTree = "<group>"; };
+		821E5B9E1C021F9800F90770 /* MCBirthdayEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBirthdayEditViewController.m; sourceTree = "<group>"; };
+		821E5B9F1C021F9800F90770 /* MCBirthdayEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCBirthdayEditViewController.xib; sourceTree = "<group>"; };
+		821E5BA31C0229E000F90770 /* MCBirthdayDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBirthdayDatePicker.h; sourceTree = "<group>"; };
+		821E5BA41C0229E000F90770 /* MCBirthdayDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBirthdayDatePicker.m; sourceTree = "<group>"; };
+		821E5BA61C0229EB00F90770 /* MCBirthdayDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCBirthdayDatePicker.xib; sourceTree = "<group>"; };
 		821FF0B71BF398C200EBC169 /* dream.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dream.sqlite; sourceTree = "<group>"; };
 		8222505E1C00C08200F60708 /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
 		8222505F1C00C08200F60708 /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
@@ -684,6 +700,34 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		821E5B951C0211A200F90770 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				821E5B961C0211D000F90770 /* MCBirthdayManager.h */,
+				821E5B971C0211D000F90770 /* MCBirthdayManager.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		821E5B991C0212CD00F90770 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				821E5B9A1C0212DF00F90770 /* MCBirthday.h */,
+				821E5B9B1C0212DF00F90770 /* MCBirthday.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821E5BA21C0229C100F90770 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821E5BA31C0229E000F90770 /* MCBirthdayDatePicker.h */,
+				821E5BA41C0229E000F90770 /* MCBirthdayDatePicker.m */,
+				821E5BA61C0229EB00F90770 /* MCBirthdayDatePicker.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		821FF0B51BF398B400EBC169 /* Dream */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +911,9 @@
 		82A085361C0051660051B23D /* Birthday */ = {
 			isa = PBXGroup;
 			children = (
+				821E5BA21C0229C100F90770 /* View */,
+				821E5B991C0212CD00F90770 /* Model */,
+				821E5B951C0211A200F90770 /* Helper */,
 				82A085371C0051660051B23D /* Controller */,
 				82A085381C0051660051B23D /* Resources */,
 			);
@@ -879,6 +926,9 @@
 				82A085391C0051900051B23D /* MCBirthdayViewController.h */,
 				82A0853A1C0051900051B23D /* MCBirthdayViewController.m */,
 				82A0853B1C0051900051B23D /* MCBirthdayViewController.xib */,
+				821E5B9D1C021F9800F90770 /* MCBirthdayEditViewController.h */,
+				821E5B9E1C021F9800F90770 /* MCBirthdayEditViewController.m */,
+				821E5B9F1C021F9800F90770 /* MCBirthdayEditViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1045,6 +1095,7 @@
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
 				82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */,
 				82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */,
+				821E5BA71C0229EB00F90770 /* MCBirthdayDatePicker.xib in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
 				8209D71B1BFE0896005029A1 /* MCNotepadImageCell.xib in Resources */,
 				8209D7161BFE0118005029A1 /* MCImagePickerViewController.xib in Resources */,
@@ -1060,6 +1111,7 @@
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
 				82198F311BF70E4C00EAF2E5 /* MCDreamCateViewController.xib in Resources */,
 				82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */,
+				821E5BA11C021F9800F90770 /* MCBirthdayEditViewController.xib in Resources */,
 				4C30C3191BDF767900E6E2C5 /* MCTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1133,6 +1185,7 @@
 				4C44BAD81BF9A6CB005D5FEA /* MCNotepad.m in Sources */,
 				4C7657BD1BF5917D00FD75D3 /* MCTextView.m in Sources */,
 				820935CA1BF231F600F032AA /* MCToolManager.m in Sources */,
+				821E5B981C0211D000F90770 /* MCBirthdayManager.m in Sources */,
 				4C30C3061BDF6CEC00E6E2C5 /* MCWeatherTmp.m in Sources */,
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */,
@@ -1151,8 +1204,10 @@
 				82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */,
 				82198F471BF7106D00EAF2E5 /* MCMirrorViewController.m in Sources */,
 				4C30C3001BDF6C8000E6E2C5 /* MCWeatherHourInfo.m in Sources */,
+				821E5BA01C021F9800F90770 /* MCBirthdayEditViewController.m in Sources */,
 				82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */,
 				8222506A1C00C64C00F60708 /* MCDate+Info.m in Sources */,
+				821E5BA51C0229E000F90770 /* MCBirthdayDatePicker.m in Sources */,
 				82EFB72B1BDC9AE7008A978C /* MCHTTPConnection.m in Sources */,
 				82EFB7281BDC9AE7008A978C /* MCDevice.m in Sources */,
 				829C08361BF4C9090043905E /* AppDelegate+Base.m in Sources */,
@@ -1160,6 +1215,7 @@
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
 				4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */,
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
+				821E5B9C1C0212DF00F90770 /* MCBirthday.m in Sources */,
 				822250671C00C53C00F60708 /* MCAddress.m in Sources */,
 				820D632E1BFCD96300205A82 /* MCLineView.m in Sources */,
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,

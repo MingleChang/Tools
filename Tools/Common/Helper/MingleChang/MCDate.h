@@ -33,6 +33,7 @@
 @property(nonatomic,assign,readonly)BOOL isLeapYear;//是否是闰年，只针对阳历有效
 
 #pragma mark - Ceate Date
++(MCDate *)date;
 +(MCDate *)dateWithInterval:(NSTimeInterval)timestamp;
 +(MCDate *)dateWithDateComponent:(NSDateComponents *)dateComponent;
 +(MCDate *)dateWithDate:(NSDate *)date;

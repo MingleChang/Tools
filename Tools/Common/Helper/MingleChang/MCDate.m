@@ -352,6 +352,31 @@ const NSInteger SECONDS_IN_MINUTE = 60;
     return YES;
 }
 
+-(BOOL)isEarlierThan:(MCDate *)date{
+    if(self.date.timeIntervalSince1970<date.date.timeIntervalSince1970){
+        return YES;
+    }
+    return NO;
+}
+-(BOOL)isLaterThan:(MCDate *)date{
+    if(self.date.timeIntervalSince1970>date.date.timeIntervalSince1970){
+        return YES;
+    }
+    return NO;
+}
+-(BOOL)isEarlierThanOrEqualTo:(MCDate *)date{
+    if(self.date.timeIntervalSince1970<=date.date.timeIntervalSince1970){
+        return YES;
+    }
+    return NO;
+}
+-(BOOL)isLaterThanOrEqualTo:(MCDate *)date{
+    if(self.date.timeIntervalSince1970>=date.date.timeIntervalSince1970){
+        return YES;
+    }
+    return NO;
+}
+
 -(NSInteger)yearsFrom:(MCDate *)date{
     NSDate *earliest = [self.date earlierDate:date.date];
     NSDate *latest = (earliest == self.date) ? date.date : self.date;

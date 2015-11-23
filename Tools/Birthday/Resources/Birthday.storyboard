@@ -21,10 +21,89 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iN9-tj-nk1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iN9-tj-nk1">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MCBirthdayCell" rowHeight="95" id="WC8-7v-hfB" customClass="MCBirthdayCell">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WC8-7v-hfB" id="vAs-2M-CaZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="落雨度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzH-Bh-d10">
+                                                    <rect key="frame" x="15" y="10" width="51" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0岁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfH-ku-87C">
+                                                    <rect key="frame" x="81" y="12" width="25" height="18"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9月2日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-9L-Jfb">
+                                                    <rect key="frame" x="15" y="41" width="46" height="17"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDy-HR-eXh">
+                                                    <rect key="frame" x="277" y="41" width="28" height="17"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20天后" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69x-Rh-Bdq">
+                                                    <rect key="frame" x="260" y="68" width="45" height="17"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正月初一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-Zz-5wP">
+                                                    <rect key="frame" x="15" y="68" width="56" height="17"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="M7s-Zz-5wP" firstAttribute="leading" secondItem="vAs-2M-CaZ" secondAttribute="leading" constant="15" id="9Y1-lp-nCA"/>
+                                                <constraint firstItem="M7s-Zz-5wP" firstAttribute="top" secondItem="Fmc-9L-Jfb" secondAttribute="bottom" constant="10" id="9oH-pa-yQA"/>
+                                                <constraint firstItem="Fmc-9L-Jfb" firstAttribute="leading" secondItem="vAs-2M-CaZ" secondAttribute="leading" constant="15" id="Ke3-i1-UdT"/>
+                                                <constraint firstItem="WzH-Bh-d10" firstAttribute="leading" secondItem="vAs-2M-CaZ" secondAttribute="leading" constant="15" id="QuC-n1-ATj"/>
+                                                <constraint firstItem="DDy-HR-eXh" firstAttribute="centerY" secondItem="Fmc-9L-Jfb" secondAttribute="centerY" id="TJa-IK-vfn"/>
+                                                <constraint firstAttribute="trailing" secondItem="69x-Rh-Bdq" secondAttribute="trailing" constant="15" id="bky-RY-T1R"/>
+                                                <constraint firstAttribute="trailing" secondItem="DDy-HR-eXh" secondAttribute="trailing" constant="15" id="hRm-Z0-p0f"/>
+                                                <constraint firstItem="WzH-Bh-d10" firstAttribute="top" secondItem="vAs-2M-CaZ" secondAttribute="top" constant="10" id="kNZ-1n-lnc"/>
+                                                <constraint firstItem="AfH-ku-87C" firstAttribute="centerY" secondItem="WzH-Bh-d10" secondAttribute="centerY" id="lhF-Lw-9fm"/>
+                                                <constraint firstItem="69x-Rh-Bdq" firstAttribute="centerY" secondItem="M7s-Zz-5wP" secondAttribute="centerY" id="pEU-Hb-229"/>
+                                                <constraint firstItem="Fmc-9L-Jfb" firstAttribute="top" secondItem="WzH-Bh-d10" secondAttribute="bottom" constant="10" id="wJc-Zj-mML"/>
+                                                <constraint firstItem="AfH-ku-87C" firstAttribute="leading" secondItem="WzH-Bh-d10" secondAttribute="trailing" constant="15" id="xqQ-jH-Rcn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="AfH-ku-87C" id="FjX-wM-sMm"/>
+                                            <outlet property="lunarDateLabel" destination="M7s-Zz-5wP" id="iW1-WF-FEu"/>
+                                            <outlet property="lunarDaysLabel" destination="69x-Rh-Bdq" id="pUD-gu-fzg"/>
+                                            <outlet property="nameLabel" destination="WzH-Bh-d10" id="ffa-ZB-dZ6"/>
+                                            <outlet property="solarDateLabel" destination="Fmc-9L-Jfb" id="Ihy-P7-64w"/>
+                                            <outlet property="solarDaysLabel" destination="DDy-HR-eXh" id="pvs-kj-Ail"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="J7Z-tq-NpH" id="mBQ-Mw-r48"/>
                                     <outlet property="delegate" destination="J7Z-tq-NpH" id="ppE-PP-ySG"/>

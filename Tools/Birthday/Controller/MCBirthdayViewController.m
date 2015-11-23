@@ -27,7 +27,13 @@
     [super viewDidLoad];
     [self configure];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,12 +45,21 @@
     return self.birthdayArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCBirthday *lBirthday=[self.birthdayArray objectAtIndex:row];
     MCBirthdayCell *lCell=[tableView dequeueReusableCellWithIdentifier:BIRTHDAY_CELL_ID forIndexPath:indexPath];
+    [lCell setupBirthday:lBirthday];
     return lCell;
 }
 #pragma mark - TableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 95;
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row=[indexPath row];
+    MCBirthday *lBirthday=[self.birthdayArray objectAtIndex:row];
+    [self performSegueWithIdentifier:BIRTHDAY_EDIT_VC_SEGUE_ID sender:lBirthday];
 }
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

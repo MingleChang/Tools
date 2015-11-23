@@ -50,6 +50,11 @@
 -(BOOL)isSameMonth:(MCDate *)date;
 -(BOOL)isSameDay:(MCDate *)date;
 
+-(BOOL)isEarlierThan:(MCDate *)date;
+-(BOOL)isLaterThan:(MCDate *)date;
+-(BOOL)isEarlierThanOrEqualTo:(MCDate *)date;
+-(BOOL)isLaterThanOrEqualTo:(MCDate *)date;
+
 -(NSInteger)yearsFrom:(MCDate *)date;
 -(NSInteger)monthsFrom:(MCDate *)date;
 -(NSInteger)weeksFrom:(MCDate *)date;

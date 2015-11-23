@@ -9,6 +9,8 @@
 #import "MCDate.h"
 
 @interface MCDate (Solar)
+-(void)changeToSolar;
+
 -(NSString *)solarYear;
 -(NSString *)solarMonth;
 -(NSString *)solarDay;
@@ -19,6 +21,8 @@
 @end
 
 @interface MCDate (Lunar)
+-(void)changeToLunar;
+
 -(NSString *)lunarYear;
 -(NSString *)lunarMonth;
 -(NSString *)lunarDay;

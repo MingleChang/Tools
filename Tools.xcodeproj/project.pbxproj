@@ -33,6 +33,8 @@
 		4C4FB39C1BFF11C8006D3325 /* MCNotepadImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FB39A1BFF11C8006D3325 /* MCNotepadImageShowViewController.m */; };
 		4C4FB39D1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FB39B1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib */; };
 		4C4FB3A01BFF1692006D3325 /* MCImageViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FB39F1BFF1692006D3325 /* MCImageViewExtension.m */; };
+		4C5ACBC91C02B14D00342968 /* MCBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5ACBC71C02B14D00342968 /* MCBirthdayCell.m */; };
+		4C5ACBCA1C02B14D00342968 /* MCBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5ACBC81C02B14D00342968 /* MCBirthdayCell.xib */; };
 		4C7657AC1BF5874800FD75D3 /* MCDreamListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */; };
 		4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */; };
 		4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7657B11BF58F4F00FD75D3 /* Compass.storyboard */; };
@@ -182,6 +184,9 @@
 		4C4FB39B1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadImageShowViewController.xib; sourceTree = "<group>"; };
 		4C4FB39E1BFF1692006D3325 /* MCImageViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageViewExtension.h; sourceTree = "<group>"; };
 		4C4FB39F1BFF1692006D3325 /* MCImageViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageViewExtension.m; sourceTree = "<group>"; };
+		4C5ACBC61C02B14D00342968 /* MCBirthdayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBirthdayCell.h; sourceTree = "<group>"; };
+		4C5ACBC71C02B14D00342968 /* MCBirthdayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBirthdayCell.m; sourceTree = "<group>"; };
+		4C5ACBC81C02B14D00342968 /* MCBirthdayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCBirthdayCell.xib; sourceTree = "<group>"; };
 		4C7657A91BF5874800FD75D3 /* MCDreamListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamListCell.h; sourceTree = "<group>"; };
 		4C7657AA1BF5874800FD75D3 /* MCDreamListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamListCell.m; sourceTree = "<group>"; };
 		4C7657AB1BF5874800FD75D3 /* MCDreamListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamListCell.xib; sourceTree = "<group>"; };
@@ -724,6 +729,9 @@
 				821E5BA31C0229E000F90770 /* MCBirthdayDatePicker.h */,
 				821E5BA41C0229E000F90770 /* MCBirthdayDatePicker.m */,
 				821E5BA61C0229EB00F90770 /* MCBirthdayDatePicker.xib */,
+				4C5ACBC61C02B14D00342968 /* MCBirthdayCell.h */,
+				4C5ACBC71C02B14D00342968 /* MCBirthdayCell.m */,
+				4C5ACBC81C02B14D00342968 /* MCBirthdayCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1072,6 +1080,7 @@
 			files = (
 				8245AA0C1BF4D91E009B5640 /* MCDreamCateCell.xib in Resources */,
 				824D5CE81BFA3786006069FE /* MCNotepadCell.xib in Resources */,
+				4C5ACBCA1C02B14D00342968 /* MCBirthdayCell.xib in Resources */,
 				82198F351BF70E4C00EAF2E5 /* MCDreamListViewController.xib in Resources */,
 				82A0853D1C0051900051B23D /* MCBirthdayViewController.xib in Resources */,
 				4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */,
@@ -1177,6 +1186,7 @@
 				4C44BAD31BF9A41C005D5FEA /* MCNotepadManager.m in Sources */,
 				820935CF1BF2341500F032AA /* MCToolCate.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
+				4C5ACBC91C02B14D00342968 /* MCBirthdayCell.m in Sources */,
 				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
 				4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */,
 				82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */,

@@ -188,6 +188,9 @@
 }
 
 #pragma mark - Event Response
+-(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
+    [self saveNotepad];
+}
 -(void)cameraBarButtonItemClick:(UIBarButtonItem *)sender{
     [self.textView resignFirstResponder];
     UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:@"选择图片" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -233,8 +236,5 @@
     UIBarButtonItem *lCameraBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_camera"] style:UIBarButtonItemStyleDone target:self action:@selector(cameraBarButtonItemClick:)];
     UIBarButtonItem *lTrashBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_trash"] style:UIBarButtonItemStyleDone target:self action:@selector(trashBarButtonItemClick:)];
     self.navigationItem.rightBarButtonItems=@[lCameraBarButtonItem,lTrashBarButtonItem];
-}
--(void)backBarButtonItemClick:(UIBarButtonItem *)sender{
-    [self saveNotepad];
 }
 @end

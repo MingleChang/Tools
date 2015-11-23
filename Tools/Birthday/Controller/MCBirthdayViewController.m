@@ -11,10 +11,13 @@
 #import "MCBirthday.h"
 #import "MingleChang.h"
 #import "MCBirthdayEditViewController.h"
+#import "MCBirthdayCell.h"
 
+#define BIRTHDAY_CELL_ID @"MCBirthdayCell"
 #define BIRTHDAY_EDIT_VC_SEGUE_ID @"MCBirthdayEditViewController"
 
-@interface MCBirthdayViewController ()
+@interface MCBirthdayViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *birthdayArray;
 @end
 
@@ -29,12 +32,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark - Event Response
--(void)addBarButtonItemClick:(UIBarButtonItem *)sender{
-    MCBirthday *lBirthday=[[MCBirthday alloc]init];
-    [self performSegueWithIdentifier:BIRTHDAY_EDIT_VC_SEGUE_ID sender:lBirthday];
-}
 
+#pragma mark - Delegate
+#pragma mark - TableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.birthdayArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MCBirthdayCell *lCell=[tableView dequeueReusableCellWithIdentifier:BIRTHDAY_CELL_ID forIndexPath:indexPath];
+    return lCell;
+}
+#pragma mark - TableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:BIRTHDAY_EDIT_VC_SEGUE_ID]) {
@@ -54,6 +65,11 @@
 }
 -(void)configureData{
     self.birthdayArray=[[[MCBirthdayManager manager]selectAllBirthday]mutableCopy];
+}
+#pragma mark - Event Response
+-(void)addBarButtonItemClick:(UIBarButtonItem *)sender{
+    MCBirthday *lBirthday=[[MCBirthday alloc]init];
+    [self performSegueWithIdentifier:BIRTHDAY_EDIT_VC_SEGUE_ID sender:lBirthday];
 }
 #pragma mark - Override
 -(void)resetNavigationItem{

@@ -27,6 +27,12 @@ typedef NS_ENUM(NSInteger,BirthdayType){
 -(NSDictionary *)toDBDictionary;
 -(NSDictionary *)toDBDeleteDictionary;
 
+-(NSString *)displayBirthday;
+-(NSString *)displaySolarBirthday;
+-(NSString *)displayLunarBirthday;
+
+-(BOOL)isValid;
+
 -(BOOL)save;
 -(BOOL)update;
 -(BOOL)destroy;

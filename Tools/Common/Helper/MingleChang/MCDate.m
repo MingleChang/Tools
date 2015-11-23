@@ -384,10 +384,10 @@ const NSInteger SECONDS_IN_MINUTE = 60;
     return [self.date timeIntervalSinceDate:date.date]/SECONDS_IN_HOUR;
 }
 -(double)minutesFrom:(MCDate *)date{
-    return [self.date timeIntervalSinceDate:date.date]/SECONDS_IN_HOUR;
+    return [self.date timeIntervalSinceDate:date.date]/SECONDS_IN_MINUTE;
 }
 -(double)secondsFrom:(MCDate *)date{
-    return [self.date timeIntervalSinceDate:date.date]/SECONDS_IN_HOUR;
+    return [self.date timeIntervalSinceDate:date.date];
 }
 
 @end

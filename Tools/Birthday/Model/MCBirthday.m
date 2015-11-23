@@ -40,6 +40,12 @@
     }
 }
 #pragma mark - Public Mothed
+-(BOOL)isValid{
+    if (self.name.length==0) {
+        return NO;
+    }
+    return YES;
+}
 -(BOOL)save{
     BOOL isSuccess=[[MCBirthdayManager manager]insertBirthday:self];
     return isSuccess;
@@ -51,6 +57,22 @@
 -(BOOL)destroy{
     BOOL isSuccess=[[MCBirthdayManager manager]deleteBirthday:self];
     return isSuccess;
+}
+-(NSString *)displayBirthday{
+    if (self.type==BirthdayTypeSolar) {
+        return [self displaySolarBirthday];
+    }else{
+        return [self displayLunarBirthday];
+    }
+}
+#pragma mark - Display Birthday
+-(NSString *)displaySolarBirthday{
+    [self.birthday changeToSolar];
+    return [NSString stringWithFormat:@"%@年%@月%@日",[self.birthday solarYear],[self.birthday solarMonth],[self.birthday solarDay]];
+}
+-(NSString *)displayLunarBirthday{
+    [self.birthday changeToLunar];
+    return [NSString stringWithFormat:@"%@年%@%@%@",[self.birthday lunarYear],(self.birthday.isLeapMonth?@"闰":@""),[self.birthday lunarMonth],[self.birthday lunarDay]];
 }
 #pragma mark - TO DB DIC
 -(id)valueForUndefinedKey:(NSString *)key{

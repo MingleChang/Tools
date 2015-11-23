@@ -21,11 +21,17 @@
                                 <segment title="阳历"/>
                                 <segment title="阴历"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentControlValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="e79-Hs-nUG"/>
+                            </connections>
                         </segmentedControl>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khu-Vo-c8r">
                             <rect key="frame" x="275" y="7" width="30" height="30"/>
                             <animations/>
                             <state key="normal" title="完成"/>
+                            <connections>
+                                <action selector="doneButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="d9z-mC-b1L"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>
@@ -44,6 +50,9 @@
                     <date key="date" timeIntervalSinceReferenceDate="469903898.42458802">
                         <!--2015-11-22 16:51:38 +0000-->
                     </date>
+                    <connections>
+                        <action selector="datePickerValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="0Yq-Y1-EWX"/>
+                    </connections>
                 </datePicker>
             </subviews>
             <animations/>
@@ -59,6 +68,11 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="yk7-MX-gdh" id="ArI-9M-79z"/>
+                <outlet property="doneButton" destination="Khu-Vo-c8r" id="6Uy-OC-3dl"/>
+                <outlet property="segmentedControl" destination="fDe-Cg-LDg" id="JIH-aM-3bU"/>
+            </connections>
             <point key="canvasLocation" x="240" y="336"/>
         </view>
     </objects>

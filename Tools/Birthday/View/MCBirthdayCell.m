@@ -65,14 +65,13 @@
 -(void)resetSolarInfo{
     [self.birthday.birthday changeToSolar];
     self.solarDateLabel.text=[NSString stringWithFormat:@"%@月%@日",[self.birthday.birthday solarMonth],[self.birthday.birthday solarDay]];
-    MCDate *birthdayDate=[MCDate dateWithMCDate:self.birthday.birthday];
     MCDate *lNowDate=[MCDate date];
     lNowDate.hour=0;
     lNowDate.minute=0;
     lNowDate.second=0;
-    birthdayDate.yearForWeekOfYear=lNowDate.yearForWeekOfYear;
+    MCDate *birthdayDate=[self.birthday.birthday dateByAddYears:lNowDate.yearForWeekOfYear-self.birthday.birthday.yearForWeekOfYear];
     if ([birthdayDate isEarlierThan:lNowDate]) {
-        birthdayDate.yearForWeekOfYear=birthdayDate.yearForWeekOfYear+1;
+        birthdayDate=[birthdayDate dateByAddYears:1];
     }
     NSInteger days=[birthdayDate daysFrom:lNowDate];
     if (days==0) {
@@ -86,15 +85,15 @@
 -(void)resetLunarInfo{
     [self.birthday.birthday changeToLunar];
     self.lunarDateLabel.text=[NSString stringWithFormat:@"%@%@",[self.birthday.birthday lunarMonth],[self.birthday.birthday lunarDay]];
-    MCDate *birthdayDate=[MCDate dateWithMCDate:self.birthday.birthday];
     MCDate *lNowDate=[MCDate date];
     [lNowDate changeToLunar];
     lNowDate.hour=0;
     lNowDate.minute=0;
     lNowDate.second=0;
-    birthdayDate.year=lNowDate.yearForWeekOfYear-birthdayDate.yearForWeekOfYear+birthdayDate.year;
+    
+    MCDate *birthdayDate=[self.birthday.birthday dateByAddYears:lNowDate.yearForWeekOfYear-self.birthday.birthday.yearForWeekOfYear];
     if ([birthdayDate isEarlierThan:lNowDate]) {
-        birthdayDate.year=birthdayDate.year+1;
+        birthdayDate=[birthdayDate dateByAddYears:1];
     }
     NSInteger days=[birthdayDate daysFrom:lNowDate];
     if (days==0) {

@@ -48,6 +48,7 @@
 }
 -(BOOL)save{
     BOOL isSuccess=[[MCBirthdayManager manager]insertBirthday:self];
+    self.isSave=isSuccess;
     return isSuccess;
 }
 -(BOOL)update{

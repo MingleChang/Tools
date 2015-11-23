@@ -75,6 +75,9 @@
         case MCToolIDBirthday:
             return @"MCBirthdayViewController";
             break;
+        case MCToolIDReciprocalDay:
+            return @"MCReciprocalDayViewController";
+            break;
         default:
             return @"MCFlashlightViewController";
             break;

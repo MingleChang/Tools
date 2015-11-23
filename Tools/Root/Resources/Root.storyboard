@@ -177,6 +177,7 @@
                         <segue destination="aU6-1L-OaM" kind="push" identifier="MCNotepadViewController" id="Ycm-HO-Kvv"/>
                         <segue destination="obx-pf-vXa" kind="push" identifier="MCSizeControlViewController" id="gle-CS-BZA"/>
                         <segue destination="Dea-iU-Aj2" kind="push" identifier="MCBirthdayViewController" id="YN8-bf-Ijr"/>
+                        <segue destination="QZt-e2-6t1" kind="push" identifier="MCReciprocalDayViewController" id="EFm-dC-dIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,6 +243,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFS-1U-vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510.5" y="414"/>
+        </scene>
+        <!--MCReciprocalDayViewController-->
+        <scene sceneID="6an-v0-yII">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReciprocalDay" referencedIdentifier="MCReciprocalDayViewController" id="QZt-e2-6t1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RfD-dD-1ox"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuL-Mp-ftF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242.5" y="597"/>
         </scene>
         <!--MCBirthdayViewController-->
         <scene sceneID="N2B-CP-LfH">

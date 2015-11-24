@@ -12,6 +12,8 @@
 
 #define WEATHER_URL @"http://apis.baidu.com/heweather/weather/free"
 
+#define IDNUMBER_URL @"http://apis.baidu.com/apistore/idservice/id"
+
 @implementation APIStoreRequest
 #pragma mark - Weather API
 +(NSURLRequest *)getWeatherRequestWithCityName:(NSString *)name{
@@ -35,4 +37,13 @@
     [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
     return [lURLRequest copy];
 }
+#pragma mark - ID Number
++(NSURLRequest *)getIDNumberRequestWithIDNumber:(NSString *)idNumber{
+    NSString *lURLStr=[NSString stringWithFormat:@"%@?id=%@",IDNUMBER_URL,idNumber];
+    NSURL *lURL=[NSURL URLWithString:lURLStr];
+    NSMutableURLRequest *lURLRequest=[NSMutableURLRequest requestWithURL:lURL];
+    [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
+    return [lURLRequest copy];
+}
+
 @end

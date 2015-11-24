@@ -137,6 +137,11 @@
 		82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */; };
 		82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */; };
 		82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */; };
+		82E8E1E71C04BB3F0087ABCE /* IDNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E8E1E61C04BB3F0087ABCE /* IDNumber.storyboard */; };
+		82E8E1EB1C04BB6E0087ABCE /* MCIdNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E1E91C04BB6E0087ABCE /* MCIdNumberViewController.m */; };
+		82E8E1EC1C04BB6E0087ABCE /* MCIdNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E8E1EA1C04BB6E0087ABCE /* MCIdNumberViewController.xib */; };
+		82E8E1F01C04C7F40087ABCE /* MCIdNumberRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E1EF1C04C7F40087ABCE /* MCIdNumberRoot.m */; };
+		82E8E1F31C04C8040087ABCE /* MCIdNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E1F21C04C8040087ABCE /* MCIdNumber.m */; };
 		82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */; };
 		82EFB6FE1BDC8E5B008A978C /* MCWeatherCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB6FD1BDC8E5B008A978C /* MCWeatherCity.m */; };
 		82EFB7011BDC8E6E008A978C /* MCWeatherArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EFB7001BDC8E6E008A978C /* MCWeatherArea.m */; };
@@ -360,6 +365,14 @@
 		82D806211BFB7FE00092F3D4 /* MCNotepadEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadEditViewController.h; sourceTree = "<group>"; };
 		82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadEditViewController.m; sourceTree = "<group>"; };
 		82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadEditViewController.xib; sourceTree = "<group>"; };
+		82E8E1E61C04BB3F0087ABCE /* IDNumber.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IDNumber.storyboard; sourceTree = "<group>"; };
+		82E8E1E81C04BB6E0087ABCE /* MCIdNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIdNumberViewController.h; sourceTree = "<group>"; };
+		82E8E1E91C04BB6E0087ABCE /* MCIdNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCIdNumberViewController.m; sourceTree = "<group>"; };
+		82E8E1EA1C04BB6E0087ABCE /* MCIdNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCIdNumberViewController.xib; sourceTree = "<group>"; };
+		82E8E1EE1C04C7F40087ABCE /* MCIdNumberRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIdNumberRoot.h; sourceTree = "<group>"; };
+		82E8E1EF1C04C7F40087ABCE /* MCIdNumberRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCIdNumberRoot.m; sourceTree = "<group>"; };
+		82E8E1F11C04C8040087ABCE /* MCIdNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIdNumber.h; sourceTree = "<group>"; };
+		82E8E1F21C04C8040087ABCE /* MCIdNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCIdNumber.m; sourceTree = "<group>"; };
 		82EFB6F91BDC8E4B008A978C /* MCWeatherProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherProvince.h; sourceTree = "<group>"; };
 		82EFB6FA1BDC8E4B008A978C /* MCWeatherProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherProvince.m; sourceTree = "<group>"; };
 		82EFB6FC1BDC8E5B008A978C /* MCWeatherCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherCity.h; sourceTree = "<group>"; };
@@ -607,6 +620,7 @@
 				82198F491BF710A800EAF2E5 /* SizeControl */,
 				82A085361C0051660051B23D /* Birthday */,
 				8227C8671C03755700F48866 /* ReciprocalDay */,
+				82E8E1E31C04BB2A0087ABCE /* IDNumber */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
@@ -1056,6 +1070,45 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		82E8E1E31C04BB2A0087ABCE /* IDNumber */ = {
+			isa = PBXGroup;
+			children = (
+				82E8E1ED1C04C7D40087ABCE /* Model */,
+				82E8E1E41C04BB2A0087ABCE /* Controller */,
+				82E8E1E51C04BB2A0087ABCE /* Resources */,
+			);
+			path = IDNumber;
+			sourceTree = "<group>";
+		};
+		82E8E1E41C04BB2A0087ABCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82E8E1E81C04BB6E0087ABCE /* MCIdNumberViewController.h */,
+				82E8E1E91C04BB6E0087ABCE /* MCIdNumberViewController.m */,
+				82E8E1EA1C04BB6E0087ABCE /* MCIdNumberViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82E8E1E51C04BB2A0087ABCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82E8E1E61C04BB3F0087ABCE /* IDNumber.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82E8E1ED1C04C7D40087ABCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82E8E1EE1C04C7F40087ABCE /* MCIdNumberRoot.h */,
+				82E8E1EF1C04C7F40087ABCE /* MCIdNumberRoot.m */,
+				82E8E1F11C04C8040087ABCE /* MCIdNumber.h */,
+				82E8E1F21C04C8040087ABCE /* MCIdNumber.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		82EFB7071BDC9ADB008A978C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1250,7 @@
 				82198F421BF70EBF00EAF2E5 /* MCNotepadViewController.xib in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
+				82E8E1EC1C04BB6E0087ABCE /* MCIdNumberViewController.xib in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
 				4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */,
 				82198F4D1BF710B700EAF2E5 /* SizeControl.storyboard in Resources */,
@@ -1223,6 +1277,7 @@
 				8209D71B1BFE0896005029A1 /* MCNotepadImageCell.xib in Resources */,
 				8209D7161BFE0118005029A1 /* MCImagePickerViewController.xib in Resources */,
 				82198F481BF7106D00EAF2E5 /* MCMirrorViewController.xib in Resources */,
+				82E8E1E71C04BB3F0087ABCE /* IDNumber.storyboard in Resources */,
 				82A0853F1C0051AC0051B23D /* Birthday.storyboard in Resources */,
 				4C8D4DB81BF4593C002A3814 /* Dream.storyboard in Resources */,
 				4C4C96F11BF30C2100471135 /* MCToolCell.xib in Resources */,
@@ -1299,6 +1354,7 @@
 				4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */,
 				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
 				4C44BAD31BF9A41C005D5FEA /* MCNotepadManager.m in Sources */,
+				82E8E1F31C04C8040087ABCE /* MCIdNumber.m in Sources */,
 				820935CF1BF2341500F032AA /* MCToolCate.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
 				4C5ACBC91C02B14D00342968 /* MCBirthdayCell.m in Sources */,
@@ -1320,6 +1376,7 @@
 				82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */,
 				8227C8701C03783400F48866 /* MCReciprocalDayViewController.m in Sources */,
 				4C30C2E81BDF0DF800E6E2C5 /* IPAddress.m in Sources */,
+				82E8E1F01C04C7F40087ABCE /* MCIdNumberRoot.m in Sources */,
 				82198F321BF70E4C00EAF2E5 /* MCDreamDetailViewController.m in Sources */,
 				4C9330981C04031100702B6C /* MCReciprocalDayEditViewController.m in Sources */,
 				82198F511BF710CA00EAF2E5 /* MCSizeControlViewController.m in Sources */,
@@ -1330,6 +1387,7 @@
 				8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */,
 				4C0CF0A51C04361700EDC716 /* MCWebViewController.m in Sources */,
 				82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */,
+				82E8E1EB1C04BB6E0087ABCE /* MCIdNumberViewController.m in Sources */,
 				82198F471BF7106D00EAF2E5 /* MCMirrorViewController.m in Sources */,
 				4C30C3001BDF6C8000E6E2C5 /* MCWeatherHourInfo.m in Sources */,
 				821E5BA01C021F9800F90770 /* MCBirthdayEditViewController.m in Sources */,

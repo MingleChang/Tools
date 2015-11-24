@@ -47,6 +47,9 @@
         case MCToolIDReciprocalDay:
             return [UIImage imageNamed:@"tool_reciprocalday"];
             break;
+        case MCToolIDIdNumber:
+            return [UIImage imageNamed:@"tool_idnumber"];
+            break;
         default:
             return [UIImage imageNamed:@"tool_default"];
             break;
@@ -77,6 +80,9 @@
             break;
         case MCToolIDReciprocalDay:
             return @"MCReciprocalDayViewController";
+            break;
+        case MCToolIDIdNumber:
+            return @"MCIdNumberViewController";
             break;
         default:
             return @"MCFlashlightViewController";

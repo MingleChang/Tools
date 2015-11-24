@@ -14,6 +14,7 @@
 +(NSURLRequest *)getWeatherRequestWithCityName:(NSString *)name;
 +(NSURLRequest *)getWeatherRequestWithCityId:(NSString *)cityid;
 +(NSURLRequest *)getWeatherRequestWithIP:(NSString *)cityIP;
-
+#pragma mark - ID Number
++(NSURLRequest *)getIDNumberRequestWithIDNumber:(NSString *)idNumber;
 
 @end

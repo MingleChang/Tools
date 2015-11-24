@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSInteger,MCToolID){
-    MCToolIDFlashlight=100,
-    MCToolIDMirror=101,
-    MCToolIDDream=102,
-    MCToolIDCompass=103,
-    MCToolIDNotepad=104,
-    MCToolIDSizeControl=105,
-    MCToolIDBirthday=106,
-    MCToolIDReciprocalDay=107,
-    MCToolIDCurrency=200,
+    //常用工具
+    MCToolIDFlashlight=100,//手电筒
+    MCToolIDMirror=101,//镜子
+    MCToolIDDream=102,//周公解梦
+    MCToolIDCompass=103,//指南针
+    MCToolIDNotepad=104,//记事本
+    MCToolIDSizeControl=105,//尺码对照表
+    MCToolIDBirthday=106,//生日本
+    MCToolIDReciprocalDay=107,//倒数日
+    //生活查询
+    MCToolIDIdNumber=200,//身份证查询
 };
 typedef NS_ENUM(NSInteger,MCToolType){
     MCToolTypeLocal=0,

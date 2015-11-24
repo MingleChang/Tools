@@ -14,6 +14,7 @@
 @property(nonatomic,strong)NSTimeZone *timeZone;
 @property(nonatomic,strong)NSLocale *locale;
 
+@property(nonatomic,assign)NSInteger era;
 @property(nonatomic,assign)NSInteger year;
 @property(nonatomic,assign)NSInteger month;
 @property(nonatomic,assign)NSInteger day;

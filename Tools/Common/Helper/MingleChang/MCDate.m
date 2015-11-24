@@ -96,6 +96,13 @@ const NSInteger SECONDS_IN_MINUTE = 60;
 
 
 #pragma mark - Setter And Getter
+-(NSInteger)era{
+    return self.dateComponent.era;
+}
+-(void)setEra:(NSInteger)era{
+    self.dateComponent.era=era;
+    self.date=[self.calendar dateFromComponents:self.dateComponent];
+}
 -(NSInteger)year{
     return self.dateComponent.year;
 }

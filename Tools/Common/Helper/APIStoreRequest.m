@@ -13,6 +13,7 @@
 #define WEATHER_URL @"http://apis.baidu.com/heweather/weather/free"
 
 @implementation APIStoreRequest
+#pragma mark - Weather API
 +(NSURLRequest *)getWeatherRequestWithCityName:(NSString *)name{
     NSString *lURLStr=[NSString stringWithFormat:@"%@?city=%@",WEATHER_URL,name];
     NSURL *lURL=[NSURL URLWithString:lURLStr];

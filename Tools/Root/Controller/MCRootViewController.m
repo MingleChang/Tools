@@ -101,11 +101,13 @@
 }
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
+    searchBar.text=@"";
 }
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     NSString *lURLStr=[NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@",searchBar.text];
     [self performSegueWithIdentifier:WEB_VC_SEGUE_ID sender:lURLStr];
+    searchBar.text=@"";
 }
 
 #pragma mark - RootChooseView Delegate
@@ -134,6 +136,7 @@
 -(void)resetNavigationItem{
     self.searchBar=[[MCSearchBar alloc]init];
     self.searchBar.delegate=self;
+    self.searchBar.placeholder=@"请输入搜索关键字";
     self.searchBar.searchBarStyle=UISearchBarStyleMinimal;
     self.navigationItem.titleView=self.searchBar;
     self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_add"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];

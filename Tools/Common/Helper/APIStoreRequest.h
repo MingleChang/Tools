@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface APIStoreRequest : NSObject
+
+#pragma mark - Weather API
 +(NSURLRequest *)getWeatherRequestWithCityName:(NSString *)name;
 +(NSURLRequest *)getWeatherRequestWithCityId:(NSString *)cityid;
 +(NSURLRequest *)getWeatherRequestWithIP:(NSString *)cityIP;

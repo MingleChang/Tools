@@ -116,6 +116,14 @@
     [self.collectionView setContentOffset:CGPointZero];
 }
 
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:WEB_VC_SEGUE_ID]) {
+        MCWebViewController *lViewController=(MCWebViewController *)segue.destinationViewController;
+        lViewController.rootURLStr=sender;
+    }
+}
+
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];
@@ -142,14 +150,4 @@
     self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_add"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];
     self.navigationItem.rightBarButtonItem=self.settingBarButtonItem;
 }
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:WEB_VC_SEGUE_ID]) {
-        MCWebViewController *lViewController=(MCWebViewController *)segue.destinationViewController;
-        lViewController.rootURLStr=sender;
-    }
-}
-
-
 @end

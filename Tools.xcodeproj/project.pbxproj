@@ -10,6 +10,7 @@
 		4C0CF0A11C0435F000EDC716 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0CF0A01C0435F000EDC716 /* Common.storyboard */; };
 		4C0CF0A51C04361700EDC716 /* MCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0CF0A31C04361700EDC716 /* MCWebViewController.m */; };
 		4C0CF0A61C04361700EDC716 /* MCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0CF0A41C04361700EDC716 /* MCWebViewController.xib */; };
+		4C0CF0A91C044BA000EDC716 /* MCSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0CF0A81C044BA000EDC716 /* MCSearchBar.m */; };
 		4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2651BF41F450017DAF0 /* MCDreamManager.m */; };
 		4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F2691BF4213B0017DAF0 /* MCDreamCate.m */; };
 		4C28F26D1BF4214B0017DAF0 /* MCZGDream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C28F26C1BF4214B0017DAF0 /* MCZGDream.m */; };
@@ -152,6 +153,8 @@
 		4C0CF0A21C04361700EDC716 /* MCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWebViewController.h; sourceTree = "<group>"; };
 		4C0CF0A31C04361700EDC716 /* MCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWebViewController.m; sourceTree = "<group>"; };
 		4C0CF0A41C04361700EDC716 /* MCWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCWebViewController.xib; sourceTree = "<group>"; };
+		4C0CF0A71C044BA000EDC716 /* MCSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSearchBar.h; sourceTree = "<group>"; };
+		4C0CF0A81C044BA000EDC716 /* MCSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSearchBar.m; sourceTree = "<group>"; };
 		4C28F2641BF41F450017DAF0 /* MCDreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamManager.h; sourceTree = "<group>"; };
 		4C28F2651BF41F450017DAF0 /* MCDreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamManager.m; sourceTree = "<group>"; };
 		4C28F2681BF4213B0017DAF0 /* MCDreamCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCate.h; sourceTree = "<group>"; };
@@ -1078,6 +1081,8 @@
 				4C7657B91BF5917D00FD75D3 /* MCTextField.m */,
 				4C7657BA1BF5917D00FD75D3 /* MCTextView.h */,
 				4C7657BB1BF5917D00FD75D3 /* MCTextView.m */,
+				4C0CF0A71C044BA000EDC716 /* MCSearchBar.h */,
+				4C0CF0A81C044BA000EDC716 /* MCSearchBar.m */,
 				4C8109751BF1D27D00B5508D /* MCDate.h */,
 				4C8109761BF1D27D00B5508D /* MCDate.m */,
 				822250681C00C64C00F60708 /* MCDate+Info.h */,
@@ -1373,6 +1378,7 @@
 				8227C8741C037A9200F48866 /* MCReciprocalDayManager.m in Sources */,
 				4C30C3181BDF767900E6E2C5 /* MCTableViewController.m in Sources */,
 				4C30C2FD1BDF6C2900E6E2C5 /* MCWeatherDayInfo.m in Sources */,
+				4C0CF0A91C044BA000EDC716 /* MCSearchBar.m in Sources */,
 				8209D71A1BFE0896005029A1 /* MCNotepadImageCell.m in Sources */,
 				4C30C3031BDF6CB800E6E2C5 /* MCWeatherAstro.m in Sources */,
 				4C9330941C03F2D600702B6C /* MCReciprocalDay.m in Sources */,

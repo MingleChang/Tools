@@ -23,7 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property(nonatomic,strong)UISearchBar *searchBar;
+@property(nonatomic,strong)MCSearchBar *searchBar;
 
 @property(nonatomic,strong)UIBarButtonItem *settingBarButtonItem;
 
@@ -132,10 +132,8 @@
 }
 #pragma mark - Override
 -(void)resetNavigationItem{
-    self.searchBar=[[UISearchBar alloc]init];
+    self.searchBar=[[MCSearchBar alloc]init];
     self.searchBar.delegate=self;
-    UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
-    searchField.textColor = [UIColor whiteColor];
     self.searchBar.searchBarStyle=UISearchBarStyleMinimal;
     self.navigationItem.titleView=self.searchBar;
     self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_add"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];

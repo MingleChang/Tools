@@ -10,7 +10,7 @@
 #import "MingleChang.h"
 
 @interface MCDreamCateSearchHeader()<UISearchBarDelegate>
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet MCSearchBar *searchBar;
 
 @end
 @implementation MCDreamCateSearchHeader
@@ -25,8 +25,7 @@
     [self configureData];
 }
 -(void)configureView{
-    UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
-    searchField.textColor=[UIColor whiteColor];
+    
 }
 -(void)configureData{
     

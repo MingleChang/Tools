@@ -96,7 +96,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入梦境关键字" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-1q-jUX">
+                                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入梦境关键字" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-1q-jUX" customClass="MCSearchBar">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <animations/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

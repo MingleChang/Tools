@@ -26,6 +26,7 @@
 #import "MCDate+Info.h"
 #import "MCTextField.h"
 #import "MCTextView.h"
+#import "MCSearchBar.h"
 
 
 /***********自定义的打印方法*************/

@@ -13,13 +13,19 @@
 #import "MCToolCell.h"
 #import "MingleChang.h"
 #import "MCRootChooseView.h"
+#import "MCWebViewController.h"
 
 #define TOOL_CELL_ID @"MCToolCell"
+#define WEB_VC_SEGUE_ID @"MCWebViewController"
 
-@interface MCRootViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,MCRootChooseViewDelegate>
+@interface MCRootViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,MCRootChooseViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet MCRootChooseView *chooseView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property(nonatomic,strong)UISearchBar *searchBar;
+
+@property(nonatomic,strong)UIBarButtonItem *settingBarButtonItem;
 
 @end
 
@@ -38,6 +44,7 @@
     MCLOG(@"%@",tool.name);
     [self performSegueWithIdentifier:tool.segueId sender:nil];
 }
+
 #pragma mark - Delegate
 #pragma mark - CollectionView DataSource
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -82,11 +89,31 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
     return CGSizeZero;
 }
+
+#pragma mark - UISearchBar Delegate
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    self.searchBar.showsCancelButton=YES;
+    self.navigationItem.rightBarButtonItem=nil;
+}
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    self.searchBar.showsCancelButton=NO;
+    self.navigationItem.rightBarButtonItem=self.settingBarButtonItem;
+}
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+}
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    NSString *lURLStr=[NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@",searchBar.text];
+    [self performSegueWithIdentifier:WEB_VC_SEGUE_ID sender:lURLStr];
+}
+
 #pragma mark - RootChooseView Delegate
 -(void)rootChooseView:(MCRootChooseView *)chooseView selectedIndex:(NSInteger)index{
     [self.collectionView reloadData];
     [self.collectionView setContentOffset:CGPointZero];
 }
+
 #pragma mark - Init Methods
 -(void)configure{
     [self configureView];
@@ -99,20 +126,29 @@
     NSArray *lTitles=[[MCToolManager manager].toolsInfo valueForKey:@"name"];
     [self.chooseView setupAllTitles:lTitles];
 }
+#pragma mark - Event Response
+-(void)settingBarButtonItemClick:(UIBarButtonItem *)sender{
+    
+}
 #pragma mark - Override
 -(void)resetNavigationItem{
-//    UISearchBar *lSearchBar=[[UISearchBar alloc]init];
-//    lSearchBar.searchBarStyle=UISearchBarStyleMinimal;
-//    self.navigationItem.titleView=lSearchBar;
+    self.searchBar=[[UISearchBar alloc]init];
+    self.searchBar.delegate=self;
+    UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
+    searchField.textColor = [UIColor whiteColor];
+    self.searchBar.searchBarStyle=UISearchBarStyleMinimal;
+    self.navigationItem.titleView=self.searchBar;
+    self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_add"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];
+    self.navigationItem.rightBarButtonItem=self.settingBarButtonItem;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:WEB_VC_SEGUE_ID]) {
+        MCWebViewController *lViewController=(MCWebViewController *)segue.destinationViewController;
+        lViewController.rootURLStr=sender;
+    }
 }
-*/
+
 
 @end

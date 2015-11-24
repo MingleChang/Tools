@@ -23,6 +23,16 @@
             </objects>
             <point key="canvasLocation" x="-364" y="171"/>
         </scene>
+        <!--MCWebViewController-->
+        <scene sceneID="Bou-l4-fzy">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MCWebViewController" storyboardName="Common" referencedIdentifier="MCWebViewController" id="3AN-Ma-R8r" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="syV-8Y-eNf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TW9-ao-BRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.5" y="-209"/>
+        </scene>
         <!--Delegate-->
         <scene sceneID="3eM-yH-7bV">
             <objects>
@@ -178,6 +188,7 @@
                         <segue destination="obx-pf-vXa" kind="push" identifier="MCSizeControlViewController" id="gle-CS-BZA"/>
                         <segue destination="Dea-iU-Aj2" kind="push" identifier="MCBirthdayViewController" id="YN8-bf-Ijr"/>
                         <segue destination="QZt-e2-6t1" kind="push" identifier="MCReciprocalDayViewController" id="EFm-dC-dIl"/>
+                        <segue destination="3AN-Ma-R8r" kind="push" identifier="MCWebViewController" id="1Sq-2T-f2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>

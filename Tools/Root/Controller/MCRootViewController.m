@@ -105,7 +105,7 @@
 }
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
-    NSString *lURLStr=[NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@",searchBar.text];
+    NSString *lURLStr=[NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@",[searchBar.text URLEncode]];
     [self performSegueWithIdentifier:WEB_VC_SEGUE_ID sender:lURLStr];
     searchBar.text=@"";
 }

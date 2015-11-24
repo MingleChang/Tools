@@ -18,7 +18,6 @@
 }
 -(void)awakeFromNib{
     [super awakeFromNib];
-    [self changeTextFieldColor];
 }
 -(void)changeTextFieldColor{
     UITextField *searchField = [self valueForKey:@"_searchField"];

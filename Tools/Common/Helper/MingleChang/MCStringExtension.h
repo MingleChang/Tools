@@ -12,5 +12,10 @@
 
 //Date
 -(NSDate *)toDateWithFormat:(NSString *)format withTimeZone:(NSTimeZone *)timeZone;
-
+/*
+ 对字符串进行URLEncode转码，主要用于进行网络参数传递
+ 参数：N/A
+ 返回值：NSString，返回进行URLEncode转码之后的字符串
+ */
+-(NSString *)URLEncode;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MCWebViewController.h"
+#import "MingleChang.h"
 
 @interface MCWebViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -37,10 +38,10 @@
     
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
+    self.navigationItem.title=[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
-    
+    self.navigationItem.title=@"加载失败";
 }
 
 /*

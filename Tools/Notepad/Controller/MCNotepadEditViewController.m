@@ -235,6 +235,6 @@
     
     UIBarButtonItem *lCameraBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_camera"] style:UIBarButtonItemStyleDone target:self action:@selector(cameraBarButtonItemClick:)];
     UIBarButtonItem *lTrashBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_trash"] style:UIBarButtonItemStyleDone target:self action:@selector(trashBarButtonItemClick:)];
-    self.navigationItem.rightBarButtonItems=@[lCameraBarButtonItem,lTrashBarButtonItem];
+    self.navigationItem.rightBarButtonItems=@[lTrashBarButtonItem,lCameraBarButtonItem];
 }
 @end

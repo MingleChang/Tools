@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger,MCToolID){
     MCToolIDReciprocalDay=107,//倒数日
     //生活查询
     MCToolIDIdNumber=200,//身份证查询
+    MCToolIDMobile=201,//身份证查询
+    MCToolIDExpress=202,
 };
 typedef NS_ENUM(NSInteger,MCToolType){
     MCToolTypeLocal=0,

@@ -12,6 +12,7 @@
 
 #define WEATHER_URL @"http://apis.baidu.com/heweather/weather/free"
 #define IDNUMBER_URL @"http://apis.baidu.com/apistore/idservice/id"
+#define MOBILE_URL @"http://apis.baidu.com/apistore/mobilenumber/mobilenumber"
 
 @implementation APIStoreRequest
 #pragma mark - Weather API 天气
@@ -44,5 +45,12 @@
     [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
     return [lURLRequest copy];
 }
-
+#pragma mark - Mobile
++(NSURLRequest *)getMobileRequestWithMobile:(NSString *)Mobile{
+    NSString *lURLStr=[NSString stringWithFormat:@"%@?phone=%@",MOBILE_URL,Mobile];
+    NSURL *lURL=[NSURL URLWithString:lURLStr];
+    NSMutableURLRequest *lURLRequest=[NSMutableURLRequest requestWithURL:lURL];
+    [lURLRequest setValue:API_KEY forHTTPHeaderField:@"apikey"];
+    return [lURLRequest copy];
+}
 @end

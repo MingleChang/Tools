@@ -1,0 +1,26 @@
+ [
+  {
+  "name": "顺丰速递",
+  "code": "shunfeng"
+  },
+  {
+  "name": "申通快递",
+  "code": "shentong"
+  },
+  {
+  "name": "圆通速递",
+  "code": "yuantong"
+  },
+  {
+  "name": "中通速递",
+  "code": "zhongtong"
+  },
+  {
+  "name": "韵达快运",
+  "code": "yunda"
+  },
+  {
+  "name": "天天快递",
+  "code": "tiantian"
+  }
+  ]

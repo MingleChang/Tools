@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FlS-9Z-dHY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Express View Controller-->
+        <scene sceneID="nRE-84-hQV">
+            <objects>
+                <viewController storyboardIdentifier="MCExpressViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FlS-9Z-dHY" customClass="MCExpressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ua-LZ-BLw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHD-IG-VIb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mpl-ix-Ota">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="o3T-RB-SFn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skk-V5-9Su">
+                                <rect key="frame" x="15" y="35" width="290" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="选择快递" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-u9-KEV" customClass="MCTextField">
+                                        <rect key="frame" x="5" y="0.0" width="280" height="40"/>
+                                        <animations/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1rT-u9-KEV" secondAttribute="trailing" constant="5" id="1uX-cX-wsK"/>
+                                    <constraint firstItem="1rT-u9-KEV" firstAttribute="leading" secondItem="skk-V5-9Su" secondAttribute="leading" constant="5" id="DcO-ta-js7"/>
+                                    <constraint firstItem="1rT-u9-KEV" firstAttribute="top" secondItem="skk-V5-9Su" secondAttribute="top" id="Xus-zN-SU1"/>
+                                    <constraint firstAttribute="height" constant="40" id="ftS-nF-ACV"/>
+                                    <constraint firstAttribute="bottom" secondItem="1rT-u9-KEV" secondAttribute="bottom" id="yDJ-mq-479"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC4-x9-mmL">
+                                <rect key="frame" x="15" y="90" width="290" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="快递单号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nea-Ht-aR9">
+                                        <rect key="frame" x="5" y="0.0" width="280" height="40"/>
+                                        <animations/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nea-Ht-aR9" firstAttribute="top" secondItem="aC4-x9-mmL" secondAttribute="top" id="37P-G6-H4E"/>
+                                    <constraint firstAttribute="bottom" secondItem="nea-Ht-aR9" secondAttribute="bottom" id="Emf-ox-TfU"/>
+                                    <constraint firstAttribute="trailing" secondItem="nea-Ht-aR9" secondAttribute="trailing" constant="5" id="LbT-7v-9S9"/>
+                                    <constraint firstAttribute="height" constant="40" id="a9q-HW-2Ju"/>
+                                    <constraint firstItem="nea-Ht-aR9" firstAttribute="leading" secondItem="aC4-x9-mmL" secondAttribute="leading" constant="5" id="vnH-rr-l1I"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="skk-V5-9Su" firstAttribute="leading" secondItem="Mpl-ix-Ota" secondAttribute="leading" constant="15" id="1Ce-LK-WSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="aC4-x9-mmL" secondAttribute="trailing" constant="15" id="2Xe-Om-aEf"/>
+                            <constraint firstItem="o3T-RB-SFn" firstAttribute="leading" secondItem="Mpl-ix-Ota" secondAttribute="leading" id="6SQ-aQ-wGp"/>
+                            <constraint firstItem="aC4-x9-mmL" firstAttribute="top" secondItem="skk-V5-9Su" secondAttribute="bottom" constant="15" id="Bmj-Gm-fE9"/>
+                            <constraint firstItem="skk-V5-9Su" firstAttribute="top" secondItem="9ua-LZ-BLw" secondAttribute="bottom" constant="15" id="TnU-hM-IFF"/>
+                            <constraint firstAttribute="bottom" secondItem="o3T-RB-SFn" secondAttribute="bottom" id="WFk-fu-VbS"/>
+                            <constraint firstItem="o3T-RB-SFn" firstAttribute="top" secondItem="Mpl-ix-Ota" secondAttribute="top" id="XQd-d9-kQm"/>
+                            <constraint firstAttribute="trailing" secondItem="o3T-RB-SFn" secondAttribute="trailing" id="ZgL-G3-Oaw"/>
+                            <constraint firstAttribute="trailing" secondItem="skk-V5-9Su" secondAttribute="trailing" constant="15" id="lQg-D8-5ye"/>
+                            <constraint firstItem="aC4-x9-mmL" firstAttribute="leading" secondItem="Mpl-ix-Ota" secondAttribute="leading" constant="15" id="v2R-YP-5Tb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="expressTextField" destination="1rT-u9-KEV" id="zO4-Yx-NMi"/>
+                        <outlet property="numTextField" destination="nea-Ht-aR9" id="pDT-pM-Kkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qE-X5-b9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+    </resources>
+</document>

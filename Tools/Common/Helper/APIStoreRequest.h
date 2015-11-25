@@ -16,5 +16,6 @@
 +(NSURLRequest *)getWeatherRequestWithIP:(NSString *)cityIP;
 #pragma mark - ID Number
 +(NSURLRequest *)getIDNumberRequestWithIDNumber:(NSString *)idNumber;
-
+#pragma mark - Mobile
++(NSURLRequest *)getMobileRequestWithMobile:(NSString *)Mobile;
 @end

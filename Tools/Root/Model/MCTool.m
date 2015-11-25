@@ -50,6 +50,12 @@
         case MCToolIDIdNumber:
             return [UIImage imageNamed:@"tool_idnumber"];
             break;
+        case MCToolIDMobile:
+            return [UIImage imageNamed:@"tool_mobile"];
+            break;
+        case MCToolIDExpress:
+            return [UIImage imageNamed:@"tool_express"];
+            break;
         default:
             return [UIImage imageNamed:@"tool_default"];
             break;
@@ -84,8 +90,13 @@
         case MCToolIDIdNumber:
             return @"MCIdNumberViewController";
             break;
+        case MCToolIDMobile:
+            return @"MCMobileViewController";
+            break;
+        case MCToolIDExpress:
+            return @"MCExpressViewController";
         default:
-            return @"MCFlashlightViewController";
+            return @"MCWebViewController";
             break;
     }
 }

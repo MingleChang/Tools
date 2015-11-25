@@ -9,6 +9,8 @@
 #import "MCWebViewController.h"
 #import "MingleChang.h"
 
+#define PROTOCOL_EXIT @"protocol://exit"
+
 @interface MCWebViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -30,11 +32,21 @@
 #pragma mark - Public Mothed
 
 #pragma mark - Private Mothed
-
+#pragma mark - Protocol
+-(BOOL)checkProtocol:(NSString *)urlStr{
+    if ([urlStr hasPrefix:PROTOCOL_EXIT]) {
+        [self protocolExit:urlStr];
+        return NO;
+    }
+    return YES;
+}
+-(void)protocolExit:(NSString *)protocol{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - Delegate
 #pragma mark - UIWebView Delegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    return YES;
+    return [self checkProtocol:request.URL.absoluteString];
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activityIndicatorView startAnimating];
@@ -44,7 +56,7 @@
     self.navigationItem.title=[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
-    self.navigationItem.title=@"加载失败";
+
 }
 
 /*

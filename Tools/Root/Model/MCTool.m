@@ -56,6 +56,9 @@
         case MCToolIDExpress:
             return [UIImage imageNamed:@"tool_express"];
             break;
+        case MCToolIDLottery:
+            return [UIImage imageNamed:@"tool_lottery"];
+            break;
         default:
             return [UIImage imageNamed:@"tool_default"];
             break;
@@ -95,6 +98,10 @@
             break;
         case MCToolIDExpress:
             return @"MCExpressViewController";
+            break;
+        case MCToolIDLottery:
+            return @"MCLotteryViewController";
+            break;
         default:
             return @"MCWebViewController";
             break;

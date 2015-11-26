@@ -70,6 +70,15 @@
 		820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632A1BFCD88600205A82 /* MCDottedLineView.m */; };
 		820D632E1BFCD96300205A82 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632D1BFCD96300205A82 /* MCLineView.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
+		82121E731C0751E100EE9930 /* Lottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82121E721C0751E100EE9930 /* Lottery.storyboard */; };
+		82121E771C07521400EE9930 /* MCLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E751C07521400EE9930 /* MCLotteryViewController.m */; };
+		82121E781C07521400EE9930 /* MCLotteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82121E761C07521400EE9930 /* MCLotteryViewController.xib */; };
+		82121E7A1C0755BA00EE9930 /* lottery.json in Resources */ = {isa = PBXBuildFile; fileRef = 82121E791C0755BA00EE9930 /* lottery.json */; };
+		82121E7E1C0755F000EE9930 /* MCLotteryCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E7D1C0755F000EE9930 /* MCLotteryCate.m */; };
+		82121E821C0760F200EE9930 /* MCLotteryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E801C0760F200EE9930 /* MCLotteryListViewController.m */; };
+		82121E831C0760F200EE9930 /* MCLotteryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82121E811C0760F200EE9930 /* MCLotteryListViewController.xib */; };
+		82121E861C07633900EE9930 /* MCLotteryRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E851C07633900EE9930 /* MCLotteryRoot.m */; };
+		82121E891C07634700EE9930 /* MCLottery.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E881C07634700EE9930 /* MCLottery.m */; };
 		82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */; };
 		82198F251BF70E3900EAF2E5 /* MCCompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */; };
 		82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82198F281BF70E4C00EAF2E5 /* MCDreamCateViewController.m */; };
@@ -270,6 +279,20 @@
 		820D632C1BFCD96300205A82 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
 		820D632D1BFCD96300205A82 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		82121E721C0751E100EE9930 /* Lottery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
+		82121E741C07521400EE9930 /* MCLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryViewController.h; sourceTree = "<group>"; };
+		82121E751C07521400EE9930 /* MCLotteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLotteryViewController.m; sourceTree = "<group>"; };
+		82121E761C07521400EE9930 /* MCLotteryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLotteryViewController.xib; sourceTree = "<group>"; };
+		82121E791C0755BA00EE9930 /* lottery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottery.json; sourceTree = "<group>"; };
+		82121E7C1C0755F000EE9930 /* MCLotteryCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryCate.h; sourceTree = "<group>"; };
+		82121E7D1C0755F000EE9930 /* MCLotteryCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLotteryCate.m; sourceTree = "<group>"; };
+		82121E7F1C0760F200EE9930 /* MCLotteryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryListViewController.h; sourceTree = "<group>"; };
+		82121E801C0760F200EE9930 /* MCLotteryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLotteryListViewController.m; sourceTree = "<group>"; };
+		82121E811C0760F200EE9930 /* MCLotteryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLotteryListViewController.xib; sourceTree = "<group>"; };
+		82121E841C07633900EE9930 /* MCLotteryRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryRoot.h; sourceTree = "<group>"; };
+		82121E851C07633900EE9930 /* MCLotteryRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLotteryRoot.m; sourceTree = "<group>"; };
+		82121E871C07634700EE9930 /* MCLottery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLottery.h; sourceTree = "<group>"; };
+		82121E881C07634700EE9930 /* MCLottery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLottery.m; sourceTree = "<group>"; };
 		82198F211BF70E3900EAF2E5 /* MCCompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCompassViewController.h; sourceTree = "<group>"; };
 		82198F221BF70E3900EAF2E5 /* MCCompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCompassViewController.m; sourceTree = "<group>"; };
 		82198F231BF70E3900EAF2E5 /* MCCompassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCompassViewController.xib; sourceTree = "<group>"; };
@@ -648,6 +671,7 @@
 				82E8E1E31C04BB2A0087ABCE /* IDNumber */,
 				8294AB091C05F593000C37B3 /* Mobile */,
 				8294AB1A1C06090C000C37B3 /* Express */,
+				82121E6F1C0751CB00EE9930 /* Lottery */,
 				822E20EC1BD938FB00F41211 /* Resources */,
 				8205FE481BD68BB500EC838E /* Assets.xcassets */,
 				8205FE3C1BD68BB400EC838E /* Supporting Files */,
@@ -695,6 +719,51 @@
 				820935CB1BF2340100F032AA /* tools.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		82121E6F1C0751CB00EE9930 /* Lottery */ = {
+			isa = PBXGroup;
+			children = (
+				82121E7B1C0755D500EE9930 /* Model */,
+				82121E701C0751CB00EE9930 /* Controller */,
+				82121E711C0751CB00EE9930 /* Resources */,
+			);
+			path = Lottery;
+			sourceTree = "<group>";
+		};
+		82121E701C0751CB00EE9930 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82121E741C07521400EE9930 /* MCLotteryViewController.h */,
+				82121E751C07521400EE9930 /* MCLotteryViewController.m */,
+				82121E761C07521400EE9930 /* MCLotteryViewController.xib */,
+				82121E7F1C0760F200EE9930 /* MCLotteryListViewController.h */,
+				82121E801C0760F200EE9930 /* MCLotteryListViewController.m */,
+				82121E811C0760F200EE9930 /* MCLotteryListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82121E711C0751CB00EE9930 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82121E791C0755BA00EE9930 /* lottery.json */,
+				82121E721C0751E100EE9930 /* Lottery.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82121E7B1C0755D500EE9930 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82121E7C1C0755F000EE9930 /* MCLotteryCate.h */,
+				82121E7D1C0755F000EE9930 /* MCLotteryCate.m */,
+				82121E841C07633900EE9930 /* MCLotteryRoot.h */,
+				82121E851C07633900EE9930 /* MCLotteryRoot.m */,
+				82121E871C07634700EE9930 /* MCLottery.h */,
+				82121E881C07634700EE9930 /* MCLottery.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		82198F171BF70DFD00EAF2E5 /* Notepad */ = {
@@ -1351,10 +1420,12 @@
 				82A0853D1C0051900051B23D /* MCBirthdayViewController.xib in Resources */,
 				4C7657B21BF58F4F00FD75D3 /* Compass.storyboard in Resources */,
 				4CD06AFE1BF344220065E215 /* Weather.storyboard in Resources */,
+				82121E7A1C0755BA00EE9930 /* lottery.json in Resources */,
 				82198F421BF70EBF00EAF2E5 /* MCNotepadViewController.xib in Resources */,
 				82273FF21BDB395600AFDEAF /* MCWeatherViewController.xib in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
 				82E8E1EC1C04BB6E0087ABCE /* MCIdNumberViewController.xib in Resources */,
+				82121E781C07521400EE9930 /* MCLotteryViewController.xib in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
 				8294AB131C05F75F000C37B3 /* MCMobileViewController.xib in Resources */,
 				8294AB0E1C05F6B3000C37B3 /* Mobile.storyboard in Resources */,
@@ -1368,6 +1439,7 @@
 				8294AB221C060922000C37B3 /* MCExpressViewController.xib in Resources */,
 				8227C86C1C0377E800F48866 /* ReciprocalDay.storyboard in Resources */,
 				82198F521BF710CA00EAF2E5 /* MCSizeControlViewController.xib in Resources */,
+				82121E731C0751E100EE9930 /* Lottery.storyboard in Resources */,
 				82273FE81BDB2F7800AFDEAF /* LaunchScreen.storyboard in Resources */,
 				82198F3B1BF70E6400EAF2E5 /* MCFlashlightViewController.xib in Resources */,
 				82A085351C0041490051B23D /* MCNotepadBigImageCell.xib in Resources */,
@@ -1379,6 +1451,7 @@
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
 				82198F331BF70E4C00EAF2E5 /* MCDreamDetailViewController.xib in Resources */,
 				82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */,
+				82121E831C0760F200EE9930 /* MCLotteryListViewController.xib in Resources */,
 				8294AB241C060972000C37B3 /* Express.storyboard in Resources */,
 				821E5BA71C0229EB00F90770 /* MCBirthdayDatePicker.xib in Resources */,
 				82273FDD1BDB2A6100AFDEAF /* MCViewController.xib in Resources */,
@@ -1463,11 +1536,13 @@
 				4C28F26A1BF4213B0017DAF0 /* MCDreamCate.m in Sources */,
 				822D2D591BDFB4AC00BB0CD1 /* MCWeatherNow.m in Sources */,
 				4C44BAD31BF9A41C005D5FEA /* MCNotepadManager.m in Sources */,
+				82121E771C07521400EE9930 /* MCLotteryViewController.m in Sources */,
 				82E8E1F31C04C8040087ABCE /* MCIdNumber.m in Sources */,
 				820935CF1BF2341500F032AA /* MCToolCate.m in Sources */,
 				4C4C96F01BF30C2100471135 /* MCToolCell.m in Sources */,
 				4C5ACBC91C02B14D00342968 /* MCBirthdayCell.m in Sources */,
 				4C8109771BF1D27D00B5508D /* MCDate.m in Sources */,
+				82121E7E1C0755F000EE9930 /* MCLotteryCate.m in Sources */,
 				4C7657BC1BF5917D00FD75D3 /* MCTextField.m in Sources */,
 				82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */,
 				4C30C2F41BDF6B4000E6E2C5 /* MCWeatherSuggestion.m in Sources */,
@@ -1480,6 +1555,7 @@
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */,
 				8205FE3E1BD68BB400EC838E /* main.m in Sources */,
+				82121E821C0760F200EE9930 /* MCLotteryListViewController.m in Sources */,
 				82A0853C1C0051900051B23D /* MCBirthdayViewController.m in Sources */,
 				820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */,
 				82198F341BF70E4C00EAF2E5 /* MCDreamListViewController.m in Sources */,
@@ -1498,6 +1574,7 @@
 				8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */,
 				8294AB191C060185000C37B3 /* MCMobile.m in Sources */,
 				4C0CF0A51C04361700EDC716 /* MCWebViewController.m in Sources */,
+				82121E891C07634700EE9930 /* MCLottery.m in Sources */,
 				82198F301BF70E4C00EAF2E5 /* MCDreamCateViewController.m in Sources */,
 				82E8E1EB1C04BB6E0087ABCE /* MCIdNumberViewController.m in Sources */,
 				8294AB121C05F75F000C37B3 /* MCMobileViewController.m in Sources */,
@@ -1533,6 +1610,7 @@
 				82EFB6FB1BDC8E4B008A978C /* MCWeatherProvince.m in Sources */,
 				4C30C2F71BDF6B7200E6E2C5 /* MCWeatherWind.m in Sources */,
 				82022E8C1BF0EFB4002FC16C /* MCFilePath.m in Sources */,
+				82121E861C07633900EE9930 /* MCLotteryRoot.m in Sources */,
 				82198F241BF70E3900EAF2E5 /* MCCompassViewController.m in Sources */,
 				82EFB72A1BDC9AE7008A978C /* MCDrawImage.m in Sources */,
 				8209D7151BFE0118005029A1 /* MCImagePickerViewController.m in Sources */,

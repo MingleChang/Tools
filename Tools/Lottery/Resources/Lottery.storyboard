@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MN0-N0-krw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Lottery View Controller-->
+        <scene sceneID="ghP-sX-2ad">
+            <objects>
+                <viewController storyboardIdentifier="MCLotteryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MN0-N0-krw" customClass="MCLotteryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKF-bk-uPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="COx-iH-UbU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5eo-ie-JgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="l2E-Jq-C3R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JxV-9E-cIN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LotteryCateCell" textLabel="4ml-5y-FaM" style="IBUITableViewCellStyleDefault" id="Msa-0k-jnx">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Msa-0k-jnx" id="JDM-Yu-DRg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ml-5y-FaM">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MN0-N0-krw" id="ugE-er-lfx"/>
+                                    <outlet property="delegate" destination="MN0-N0-krw" id="jVt-xB-W4X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="COx-iH-UbU" firstAttribute="top" secondItem="JxV-9E-cIN" secondAttribute="bottom" id="HZA-vW-x6W"/>
+                            <constraint firstAttribute="trailing" secondItem="l2E-Jq-C3R" secondAttribute="trailing" id="Itf-xA-zvv"/>
+                            <constraint firstItem="JxV-9E-cIN" firstAttribute="top" secondItem="sKF-bk-uPt" secondAttribute="bottom" id="ZT4-4Q-rTx"/>
+                            <constraint firstAttribute="bottom" secondItem="l2E-Jq-C3R" secondAttribute="bottom" id="b1X-Ye-NNR"/>
+                            <constraint firstItem="l2E-Jq-C3R" firstAttribute="leading" secondItem="5eo-ie-JgJ" secondAttribute="leading" id="b5q-cQ-6KF"/>
+                            <constraint firstItem="l2E-Jq-C3R" firstAttribute="top" secondItem="5eo-ie-JgJ" secondAttribute="top" id="jq3-pp-UAA"/>
+                            <constraint firstAttribute="trailing" secondItem="JxV-9E-cIN" secondAttribute="trailing" id="mDf-JK-bhE"/>
+                            <constraint firstItem="JxV-9E-cIN" firstAttribute="leading" secondItem="5eo-ie-JgJ" secondAttribute="leading" id="tTJ-ob-1TZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JxV-9E-cIN" id="RRE-au-l2D"/>
+                        <segue destination="VAx-MT-4GS" kind="push" identifier="MCLotteryListViewController" id="l94-7S-g6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GE3-lk-sJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="236"/>
+        </scene>
+        <!--Lottery List View Controller-->
+        <scene sceneID="liR-fx-DSA">
+            <objects>
+                <viewController storyboardIdentifier="MCLotteryListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VAx-MT-4GS" customClass="MCLotteryListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GbT-bz-9ro"/>
+                        <viewControllerLayoutGuide type="bottom" id="ByC-Bx-V8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Thy-xf-hat">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="peZ-bh-E5i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4O-IE-NyX">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t4O-IE-NyX" secondAttribute="trailing" id="2lb-OC-R7t"/>
+                            <constraint firstItem="t4O-IE-NyX" firstAttribute="leading" secondItem="Thy-xf-hat" secondAttribute="leading" id="6dH-LR-2Ew"/>
+                            <constraint firstItem="peZ-bh-E5i" firstAttribute="leading" secondItem="Thy-xf-hat" secondAttribute="leading" id="7S8-J5-5FA"/>
+                            <constraint firstItem="t4O-IE-NyX" firstAttribute="top" secondItem="GbT-bz-9ro" secondAttribute="bottom" id="9wr-Pt-aCp"/>
+                            <constraint firstItem="ByC-Bx-V8Y" firstAttribute="top" secondItem="t4O-IE-NyX" secondAttribute="bottom" id="IPQ-ov-Rcl"/>
+                            <constraint firstItem="peZ-bh-E5i" firstAttribute="top" secondItem="Thy-xf-hat" secondAttribute="top" id="Jzg-Kb-7oW"/>
+                            <constraint firstAttribute="bottom" secondItem="peZ-bh-E5i" secondAttribute="bottom" id="TjF-bi-nPB"/>
+                            <constraint firstAttribute="trailing" secondItem="peZ-bh-E5i" secondAttribute="trailing" id="hny-XZ-L3V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lob-E8-4en"/>
+                    <connections>
+                        <outlet property="tableView" destination="t4O-IE-NyX" id="hGK-6u-WQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AyX-at-3Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+    </resources>
+</document>

@@ -42,7 +42,7 @@
 }
 -(void)openTool:(MCTool *)tool{
     MCLOG(@"%@",tool.name);
-    [self performSegueWithIdentifier:tool.segueId sender:nil];
+    [self performSegueWithIdentifier:tool.segueId sender:tool.url];
 }
 
 #pragma mark - Delegate

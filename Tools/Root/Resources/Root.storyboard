@@ -192,6 +192,7 @@
                         <segue destination="V4d-SY-YbJ" kind="push" identifier="MCIdNumberViewController" id="FNP-4v-44v"/>
                         <segue destination="jMN-3l-KDb" kind="push" identifier="MCMobileViewController" id="0qU-7B-1CY"/>
                         <segue destination="pG8-5C-CgX" kind="push" identifier="MCExpressViewController" id="2h7-5U-ffL"/>
+                        <segue destination="yDZ-bT-alE" kind="push" identifier="MCLotteryViewController" id="bxa-21-YUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETs-MK-JPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,6 +278,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1s-k4-W9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495" y="275"/>
+        </scene>
+        <!--MCLotteryViewController-->
+        <scene sceneID="Cdc-js-sNU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lottery" referencedIdentifier="MCLotteryViewController" id="yDZ-bT-alE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gte-bC-uhP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CH7-u0-VzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="365"/>
         </scene>
         <!--MCExpressViewController-->
         <scene sceneID="FO8-XQ-uMp">

@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger,MCToolID){
     //生活查询
     MCToolIDIdNumber=200,//身份证查询
     MCToolIDMobile=201,//身份证查询
-    MCToolIDExpress=202,
+    MCToolIDExpress=202,//快递查询
+    MCToolIDLottery=203,//彩票查询
 };
 typedef NS_ENUM(NSInteger,MCToolType){
     MCToolTypeLocal=0,

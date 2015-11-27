@@ -30,11 +30,6 @@
     NSString *lPath=[[NSBundle mainBundle]pathForResource:@"tools" ofType:@"json"];
     NSData *lData=[NSData dataWithContentsOfFile:lPath];
     NSArray *lArray=[NSJSONSerialization JSONObjectWithData:lData options:NSJSONReadingAllowFragments error:nil];
-    NSMutableArray *lToolInfo=[NSMutableArray array];
-    for (NSDictionary *lDic in lArray) {
-        MCToolCate *lCate=[[MCToolCate alloc]initWithDictionary:lDic];
-        [lToolInfo addObject:lCate];
-    }
-    self.toolsInfo=lToolInfo;
+    self.toolsInfo=[MCToolCate arrayModelByArrayOfDictionary:lArray];
 }
 @end

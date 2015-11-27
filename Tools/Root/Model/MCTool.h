@@ -17,11 +17,10 @@ typedef NS_ENUM(NSInteger,MCToolID){
     MCToolIDSizeControl=105,//尺码对照表
     MCToolIDBirthday=106,//生日本
     MCToolIDReciprocalDay=107,//倒数日
-    //生活查询
-    MCToolIDIdNumber=200,//身份证查询
-    MCToolIDMobile=201,//身份证查询
-    MCToolIDExpress=202,//快递查询
-    MCToolIDLottery=203,//彩票查询
+    MCToolIDIdNumber=108,//身份证查询
+    MCToolIDMobile=109,//身份证查询
+    MCToolIDExpress=110,//快递查询
+    MCToolIDLottery=111,//彩票查询
 };
 typedef NS_ENUM(NSInteger,MCToolType){
     MCToolTypeLocal=0,
@@ -37,4 +36,6 @@ typedef NS_ENUM(NSInteger,MCToolType){
 @property(nonatomic,strong,readonly)UIImage *localImage;
 @property(nonatomic,copy,readonly)NSString *segueId;
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
+
++(NSArray *)arrayModelByArrayOfDictionary:(NSArray *)array;
 @end

@@ -19,7 +19,14 @@
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
-
++(NSArray *)arrayModelByArrayOfDictionary:(NSArray *)array{
+    NSMutableArray *lArray=[NSMutableArray arrayWithCapacity:array.count];
+    for (NSDictionary *lDic in array) {
+        MCTool *lTool=[[MCTool alloc]initWithDictionary:lDic];
+        [lArray addObject:lTool];
+    }
+    return [lArray copy];
+}
 #pragma mark - Setter And Getter
 -(UIImage *)localImage{
     switch (self.toolId) {

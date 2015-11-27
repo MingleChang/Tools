@@ -13,4 +13,5 @@
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSArray *allTools;
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
++(NSArray *)arrayModelByArrayOfDictionary:(NSArray *)array;
 @end

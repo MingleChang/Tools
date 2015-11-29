@@ -10,8 +10,11 @@
 #import "MCLotteryCate.h"
 #import "MCLottery.h"
 #import "MCLotteryRoot.h"
+#import "MCLotteryListCell.h"
 
-@interface MCLotteryListViewController ()
+#define LOTTERY_LIST_CELL_ID @"MCLotteryListCell"
+
+@interface MCLotteryListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)UIActivityIndicatorView *activityIndicatorView;
@@ -52,6 +55,23 @@
         });
     }];
     [self.sessionDataTask resume];
+}
+
+#pragma mark - Delegate
+#pragma mark - UITableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.lotteryArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCLottery *lLottery=[self.lotteryArray objectAtIndex:row];
+    MCLotteryListCell *lCell=[tableView dequeueReusableCellWithIdentifier:LOTTERY_LIST_CELL_ID forIndexPath:indexPath];
+    [lCell setupLottery:lLottery andLotteryCate:self.lotteryCate];
+    return lCell;;
+}
+#pragma mark - UITableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 /*
 #pragma mark - Navigation

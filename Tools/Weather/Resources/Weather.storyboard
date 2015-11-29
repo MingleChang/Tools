@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Q8Z-2G-CaB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k2m-co-5qJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-QH-oPc">
@@ -136,7 +136,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-10-29 13:89" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH3-kY-r9B">
-                                <rect key="frame" x="15" y="313" width="103" height="15"/>
+                                <rect key="frame" x="15" y="533" width="103" height="15"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -161,6 +161,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AHb-bj-e5n" secondAttribute="trailing" constant="15" id="1FZ-XF-0bq"/>
                             <constraint firstItem="4ME-OZ-72u" firstAttribute="bottom" secondItem="5cD-t7-RDg" secondAttribute="centerY" constant="-2" id="1Z1-hw-Iy1"/>
@@ -188,9 +189,10 @@
                             <constraint firstItem="AHb-bj-e5n" firstAttribute="width" secondItem="4ME-OZ-72u" secondAttribute="width" id="uRg-av-vUa"/>
                             <constraint firstItem="At7-Jy-o68" firstAttribute="height" secondItem="5tS-sG-q5K" secondAttribute="height" id="yzH-cm-isv"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="puo-c5-tf9" appends="YES" id="8ki-tW-9HL"/>
+                        </connections>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="348"/>
                     <connections>
                         <outlet property="cityLabel" destination="oAn-sL-8eP" id="xmx-Sf-lRu"/>
                         <outlet property="condLabel" destination="9eE-be-BTn" id="hdI-5G-NRx"/>
@@ -202,14 +204,76 @@
                         <outlet property="tmpLabel" destination="5cD-t7-RDg" id="jB2-Yn-xOe"/>
                         <outlet property="windDirLabel" destination="MNp-g3-nsi" id="Idd-yx-uaL"/>
                         <outlet property="windSCLabel" destination="hdh-nO-dmm" id="Xhv-ZL-RnB"/>
+                        <segue destination="K4n-xS-pKZ" kind="push" identifier="MCCityChooseViewController" id="GhP-se-zlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wi-q5-mwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="puo-c5-tf9">
+                    <connections>
+                        <action selector="tapGestureEvent:" destination="1dM-BM-MOm" id="iNL-NN-smq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4" y="-100"/>
         </scene>
+        <!--City Choose View Controller-->
+        <scene sceneID="2Mi-4K-Cs1">
+            <objects>
+                <viewController storyboardIdentifier="MCCityChooseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K4n-xS-pKZ" customClass="MCCityChooseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ylU-NI-H3F"/>
+                        <viewControllerLayoutGuide type="bottom" id="MDn-L3-yzo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v8P-hA-PHK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-a2-kdB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入城市名" translatesAutoresizingMaskIntoConstraints="NO" id="0MZ-xD-pb0" customClass="MCSearchBar">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="K4n-xS-pKZ" id="dnj-bN-9jg"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-xN-1EP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tOs-xN-1EP" secondAttribute="trailing" id="2dn-TC-cvq"/>
+                            <constraint firstAttribute="trailing" secondItem="gdg-a2-kdB" secondAttribute="trailing" id="8Rx-Y7-pQc"/>
+                            <constraint firstItem="tOs-xN-1EP" firstAttribute="top" secondItem="0MZ-xD-pb0" secondAttribute="bottom" id="Dbb-Gc-m67"/>
+                            <constraint firstItem="0MZ-xD-pb0" firstAttribute="top" secondItem="ylU-NI-H3F" secondAttribute="bottom" id="E3T-2g-Zj6"/>
+                            <constraint firstAttribute="bottom" secondItem="gdg-a2-kdB" secondAttribute="bottom" id="FZ7-Bf-pCv"/>
+                            <constraint firstItem="gdg-a2-kdB" firstAttribute="top" secondItem="v8P-hA-PHK" secondAttribute="top" id="IbI-2j-KEw"/>
+                            <constraint firstItem="0MZ-xD-pb0" firstAttribute="leading" secondItem="v8P-hA-PHK" secondAttribute="leading" id="Icd-LG-e4B"/>
+                            <constraint firstItem="gdg-a2-kdB" firstAttribute="leading" secondItem="v8P-hA-PHK" secondAttribute="leading" id="Qua-jB-730"/>
+                            <constraint firstAttribute="trailing" secondItem="0MZ-xD-pb0" secondAttribute="trailing" id="d4b-1W-hek"/>
+                            <constraint firstItem="tOs-xN-1EP" firstAttribute="leading" secondItem="v8P-hA-PHK" secondAttribute="leading" id="hd6-ES-2Zw"/>
+                            <constraint firstItem="MDn-L3-yzo" firstAttribute="top" secondItem="tOs-xN-1EP" secondAttribute="bottom" id="qw0-No-by3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yz5-cy-9T8"/>
+                    <connections>
+                        <outlet property="searchBar" destination="0MZ-xD-pb0" id="0Cz-fE-nxV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nA1-nY-0JN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="-100"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bg" width="375" height="667"/>
         <image name="weather_hightmp" width="12" height="12"/>
         <image name="weather_lowtmp" width="12" height="12"/>
     </resources>

@@ -8,6 +8,9 @@
 
 #import "MCRootWeatherViewController.h"
 #import "MCWeatherManager.h"
+
+#define CITY_CHOOSE_VC_SEGUE_ID @"MCCityChooseViewController"
+
 @interface MCRootWeatherViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
@@ -19,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *windDirLabel;
 @property (weak, nonatomic) IBOutlet UILabel *humLabel;
 @property (weak, nonatomic) IBOutlet UILabel *humDesLabel;
+- (IBAction)tapGestureEvent:(UITapGestureRecognizer *)sender;
 
 @end
 
@@ -33,6 +37,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [self reloadWeatherInfo];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -44,24 +49,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-#pragma mark - Init Methods
--(void)configure{
-    [self configureView];
-    [self configureData];
-}
--(void)configureView{
-    
-}
--(void)configureData{
+#pragma mark - Private Motheds
+-(void)reloadWeatherInfo{
     [[MCWeatherManager manager]updateWeatherInfo:^(MCWeatherStatus status) {
         dispatch_async(dispatch_get_main_queue(), ^{
             switch (status) {
@@ -87,6 +77,7 @@
 }
 -(void)resetWeatherInfo{
     if ([MCWeatherManager manager].weatherInfo==nil) {
+        [self resetEmptyWeatherInfo];
         return;
     }
     MCWeatherDayInfo *lTodayWeather=[MCWeatherManager manager].weatherInfo.weatherDays[0];
@@ -101,7 +92,43 @@
     self.humLabel.text=[MCWeatherManager manager].weatherInfo.weatherNow.displayHum;
     self.humDesLabel.text=@"湿度";
 }
+-(void)resetEmptyWeatherInfo{
+    self.cityLabel.text=@"--";
+    self.tmpLabel.text=@"--°";
+    self.highTmpLabel.text=@"--°";
+    self.lowTmpLabel.text=@"--°";
+    self.timeLabel.text=@"----";
+    self.condLabel.text=@"--";
+    self.windSCLabel.text=@"--";
+    self.windDirLabel.text=@"--";
+    self.humLabel.text=@"--";
+    self.humDesLabel.text=@"--";
+}
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+#pragma mark - Init Methods
+-(void)configure{
+    [self configureView];
+    [self configureData];
+}
+-(void)configureView{
+    
+}
+-(void)configureData{
+    
+}
+#pragma mark - Event Response
+- (IBAction)tapGestureEvent:(UITapGestureRecognizer *)sender {
+    [self performSegueWithIdentifier:CITY_CHOOSE_VC_SEGUE_ID sender:nil];
+}
 #pragma mark - Override
 //-(void)resetNavigationItem{
 //}

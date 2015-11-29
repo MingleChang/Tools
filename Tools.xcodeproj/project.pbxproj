@@ -129,6 +129,9 @@
 		823476851BF8D31C00A99554 /* MCSizeControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 823476841BF8D31C00A99554 /* MCSizeControlButton.m */; };
 		823476881BF8D3DD00A99554 /* MCSizeControlChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 823476871BF8D3DD00A99554 /* MCSizeControlChooseView.m */; };
 		82359E341BF37376000AB501 /* MCRootChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82359E331BF37376000AB501 /* MCRootChooseView.m */; };
+		8241F0D21C0ACA1F00E65FBE /* MCCityChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8241F0D01C0ACA1F00E65FBE /* MCCityChooseViewController.m */; };
+		8241F0D31C0ACA1F00E65FBE /* MCCityChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8241F0D11C0ACA1F00E65FBE /* MCCityChooseViewController.xib */; };
+		8241F0D61C0AD0F800E65FBE /* MCSearchCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8241F0D51C0AD0F800E65FBE /* MCSearchCity.m */; };
 		8245AA061BF4D904009B5640 /* MCDreamCateSearchHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245AA041BF4D904009B5640 /* MCDreamCateSearchHeader.m */; };
 		8245AA071BF4D904009B5640 /* MCDreamCateSearchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8245AA051BF4D904009B5640 /* MCDreamCateSearchHeader.xib */; };
 		8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245AA091BF4D91E009B5640 /* MCDreamCateCell.m */; };
@@ -154,6 +157,8 @@
 		82B4D6691BDE51C500FCA1C2 /* MCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6681BDE51C500FCA1C2 /* MCLocationManager.m */; };
 		82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */; };
 		82B4D6711BDE692100FCA1C2 /* APIStoreRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */; };
+		82D233C11C09FEA100A9EE4D /* MCLotteryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D233BF1C09FEA100A9EE4D /* MCLotteryListCell.m */; };
+		82D233C21C09FEA100A9EE4D /* MCLotteryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D233C01C09FEA100A9EE4D /* MCLotteryListCell.xib */; };
 		82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */; };
 		82D806251BFB7FE00092F3D4 /* MCNotepadEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */; };
 		82E8E1E71C04BB3F0087ABCE /* IDNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E8E1E61C04BB3F0087ABCE /* IDNumber.storyboard */; };
@@ -372,6 +377,11 @@
 		823476871BF8D3DD00A99554 /* MCSizeControlChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSizeControlChooseView.m; sourceTree = "<group>"; };
 		82359E321BF37376000AB501 /* MCRootChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootChooseView.h; sourceTree = "<group>"; };
 		82359E331BF37376000AB501 /* MCRootChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootChooseView.m; sourceTree = "<group>"; };
+		8241F0CF1C0ACA1F00E65FBE /* MCCityChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCityChooseViewController.h; sourceTree = "<group>"; };
+		8241F0D01C0ACA1F00E65FBE /* MCCityChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCityChooseViewController.m; sourceTree = "<group>"; };
+		8241F0D11C0ACA1F00E65FBE /* MCCityChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCityChooseViewController.xib; sourceTree = "<group>"; };
+		8241F0D41C0AD0F800E65FBE /* MCSearchCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSearchCity.h; sourceTree = "<group>"; };
+		8241F0D51C0AD0F800E65FBE /* MCSearchCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSearchCity.m; sourceTree = "<group>"; };
 		8245AA031BF4D904009B5640 /* MCDreamCateSearchHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDreamCateSearchHeader.h; sourceTree = "<group>"; };
 		8245AA041BF4D904009B5640 /* MCDreamCateSearchHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDreamCateSearchHeader.m; sourceTree = "<group>"; };
 		8245AA051BF4D904009B5640 /* MCDreamCateSearchHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDreamCateSearchHeader.xib; sourceTree = "<group>"; };
@@ -410,6 +420,9 @@
 		82B4D66A1BDE5D5C00FCA1C2 /* MCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootViewController.m; sourceTree = "<group>"; };
 		82B4D66F1BDE692100FCA1C2 /* APIStoreRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreRequest.h; sourceTree = "<group>"; };
 		82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIStoreRequest.m; sourceTree = "<group>"; };
+		82D233BE1C09FEA100A9EE4D /* MCLotteryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryListCell.h; sourceTree = "<group>"; };
+		82D233BF1C09FEA100A9EE4D /* MCLotteryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLotteryListCell.m; sourceTree = "<group>"; };
+		82D233C01C09FEA100A9EE4D /* MCLotteryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLotteryListCell.xib; sourceTree = "<group>"; };
 		82D806211BFB7FE00092F3D4 /* MCNotepadEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNotepadEditViewController.h; sourceTree = "<group>"; };
 		82D806221BFB7FE00092F3D4 /* MCNotepadEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNotepadEditViewController.m; sourceTree = "<group>"; };
 		82D806231BFB7FE00092F3D4 /* MCNotepadEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNotepadEditViewController.xib; sourceTree = "<group>"; };
@@ -492,6 +505,8 @@
 				82EFB6FD1BDC8E5B008A978C /* MCWeatherCity.m */,
 				82EFB6FF1BDC8E6E008A978C /* MCWeatherArea.h */,
 				82EFB7001BDC8E6E008A978C /* MCWeatherArea.m */,
+				8241F0D41C0AD0F800E65FBE /* MCSearchCity.h */,
+				8241F0D51C0AD0F800E65FBE /* MCSearchCity.m */,
 			);
 			name = CityModel;
 			sourceTree = "<group>";
@@ -724,6 +739,7 @@
 		82121E6F1C0751CB00EE9930 /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
+				82D233BD1C09FE7000A9EE4D /* View */,
 				82121E7B1C0755D500EE9930 /* Model */,
 				82121E701C0751CB00EE9930 /* Controller */,
 				82121E711C0751CB00EE9930 /* Resources */,
@@ -1007,6 +1023,9 @@
 				82273FF31BDB397B00AFDEAF /* MCRootWeatherViewController.h */,
 				82273FF41BDB397B00AFDEAF /* MCRootWeatherViewController.m */,
 				82273FF51BDB397B00AFDEAF /* MCRootWeatherViewController.xib */,
+				8241F0CF1C0ACA1F00E65FBE /* MCCityChooseViewController.h */,
+				8241F0D01C0ACA1F00E65FBE /* MCCityChooseViewController.m */,
+				8241F0D11C0ACA1F00E65FBE /* MCCityChooseViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1243,6 +1262,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		82D233BD1C09FE7000A9EE4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82D233BE1C09FEA100A9EE4D /* MCLotteryListCell.h */,
+				82D233BF1C09FEA100A9EE4D /* MCLotteryListCell.m */,
+				82D233C01C09FEA100A9EE4D /* MCLotteryListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		82E8E1E31C04BB2A0087ABCE /* IDNumber */ = {
 			isa = PBXGroup;
 			children = (
@@ -1446,6 +1475,7 @@
 				4C0CF0A61C04361700EDC716 /* MCWebViewController.xib in Resources */,
 				4C9330991C04031100702B6C /* MCReciprocalDayEditViewController.xib in Resources */,
 				82273FE61BDB2AB200AFDEAF /* MCRootViewController.xib in Resources */,
+				82D233C21C09FEA100A9EE4D /* MCLotteryListCell.xib in Resources */,
 				821166681BE265D0009227D2 /* Root.storyboard in Resources */,
 				4C93309F1C040FBB00702B6C /* MCReciprocalDayCell.xib in Resources */,
 				4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */,
@@ -1468,6 +1498,7 @@
 				4C30C3171BDF767900E6E2C5 /* MCCollectionViewController.xib in Resources */,
 				8294AB261C0613F7000C37B3 /* express.json in Resources */,
 				4C4FB39D1BFF11C8006D3325 /* MCNotepadImageShowViewController.xib in Resources */,
+				8241F0D31C0ACA1F00E65FBE /* MCCityChooseViewController.xib in Resources */,
 				82273FF71BDB397B00AFDEAF /* MCRootWeatherViewController.xib in Resources */,
 				82198F311BF70E4C00EAF2E5 /* MCDreamCateViewController.xib in Resources */,
 				4C0CF0A11C0435F000EDC716 /* Common.storyboard in Resources */,
@@ -1551,6 +1582,7 @@
 				4C7657BD1BF5917D00FD75D3 /* MCTextView.m in Sources */,
 				820935CA1BF231F600F032AA /* MCToolManager.m in Sources */,
 				821E5B981C0211D000F90770 /* MCBirthdayManager.m in Sources */,
+				82D233C11C09FEA100A9EE4D /* MCLotteryListCell.m in Sources */,
 				4C30C3061BDF6CEC00E6E2C5 /* MCWeatherTmp.m in Sources */,
 				82273FDC1BDB2A6100AFDEAF /* MCViewController.m in Sources */,
 				82D806241BFB7FE00092F3D4 /* MCNotepadEditViewController.m in Sources */,
@@ -1588,12 +1620,14 @@
 				82EFB7281BDC9AE7008A978C /* MCDevice.m in Sources */,
 				4C93309E1C040FBB00702B6C /* MCReciprocalDayCell.m in Sources */,
 				829C08361BF4C9090043905E /* AppDelegate+Base.m in Sources */,
+				8241F0D21C0ACA1F00E65FBE /* MCCityChooseViewController.m in Sources */,
 				82273FF61BDB397B00AFDEAF /* MCRootWeatherViewController.m in Sources */,
 				82273FD81BDB2A6100AFDEAF /* MCTabBarController.m in Sources */,
 				4C28F2661BF41F450017DAF0 /* MCDreamManager.m in Sources */,
 				4C30C30C1BDF6D1500E6E2C5 /* MCWeatherUpdate.m in Sources */,
 				821E5B9C1C0212DF00F90770 /* MCBirthday.m in Sources */,
 				822250671C00C53C00F60708 /* MCAddress.m in Sources */,
+				8241F0D61C0AD0F800E65FBE /* MCSearchCity.m in Sources */,
 				820D632E1BFCD96300205A82 /* MCLineView.m in Sources */,
 				8294AB161C060176000C37B3 /* MCMobileRoot.m in Sources */,
 				82EFB7041BDC91EE008A978C /* MCWeatherManager.m in Sources */,

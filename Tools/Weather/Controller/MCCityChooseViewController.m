@@ -13,6 +13,7 @@
 #import "MCWeatherCity.h"
 #import "MCWeatherArea.h"
 #import "MCSearchCity.h"
+#import "MCWeatherLocationManager.h"
 
 #define CITY_CHOOSE_CELL_ID @"MCCityChooseCell"
 
@@ -38,7 +39,7 @@
 #pragma mark - Private Motheds
 -(void)searchCitiesWith:(NSString *)key{
     NSMutableArray *lSearchCities=[NSMutableArray array];
-    for (MCWeatherProvince *lProvince in [MCWeatherManager manager].cityList) {
+    for (MCWeatherProvince *lProvince in [MCWeatherLocationManager manager].cityList) {
         if ([lProvince.name containsString:key]) {
             for (MCWeatherCity *lCity in lProvince.weatherCities) {
                 for (MCWeatherArea *lArea in lCity.weatherAreas) {
@@ -98,7 +99,6 @@
     [MCWeatherManager manager].lastCityId=lSearchCity.identity;
     [MCWeatherManager manager].method=GetWeatherMethodSelected;
     [MCWeatherManager manager].weatherInfo=nil;
-    [[MCWeatherManager manager]saveWeatherMethodAndLastCityId];
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - UISearchBar Delegate

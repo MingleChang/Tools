@@ -16,4 +16,5 @@
 @property(nonatomic,copy)NSString *area;
 @property(nonatomic,copy)NSString *street;
 @property(nonatomic,copy)NSString *number;
+-(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

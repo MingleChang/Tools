@@ -17,7 +17,6 @@
 #import "MCDrawImage.h"
 #import "MCDevice.h"
 #import "MCHTTPConnection.h"
-#import "MCLocationManager.h"
 #import "MCStringExtension.h"
 #import "MCDateExtension.h"
 #import "MCCacheManager.h"

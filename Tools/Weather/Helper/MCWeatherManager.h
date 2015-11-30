@@ -21,7 +21,6 @@ typedef NS_ENUM(NSInteger,MCWeatherStatus){
     WeatherStatusFailed,
 };
 typedef NS_ENUM(NSInteger,GetWeatherMethod){
-    GetWeatherMethodIP,
     GetWeatherMethodLocal,
     GetWeatherMethodSelected,
 };
@@ -29,8 +28,6 @@ typedef NS_ENUM(NSInteger,GetWeatherMethod){
 typedef void (^WeatherResultBlock)(MCWeatherStatus status);
 
 @interface MCWeatherManager : NSObject
-
-@property(nonatomic,copy)NSArray *cityList;
 
 @property(nonatomic,assign)MCWeatherStatus status;
 @property(nonatomic,assign)GetWeatherMethod method;
@@ -40,5 +37,4 @@ typedef void (^WeatherResultBlock)(MCWeatherStatus status);
 +(MCWeatherManager *)manager;
 
 -(void)updateWeatherInfo:(WeatherResultBlock)block;
--(void)saveWeatherMethodAndLastCityId;
 @end

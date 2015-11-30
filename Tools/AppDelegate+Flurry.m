@@ -13,5 +13,9 @@
 -(void)setupFlurry{
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:@"9MN69HS227SWRKSW93D8"];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+}
+void uncaughtExceptionHandler(NSException *exception){
+    [Flurry logError:@"Uncaught" message:@"Crash" exception:exception];
 }
 @end

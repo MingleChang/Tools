@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Base.h"
+#import "AppDelegate+Flurry.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self baseSetting];
+#ifdef DEBUG
+    
+#else
+    [self setupFlurry];
+#endif
     return YES;
 }
 

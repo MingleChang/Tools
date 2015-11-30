@@ -14,6 +14,7 @@
 #import "MingleChang.h"
 #import "MCRootChooseView.h"
 #import "MCWebViewController.h"
+#import "Flurry.h"
 
 #define TOOL_CELL_ID @"MCToolCell"
 #define WEB_VC_SEGUE_ID @"MCWebViewController"
@@ -42,6 +43,7 @@
 }
 -(void)openTool:(MCTool *)tool{
     MCLOG(@"%@",tool.name);
+    [Flurry logEvent:tool.name];
     [self performSegueWithIdentifier:tool.segueId sender:tool.url];
 }
 

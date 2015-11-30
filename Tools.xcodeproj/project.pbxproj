@@ -68,6 +68,8 @@
 		8209D71B1BFE0896005029A1 /* MCNotepadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8209D7191BFE0896005029A1 /* MCNotepadImageCell.xib */; };
 		820D632B1BFCD88600205A82 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632A1BFCD88600205A82 /* MCDottedLineView.m */; };
 		820D632E1BFCD96300205A82 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632D1BFCD96300205A82 /* MCLineView.m */; };
+		82104B701C0C9E0E00118E61 /* libFlurry_7.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82104B6F1C0C9E0E00118E61 /* libFlurry_7.3.0.a */; };
+		82104B731C0C9E3D00118E61 /* AppDelegate+Flurry.m in Sources */ = {isa = PBXBuildFile; fileRef = 82104B721C0C9E3D00118E61 /* AppDelegate+Flurry.m */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
 		82121E731C0751E100EE9930 /* Lottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82121E721C0751E100EE9930 /* Lottery.storyboard */; };
 		82121E771C07521400EE9930 /* MCLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E751C07521400EE9930 /* MCLotteryViewController.m */; };
@@ -261,6 +263,11 @@
 		820D632A1BFCD88600205A82 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
 		820D632C1BFCD96300205A82 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
 		820D632D1BFCD96300205A82 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
+		82104B6D1C0C9E0E00118E61 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		82104B6E1C0C9E0E00118E61 /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		82104B6F1C0C9E0E00118E61 /* libFlurry_7.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.3.0.a; sourceTree = "<group>"; };
+		82104B711C0C9E3D00118E61 /* AppDelegate+Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Flurry.h"; sourceTree = "<group>"; };
+		82104B721C0C9E3D00118E61 /* AppDelegate+Flurry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Flurry.m"; sourceTree = "<group>"; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		82121E721C0751E100EE9930 /* Lottery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
 		82121E741C07521400EE9930 /* MCLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryViewController.h; sourceTree = "<group>"; };
@@ -417,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82104B701C0C9E0E00118E61 /* libFlurry_7.3.0.a in Frameworks */,
 				A2BE7E7E883B9BA79B3EBD53 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,6 +665,8 @@
 				82273FDF1BDB2A8B00AFDEAF /* AppDelegate.m */,
 				829C08341BF4C9090043905E /* AppDelegate+Base.h */,
 				829C08351BF4C9090043905E /* AppDelegate+Base.m */,
+				82104B711C0C9E3D00118E61 /* AppDelegate+Flurry.h */,
+				82104B721C0C9E3D00118E61 /* AppDelegate+Flurry.m */,
 				8205FE4D1BD68BB500EC838E /* Info.plist */,
 				8205FE3D1BD68BB400EC838E /* main.m */,
 			);
@@ -681,6 +691,16 @@
 				820935C91BF231F600F032AA /* MCToolManager.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		82104B6C1C0C9E0E00118E61 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				82104B6D1C0C9E0E00118E61 /* Flurry.h */,
+				82104B6E1C0C9E0E00118E61 /* FlurryWatch.h */,
+				82104B6F1C0C9E0E00118E61 /* libFlurry_7.3.0.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 		821166661BE265C0009227D2 /* Resources */ = {
@@ -1250,6 +1270,7 @@
 		82EFB7071BDC9ADB008A978C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				82104B6C1C0C9E0E00118E61 /* Flurry */,
 				82EFB7081BDC9AE7008A978C /* MingleChang */,
 				82B4D66F1BDE692100FCA1C2 /* APIStoreRequest.h */,
 				82B4D6701BDE692100FCA1C2 /* APIStoreRequest.m */,
@@ -1514,6 +1535,7 @@
 				8294AB291C0614CA000C37B3 /* MCExpress.m in Sources */,
 				82B4D66B1BDE5D5C00FCA1C2 /* MCRootViewController.m in Sources */,
 				82273FF11BDB395600AFDEAF /* MCWeatherViewController.m in Sources */,
+				82104B731C0C9E3D00118E61 /* AppDelegate+Flurry.m in Sources */,
 				8294AB211C060922000C37B3 /* MCExpressViewController.m in Sources */,
 				8245AA0B1BF4D91E009B5640 /* MCDreamCateCell.m in Sources */,
 				8294AB191C060185000C37B3 /* MCMobile.m in Sources */,
@@ -1673,6 +1695,10 @@
 				INFOPLIST_FILE = Tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tools/Common/Helper/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mingle.chang.tools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1686,6 +1712,10 @@
 				INFOPLIST_FILE = Tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tools/Common/Helper/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mingle.chang.tools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

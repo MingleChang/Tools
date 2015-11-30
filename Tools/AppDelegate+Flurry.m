@@ -11,11 +11,7 @@
 
 @implementation AppDelegate (Flurry)
 -(void)setupFlurry{
-    [Flurry startSession:@"DYDGVJWM2BTZXC2W3VZP"];
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-}
-void uncaughtExceptionHandler(NSException *exception)
-{
-    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
+    [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:@"9MN69HS227SWRKSW93D8"];
 }
 @end

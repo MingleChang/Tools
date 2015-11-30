@@ -149,7 +149,7 @@
     self.searchBar.placeholder=@"请输入搜索关键字";
     self.searchBar.searchBarStyle=UISearchBarStyleMinimal;
     self.navigationItem.titleView=self.searchBar;
-    self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_setting"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];
-    self.navigationItem.rightBarButtonItem=self.settingBarButtonItem;
+//    self.settingBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_setting"] style:UIBarButtonItemStyleDone target:self action:@selector(settingBarButtonItemClick:)];
+//    self.navigationItem.rightBarButtonItem=self.settingBarButtonItem;
 }
 @end

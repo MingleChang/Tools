@@ -70,6 +70,8 @@
 		820D632E1BFCD96300205A82 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 820D632D1BFCD96300205A82 /* MCLineView.m */; };
 		82104B701C0C9E0E00118E61 /* libFlurry_7.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82104B6F1C0C9E0E00118E61 /* libFlurry_7.3.0.a */; };
 		82104B731C0C9E3D00118E61 /* AppDelegate+Flurry.m in Sources */ = {isa = PBXBuildFile; fileRef = 82104B721C0C9E3D00118E61 /* AppDelegate+Flurry.m */; };
+		82104B751C0CA30D00118E61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82104B741C0CA30D00118E61 /* Security.framework */; };
+		82104B771C0CA33000118E61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82104B761C0CA33000118E61 /* SystemConfiguration.framework */; };
 		821166681BE265D0009227D2 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821166671BE265D0009227D2 /* Root.storyboard */; };
 		82121E731C0751E100EE9930 /* Lottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82121E721C0751E100EE9930 /* Lottery.storyboard */; };
 		82121E771C07521400EE9930 /* MCLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82121E751C07521400EE9930 /* MCLotteryViewController.m */; };
@@ -268,6 +270,8 @@
 		82104B6F1C0C9E0E00118E61 /* libFlurry_7.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.3.0.a; sourceTree = "<group>"; };
 		82104B711C0C9E3D00118E61 /* AppDelegate+Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Flurry.h"; sourceTree = "<group>"; };
 		82104B721C0C9E3D00118E61 /* AppDelegate+Flurry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Flurry.m"; sourceTree = "<group>"; };
+		82104B741C0CA30D00118E61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		82104B761C0CA33000118E61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		821166671BE265D0009227D2 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		82121E721C0751E100EE9930 /* Lottery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
 		82121E741C07521400EE9930 /* MCLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLotteryViewController.h; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82104B771C0CA33000118E61 /* SystemConfiguration.framework in Frameworks */,
+				82104B751C0CA30D00118E61 /* Security.framework in Frameworks */,
 				82104B701C0C9E0E00118E61 /* libFlurry_7.3.0.a in Frameworks */,
 				A2BE7E7E883B9BA79B3EBD53 /* libPods.a in Frameworks */,
 			);
@@ -1323,6 +1329,8 @@
 		8FD0331F0B03CCEACDF3F8C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82104B761C0CA33000118E61 /* SystemConfiguration.framework */,
+				82104B741C0CA30D00118E61 /* Security.framework */,
 				AC339506E995F7AFD8AFAFAD /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1692,6 +1700,7 @@
 			baseConfigurationReference = C6E6F4DCD596D768B5724709 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1709,6 +1718,7 @@
 			baseConfigurationReference = BC0553AA50D7379E8A437931 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

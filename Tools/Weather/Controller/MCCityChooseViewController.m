@@ -82,23 +82,33 @@
 #pragma mark - Delegate
 #pragma mark - UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.searchCities.count;
+    return self.searchCities.count+1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row=[indexPath row];
-    MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row];
     UITableViewCell *lCell=[tableView dequeueReusableCellWithIdentifier:CITY_CHOOSE_CELL_ID forIndexPath:indexPath];
-    lCell.textLabel.text=[NSString stringWithFormat:@"%@-%@-%@",lSearchCity.provinceName,lSearchCity.cityName,lSearchCity.areaName];
+    if (row==0) {
+        lCell.textLabel.text=@"自动定位";
+    }else{
+        MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row-1];
+        lCell.textLabel.text=[NSString stringWithFormat:@"%@-%@-%@",lSearchCity.provinceName,lSearchCity.cityName,lSearchCity.areaName];
+    }
     return lCell;
 }
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger row=[indexPath row];
-    MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row];
-    [MCWeatherManager manager].lastCityId=lSearchCity.identity;
-    [MCWeatherManager manager].method=GetWeatherMethodSelected;
-    [MCWeatherManager manager].weatherInfo=nil;
+    if (row==0) {
+        [MCWeatherManager manager].lastCityId=@"";
+        [MCWeatherManager manager].method=GetWeatherMethodLocal;
+        [MCWeatherManager manager].weatherInfo=nil;
+    }else{
+        MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row-1];
+        [MCWeatherManager manager].lastCityId=lSearchCity.identity;
+        [MCWeatherManager manager].method=GetWeatherMethodSelected;
+        [MCWeatherManager manager].weatherInfo=nil;
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - UISearchBar Delegate

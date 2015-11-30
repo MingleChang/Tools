@@ -46,6 +46,7 @@
 -(void)updateWeatherInfo:(WeatherResultBlock)block{
     self.block=block;
     if (self.lastCityId.length==0 || self.method==GetWeatherMethodLocal) {
+        [self needUpdateAfterReadLocal];
         if (self.block) {
             self.block(WeatherStatusPositioning);
         }

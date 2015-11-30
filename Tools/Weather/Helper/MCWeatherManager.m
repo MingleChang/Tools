@@ -55,13 +55,16 @@
     }
     self.cityList=lCityList;
 }
+-(void)saveWeatherMethodAndLastCityId{
+    [[NSUserDefaults standardUserDefaults]setInteger:self.method forKey:WEATHER_METHOD_USERDEFAULT];
+    [[NSUserDefaults standardUserDefaults]setObject:self.lastCityId forKey:LAST_CITY_ID_USERDEFAULT];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
 -(void)cacheWeatherInfo:(NSDictionary *)dic{
     NSString *lFileName=[NSString stringWithFormat:@"tmp-%@",self.weatherInfo.weatherBasic.cityid];
     [MCCacheManager cacheObject:dic toFile:lFileName expireTime:EXPIRE_TIME];
-    [[NSUserDefaults standardUserDefaults]setInteger:self.method forKey:WEATHER_METHOD_USERDEFAULT];
-    [[NSUserDefaults standardUserDefaults]setObject:self.weatherInfo.weatherBasic.cityid forKey:LAST_CITY_ID_USERDEFAULT];
     self.lastCityId=self.weatherInfo.weatherBasic.cityid;
-    [[NSUserDefaults standardUserDefaults]synchronize];
+    [self saveWeatherMethodAndLastCityId];
 }
 -(BOOL)needUpdateAfterReadLocal{
     if (self.lastCityId.length==0) {

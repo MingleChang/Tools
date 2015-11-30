@@ -14,7 +14,10 @@
 #import "MCWeatherArea.h"
 #import "MCSearchCity.h"
 
-@interface MCCityChooseViewController ()<UISearchBarDelegate>
+#define CITY_CHOOSE_CELL_ID @"MCCityChooseCell"
+
+@interface MCCityChooseViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @property(nonatomic,copy)NSArray *searchCities;
@@ -76,9 +79,33 @@
     self.searchCities=lSearchCities;
 }
 #pragma mark - Delegate
+#pragma mark - UITableViewDataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.searchCities.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row=[indexPath row];
+    MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row];
+    UITableViewCell *lCell=[tableView dequeueReusableCellWithIdentifier:CITY_CHOOSE_CELL_ID forIndexPath:indexPath];
+    lCell.textLabel.text=[NSString stringWithFormat:@"%@-%@-%@",lSearchCity.provinceName,lSearchCity.cityName,lSearchCity.areaName];
+    return lCell;
+}
+#pragma mark - UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row=[indexPath row];
+    MCSearchCity *lSearchCity=[self.searchCities objectAtIndex:row];
+    [MCWeatherManager manager].lastCityId=lSearchCity.identity;
+    [MCWeatherManager manager].method=GetWeatherMethodSelected;
+    [MCWeatherManager manager].weatherInfo=nil;
+    [[MCWeatherManager manager]saveWeatherMethodAndLastCityId];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - UISearchBar Delegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self searchCitiesWith:searchBar.text];
+    [searchBar resignFirstResponder];
+    [self.tableView reloadData];
 }
 /*
 #pragma mark - Navigation

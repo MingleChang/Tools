@@ -40,4 +40,5 @@ typedef void (^WeatherResultBlock)(MCWeatherStatus status);
 +(MCWeatherManager *)manager;
 
 -(void)updateWeatherInfo:(WeatherResultBlock)block;
+-(void)saveWeatherMethodAndLastCityId;
 @end

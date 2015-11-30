@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.interactivePopGestureRecognizer.enabled=YES;
-    self.interactivePopGestureRecognizer.delegate=self;
+//    self.interactivePopGestureRecognizer.enabled=YES;
+//    self.interactivePopGestureRecognizer.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -120,7 +120,7 @@
     [self configureData];
 }
 -(void)configureView{
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadWeatherInfo) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 -(void)configureData{
     

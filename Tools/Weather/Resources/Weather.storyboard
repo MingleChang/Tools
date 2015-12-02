@@ -200,6 +200,9 @@
                         <outlet property="humDesLabel" destination="1hf-u9-KSH" id="yed-mw-U2l"/>
                         <outlet property="humLabel" destination="e5h-BL-3aD" id="nSC-RW-R4T"/>
                         <outlet property="lowTmpLabel" destination="AHb-bj-e5n" id="Am2-8z-2hK"/>
+                        <outlet property="tempBottomConstraint" destination="CgE-Nl-tFW" id="wm0-mk-mA8"/>
+                        <outlet property="tempTopConstraint" destination="mes-O2-J2f" id="Ktj-ub-wgd"/>
+                        <outlet property="timeBottomConstraint" destination="bDE-ab-4eg" id="YhM-bN-DFY"/>
                         <outlet property="timeLabel" destination="PH3-kY-r9B" id="7u7-bA-bf0"/>
                         <outlet property="tmpLabel" destination="5cD-t7-RDg" id="jB2-Yn-xOe"/>
                         <outlet property="windDirLabel" destination="MNp-g3-nsi" id="Idd-yx-uaL"/>

@@ -8,6 +8,7 @@
 
 #import "MCRootWeatherViewController.h"
 #import "MCWeatherManager.h"
+#import "MingleChang.h"
 
 #define CITY_CHOOSE_VC_SEGUE_ID @"MCCityChooseViewController"
 
@@ -23,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *humLabel;
 @property (weak, nonatomic) IBOutlet UILabel *humDesLabel;
 - (IBAction)tapGestureEvent:(UITapGestureRecognizer *)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tempTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tempBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *timeBottomConstraint;
 
 @end
 
@@ -120,6 +124,11 @@
     [self configureData];
 }
 -(void)configureView{
+    if ([MCDevice iPhoneOld]) {
+        self.tempTopConstraint.constant=5;
+        self.tempBottomConstraint.constant=10;
+        self.timeBottomConstraint.constant=5;
+    }
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadWeatherInfo) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 -(void)configureData{

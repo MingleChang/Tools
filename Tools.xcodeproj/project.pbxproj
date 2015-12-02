@@ -49,6 +49,7 @@
 		4C9330981C04031100702B6C /* MCReciprocalDayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9330961C04031100702B6C /* MCReciprocalDayEditViewController.m */; };
 		4C93309E1C040FBB00702B6C /* MCReciprocalDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C93309C1C040FBB00702B6C /* MCReciprocalDayCell.m */; };
 		4C93309F1C040FBB00702B6C /* MCReciprocalDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C93309D1C040FBB00702B6C /* MCReciprocalDayCell.xib */; };
+		4C9B98CF1C0EC97100D3332B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B98CE1C0EC97100D3332B /* icon.png */; };
 		4C9B99DB1C0BF3CB0064384B /* MCWeatherLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B99DA1C0BF3CB0064384B /* MCWeatherLocationManager.m */; };
 		4CD06AF81BF33BC30065E215 /* Flashlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */; };
 		4CD06AFA1BF33BD00065E215 /* Mirror.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06AF91BF33BD00065E215 /* Mirror.storyboard */; };
@@ -234,6 +235,7 @@
 		4C93309B1C040FBB00702B6C /* MCReciprocalDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCReciprocalDayCell.h; sourceTree = "<group>"; };
 		4C93309C1C040FBB00702B6C /* MCReciprocalDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCReciprocalDayCell.m; sourceTree = "<group>"; };
 		4C93309D1C040FBB00702B6C /* MCReciprocalDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCReciprocalDayCell.xib; sourceTree = "<group>"; };
+		4C9B98CE1C0EC97100D3332B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4C9B99D91C0BF3CB0064384B /* MCWeatherLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWeatherLocationManager.h; sourceTree = "<group>"; };
 		4C9B99DA1C0BF3CB0064384B /* MCWeatherLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWeatherLocationManager.m; sourceTree = "<group>"; };
 		4CD06AF71BF33BC30065E215 /* Flashlight.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flashlight.storyboard; sourceTree = "<group>"; };
@@ -642,6 +644,7 @@
 		8205FE3B1BD68BB400EC838E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4C9B98CE1C0EC97100D3332B /* icon.png */,
 				822E20F11BD9394F00F41211 /* Common */,
 				82273FA91BDB297D00AFDEAF /* Root */,
 				82273FE91BDB347800AFDEAF /* Weather */,
@@ -1413,6 +1416,7 @@
 				82121E7A1C0755BA00EE9930 /* lottery.json in Resources */,
 				820935CC1BF2340100F032AA /* tools.json in Resources */,
 				4CD06AFF1BF344220065E215 /* weather_citylist.json in Resources */,
+				4C9B98CF1C0EC97100D3332B /* icon.png in Resources */,
 				8294AB131C05F75F000C37B3 /* MCMobileViewController.xib in Resources */,
 				8294AB0E1C05F6B3000C37B3 /* Mobile.storyboard in Resources */,
 				4C7657AD1BF5874800FD75D3 /* MCDreamListCell.xib in Resources */,
